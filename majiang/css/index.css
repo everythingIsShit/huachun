@@ -368,6 +368,13 @@ img{border:none;}
     background-color:#fff;
     border:1px solid #29744b;
 }
+.news_title{
+    background: url('../img/k1000.png') no-repeat;
+    width:1000px;
+    height:68px;
+    color:#fff;
+    cursor:pointer;
+}
 /*footer*/
 .footer{
     background:#171717;
