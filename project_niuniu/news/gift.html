@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>下载有礼--开心牛牛官方网站-华淳游戏</title>
+    <script src="../js/jquery-1.11.3.js"></script>
+    <link rel="stylesheet" href="css/gift.css"/>
+</head>
+<body>
+    <div id="head">
+        <div class="logo_box">
+            <img src="img/com_logo.png" alt="华淳游戏"/>
+        </div>
+    </div>
+    <div id="main">
+        <div class="go_index">
+            <a href="../index.html" target="_blank">进入官网</a>
+        </div>
+        <div class="get_gift">
+            <h3>专属下载<span>礼包</span></h3>
+            <ul class="c-list">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <a id="gift_now">立即领取</a>
+        </div>
+    </div>
+    <div id="modal">
+        <div class="modal-dialog">
+            <a  class="close" id="close">×</a>
+            <div class="andriod_user">
+                <h3>安卓用户</h3>
+                <div class="code_box">
+                    <img src="img/QR-code.png"/>
+                </div>
+            </div>
+            <div class="iphone_user">
+                <h3>苹果用户</h3>
+                <div class="code_box">
+                    <img src="img/QR-code.png"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $('#gift_now').click(function(){
+        $('#modal').css("display","block");
+    });
+    $("#close").click(function(){
+        $('#modal').css("display","none");
+    });
+</script>
+</html>

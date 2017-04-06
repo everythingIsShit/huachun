@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="all">
+    <meta name="copyright" content="huachun">
+    <meta name="description" content="游戏排行榜">
+    <meta name="keywords" content="游戏排行榜">
+    <title>开心牛牛-开心牛牛官方网站-华淳游戏</title>
+    <link rel="stylesheet" href="css/niuniu.css"/>
+    <script src="js/jquery-1.11.3.js"></script>
+    <link href="css/slideshow.css" rel="stylesheet"/>
+    <script src="js/slideshow.js"></script>
+    <!--[if IE]>
+    <style>
+         .video-js{
+            width:100%;s
+            height:100%;
+        }
+        .main-bg{
+            min-height:1070px;
+        }
+    </style>
+    <![endif]-->
+</head>
+<body>
+    <div id="header">
+    </div>
+    <div id="main">
+        <div class="main-bg">
+            <video id="my-video" class="video-js vjs-big-play-centered" loop autoplay>
+                <source src="img/Sequence.mp4" type='video/mp4'>
+                <source src="img/Sequence.webm" type='video/webm'/>
+            </video>
+            <div class="by-nav">
+                <div class="by-nav-title">
+                    <a href="index.html" class="logo">
+                        <img src="img/logo.png" alt=""/>
+                    </a>
+                    <div class="nav-left nav-list l">
+                        <a href="news/news_list.html" class="alink" target="_blank">
+                            <p>新闻资讯</p>
+                            <!--<span>NEWS</span>-->
+                        </a>
+                        <a href="news/news.html?tid=13?categoryId=30" class="alink" target="_blank">
+                            <p>游戏百科</p>
+                            <!--<span>ENCYCLOPEDIA</span>-->
+                        </a>
+                    </div>
+                    <div class="nav-right nav-list r">
+                        <a href="#" class="alink" target="_blank">
+                            <p>游戏特色</p>
+                            <!--<span>FEATURE</span>-->
+                        </a>
+                        <a href="javascript:void(0)" class="alink" target="_blank" onclick="unopened()">
+                            <p>游戏视频 </p>
+                            <!--<span>VIDEO</span>-->
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="transition-bg">
+        </div>
+        <div class="news-wrap">
+            <div class="news-box">
+                <div class="Adnews-box">
+                    <div class="Ad l">
+                        <div class="comiis_wrapad" id="slideContainer">
+                            <div id="frameHlicAe" class="frame cl">
+                                <div class="block">
+                                    <div class="cl">
+                                        <ul class="slideshow" id="slidesImgs">
+                                            <li>
+                                                <a href="#">
+                                                    <img src="img/carousel01.jpg" alt="邀请好友送礼包"/>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img src="img/carousel02.jpg" alt="闯关赢万元大奖"/>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="slidebar" id="slideBar">
+                                        <ul>
+                                            <li class="on"></li>
+                                            <li></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news r">
+                        <a href="news/news_list.html" class="more"></a>
+                        <div class="news-nav">
+                            <a href="javascript:void(0)" class="on">最新</a>
+                            <a href="javascript:void(0)">公告</a>
+                            <a href="javascript:void(0)">攻略</a>
+                            <a href="javascript:void(0)">活动</a>
+                        </div>
+                        <div class="news-nav-box">
+                            <div class="news-com"><ul></ul></div>
+                            <div class="news-com"><ul></ul></div>
+                            <div class="news-com"><ul></ul></div>
+                            <div class="news-com"><ul></ul></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="four-ad">
+                    <ul>
+                        <li>
+                            <a href="news/gift.html" target="_blank">
+                                <img src="img/ad01.png" alt=""/>
+                                <h3>新手礼包</h3>
+                                <span>GO>></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="news/news.html?tid=1" target="_blank">
+                                <img src="img/ad02.png" alt="游戏百科"/>
+                                <h3>游戏百科</h3>
+                                <span>GO>></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <img src="img/ad03.png" alt=""/>
+                                <h3>好友竞技</h3>
+                                <span>GO>></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" onclick="unopened()" href="javascript:void(0)">
+                                <img src="img/ad04.png" alt=""/>
+                                <h3>闯关有奖</h3>
+                                <span>GO>></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="feature-warp">
+            <h3 class="feature-title">游戏特色</h3>
+            <div class="feature-box">
+                <div class="feature-img">
+                    <a class="icon prev"></a>
+                    <a class="icon next"></a>
+                </div>
+            </div>
+            <div class="img">
+                <div id="slide">
+                    <ul id="slide-list">
+                    </ul>
+                </div>
+            </div>
+        </div>
+       <!-- <div class="animation-warp">
+            <div class="animation-box">
+                <h3 class="title">游戏影画</h3>
+                <div class="animation-v-p">
+                    <div class="animation-video-box">
+                        <div class="animation-video">
+                            <div class="animation-content">
+                                <div class="animation-nav id=animation-video">
+                                    <span class="cur">
+                                        官方视频
+                                    </span>
+                                    <span>
+                                        攻略视频
+                                    </span>
+                                    <a href="#"></a>
+                                </div>
+                                <div class="animation-show">
+                                    <a href="#"  target=‘_blank' class="animation-left"></a>
+                                    <a href="#" target="_blank" class="animation-right"></a>
+                                    <div class="animation-show-video">
+                                        <div class="comList">
+                                            <div class="showList">
+                                                <ul>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="animation-img">
+                                                                <img src="" alt=""/>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="animation-img">
+                                                                <img src="" alt=""/>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="animation-img">
+                                                                <img src="" alt=""/>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="animation-video">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+    </div>
+    <div id="footer">
+        <div class="service">
+            <div class="content">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="icon_bottom icon_bottom_down"></i>
+                            <h4>游戏下载</h4>
+                            <p>最新游戏版本</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="icon_bottom icon_bottom_wx"></i>
+                            <h4>游戏微信</h4>
+                            <p>收听官方微信，获得第一手<br/>游戏资讯</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="icon_bottom icon_bottom_serv"></i>
+                            <h4>游戏客服</h4>
+                            <p>官方客服唯一电话：<br/>0755-xxxxxxx</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="icon_bottom icon_bottom_self"></i>
+                            <h4>关于我们</h4>
+                            <p>游戏最新版本0.010</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright"></div>
+    </div>
+    <script src="js/niuniu.js"></script>
+    <script>
+        SlideShow(3000);
+     </script>
+</body>
+</html>

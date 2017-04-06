@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <title>开心牛牛-开心牛牛官方网站-腾讯游戏</title>
+    <link rel="stylesheet" href="css/news.css" type="text/css"/>
+    <script src="../js/jquery-1.11.3.js" type="application/javascript"></script>
+</head>
+<body>
+<div class="header_nav">
+    <div class="content">
+        <a href="../index.html" class="logo" title="开心牛牛">
+            <i class="icon_logo"></i>
+        </a>
+        <div class="hd_title">
+            <h1>开心牛牛</h1>
+            <p>自由对战，想玩就玩</p>
+        </div>
+        <div class="f-right wechat"></div>
+        <ul class="main_nav">
+            <li>
+                <a href="../index.html">
+                    <i class="icon icon_nav_sy"></i>
+                    首页
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="icon icon_nav_gg"></i>
+                    公告
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="icon icon_nav_gl"></i>
+                    攻略
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="icon icon_nav_hd"></i>
+                    活动
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="head list_head">
+    <div class="wrap">
+        <h1>资讯中心</h1>
+        <p class="route">开心牛牛&nbsp;&nbsp;
+            <a href="../index.html">首页</a> >
+            <span>游戏资讯</span>
+        </p>
+    </div>
+</div>
+<div class="page_bg">
+    <div class="content">
+        <div class="cont_tit">
+            <ul id="news_nav">
+                <li class="active">最新
+                    <i class="vline"></i>
+                    <i class="hline"></i>
+                </li>
+                <li>公告
+                    <i class="vline"></i>
+                    <i class="hline"></i>
+                </li>
+                <li>攻略
+                    <i class="vline"></i>
+                    <i class="hline"></i>
+                </li>
+                <li>活动
+                    <i class="vline vline2"></i>
+                    <i class="vline"></i>
+                    <i class="hline"></i>
+                </li>
+            </ul>
+        </div>
+        <div class="cont">
+            <div class="wrap">
+                <ul class="news_list">
+                </ul>
+                <div class="page_btn">
+                    <a href="#" class="page_syy" onclick="prevPage(0)"></a>
+                    <a href="#" class="page_xyy" onclick="nextPage(0)"></a>
+                </div>
+            </div>
+            <div class="wrap">
+                <ul class="news_list">
+                </ul>
+                <div class="page_btn">
+                    <a href="#" class="page_syy" onclick="prevPage(1)"></a>
+                    <a href="#" class="page_xyy" onclick="nextPage(1)"></a>
+                </div>
+            </div>
+            <div class="wrap">
+                <ul class="news_list">
+                </ul>
+                <div class="page_btn">
+                    <a href="#" class="page_syy" onclick="prevPage(2)"></a>
+                    <a href="#" class="page_xyy" onclick="nextPage(2)"></a>
+                </div>
+            </div>
+            <div class="wrap">
+                <ul class="news_list">
+                </ul>
+                <div class="page_btn">
+                    <a href="#" class="page_syy" onclick="prevPage(3)"></a>
+                    <a href="#" class="page_xyy" onclick="nextPage(3)"></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="js/news.js"></script>
+<script>
+    var parm1=getParam('categoryId');
+    function getParam(paramName) {
+        paramValue = "";
+        isFound = false;
+        if (this.location.search.indexOf("?") == 0 && this.location.search.indexOf("=") > 1) {
+            arrSource = unescape(this.location.search).substring(1, this.location.search.length).split("&");
+            i = 0;
+            while (i < arrSource.length && !isFound) {
+                if (arrSource[i].indexOf("=") > 0) {
+                    if (arrSource[i].split("=")[0].toLowerCase() == paramName.toLowerCase()) {
+                        paramValue = arrSource[i].split("=")[1];
+                        isFound = true;
+                    }
+                }
+                i++;
+            }
+        }
+        return paramValue;
+    }
+
+</script>
+</body>
+</html>
