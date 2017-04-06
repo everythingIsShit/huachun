@@ -104,8 +104,18 @@ img{border:none;}
     background-size: 1920px 100px;
     height:100px;
 }
-.main .section{
-    background: url('../img/bg-main.jpg') top center no-repeat;
+.main .view{
+    background: url('../img/bg-main.jpg') bottom center no-repeat;
+}
+.main .view:before{
+    content:"";
+    display:table;
+    clear:both;
+}
+.main .view:after{
+    content:"";
+    display:table;
+    clear:both;
 }
 /************************************ÓÎÏ·×ÊÑ¶************************************/
 .message{
@@ -364,7 +374,7 @@ img{border:none;}
     width:1000px;
     height:1050px;
     position: relative;
-    margin:65px auto 0;
+    margin:65px auto 373px;
     background-color:#fff;
     border:1px solid #29744b;
 }
@@ -374,6 +384,28 @@ img{border:none;}
     height:68px;
     color:#fff;
     cursor:pointer;
+}
+.news_title .bt{
+    color:#fff;
+    font-size: 32px;
+    float:left;
+    line-height: 68px;
+    margin-left: 15px;
+    font-family:"Microsoft Yahei";
+    font-weight: bold;
+}
+.news_title .bt_r{
+    float:right;
+    line-height: 68px;
+    margin-right: 15px;
+}
+.news_title .bt_r a{
+    color:#fff;
+}
+.news_list{
+    width:1000px;
+    height:200px;
+    font-family:"Microsoft Yahei";
 }
 /*footer*/
 .footer{
