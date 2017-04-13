@@ -36,6 +36,15 @@ img{border:none;}
     color:#000;
 }
 /*****************************导航栏样式****************************/
+#header{
+    position: relative;
+    z-index:7;
+}
+.main{
+    position: relative;
+    z-index: 6;
+    margin-top:-2%;
+}
 .top{
     height:55px;
     background-color:#1A6B44;
@@ -85,6 +94,10 @@ img{border:none;}
 .section{
     width:100%;
     position: relative;
+    margin-top:-20px;
+    z-index: 99;
+    background: url('../img/bg-main.jpg') bottom center no-repeat;
+    background-size: 1920px;
 }
 .video-box{
     background: url('../img/bg-video.jpg') no-repeat;
@@ -99,13 +112,13 @@ img{border:none;}
     position:relative;
     z-index:7;
     width:100%;
-    margin-top:-55px;
+    margin-top:-11%;
     background:url('../img/bg-duration.png') center no-repeat;
     background-size: 1920px 100px;
     height:100px;
 }
 .main .view{
-    background: url('../img/bg-main.jpg') bottom center no-repeat;
+
 }
 .main .view:before{
     content:"";
@@ -365,14 +378,28 @@ img{border:none;}
     margin:0 auto;
 }
 /*新闻子页面*/
+.body{
+    background: url('../img/bg-main.jpg') bottom center no-repeat;
+}
+.body:before{
+    content: "";
+    display:table;
+    clear:both;
+}
+.body:after{
+    content: "";
+    display:table;
+    clear:both;
+}
 .z1000{
     width:1000px;
     position:relative;
     margin:0 auto;
+
 }
 .cont{
     width:1000px;
-    height:1050px;
+    min-height:1050px;
     position: relative;
     margin:65px auto 373px;
     background-color:#fff;
@@ -383,7 +410,6 @@ img{border:none;}
     width:1000px;
     height:68px;
     color:#fff;
-    cursor:pointer;
 }
 .news_title .bt{
     color:#fff;
@@ -399,6 +425,13 @@ img{border:none;}
     line-height: 68px;
     margin-right: 15px;
 }
+.news_title .bt_r span{
+    float:right;
+    max-width:560px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
 .news_title .bt_r a{
     color:#fff;
 }
@@ -406,6 +439,169 @@ img{border:none;}
     width:1000px;
     height:200px;
     font-family:"Microsoft Yahei";
+}
+.news_list .hd{
+    height:40px;
+    font-size:16px;
+    width:1000px;
+}
+.news_list .hd ul{
+    width:960px;
+    float:left;
+    border-bottom:1px solid #dddddd;
+    margin:15px 20px 25px;
+}
+.news_list .hd ul li{
+    float:left;
+    width:150px;
+    height:50px;
+}
+.news_list .hd .on{
+    height:49px;
+    border-bottom:2px solid #e6c082;
+}
+.news_list .hd ul li a{
+    display:block;
+    height:35px;
+    line-height:35px;
+    color:#000;
+    text-align: center;
+    border-right:1px solid #dddddd;
+}
+.news_list .hd .on a{
+    color:#e6c082;
+}
+.news_list .bd{
+    height:745px;
+    margin-top:60px;
+}
+.news_list .bd .tab-panel{
+    display:none;
+}
+.news_list .bd .active{
+    display:block;
+}
+.news_list .tab-panel ul{
+    height:760px;
+}
+.news_list .tab-panel ul li{
+    width:960px;
+    float:left;
+    margin:0 0 0 20px;
+    border-bottom: 1px solid #dddddd;
+}
+.news_list .tab-panel ul a{
+    color:#000;
+    font-size:15px;
+}
+.news_list .tab-panel ul a:hover{
+    color:#878787;
+}
+.news_list .tab-panel ul p{
+    width:930px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    margin-left:-30px;
+ }
+ .news_list .bd p{
+     padding:20px 5px;
+     text-indent: 2em;
+     font-size:14px;
+ }
+.news_list .tab-panel ul span{
+    color:#878787;
+    float:right;
+    margin:-40px 5px 0 0 ;
+ }
+.page{
+    width:150px;
+    height:90px;
+    position: relative;
+    margin:0 auto;
+    top:45px;
+    color:#878787;
+}
+.news_list_cont{
+    width:955px;
+    position:relative;
+    margin:0 auto;
+    color:#545454;
+}
+.news_list_cont h1{
+    color:#d7752c;
+    text-align: center;
+    font-size:18px;
+    font-family: Microsoft Yahei;
+    font-weight:bold;
+    margin-top:40px;
+}
+.news_list_cont img{
+    max-width:100%;
+}
+.news_list_cont .time{
+    text-align: center;
+    font-size:13px;
+    margin:20px 0;
+}
+
+.news_list_cont .hr{
+    width:955px;
+    border:.05px solid #dddddd;
+    margin:25px 0;
+}
+.news_list_cont p{
+    margin:20px 0;
+    text-indent: 2em;
+}
+.page a{
+    border:none;
+    background-color: #fff;
+    color:#000;
+    cursor:pointer;
+}
+.page a:hover{
+    color:#878787;
+}
+/*麻将技巧子页面*/
+.list{
+    width:960px;
+    position:relative;
+    margin:40px 40px 0;
+    font-family: "Microsoft YaHei", "微软雅黑", Helvetica, Arial, Tahoma;
+}
+.list .list_cont{
+    height:700px;
+}
+.list .list_cont ul{
+    height:760px;
+}
+.list .list_cont ul li{
+    float:left;
+    margin:0 0 0 20px;
+    border-bottom: 1px solid #DDDDDD;
+    line-height:55px;
+}
+.list .list_cont ul li a{
+    color:#000;
+    font-size:15px;
+}
+.list .list_cont ul li p{
+    position:relative;
+    margin:0 auto;
+    width:930px;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-left:-5px;
+}
+.list .list_cont ul li a:hover p{
+    color:#878787;
+}
+.list .list_cont ul li span{
+    color:#878787;
+    float:right;
+    margin:-50px 5px 0 0;
 }
 /*footer*/
 .footer{
