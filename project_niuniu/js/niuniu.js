@@ -2,8 +2,9 @@
 
 /*****news��������������¼�****/
 $(function(){
+    $('#copyright').load('data/copyright.php');
     $('.news-nav a').hover(function () {
-        $(this).addClass('on').siblings().removeClass('on');
+        $(this).addClass('on').siblings().removeClass('on');dsf
         var target = $('.news-nav a').index(this);
         $('.news-nav-box div.news-com').css("display", "none");
         $(".news-nav-box div.news-com:eq(" + target + ")").css("display", "block");
@@ -18,11 +19,12 @@ $(function(){
             setMainBgHeight();
         };
     }
+    function setMainBgHeight(){
+        var mh=$('video').css("height");
+        $('.main-bg').css("height",mh);
+    }
 });
-function setMainBgHeight(){
-    var mh=$('video').css("height");
-    $('.main-bg').css("height",mh);
-}
+
 /***游戏特色广告轮播***/
 var imgs = [{ "i": 0, "img": "img/f1.png" }, { "i": 1, "img": "img/f2.png" }, { "i": 2, "img": "img/f3.png" }, { "i": 3, "img": "img/f4.png" }];
 var adv = {

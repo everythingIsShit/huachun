@@ -33,7 +33,7 @@ function navClick(target){
 
 var pageNum = 1;
 loadNewsList(pageNum);
-
+//index 是判断加载哪一类新闻
 function loadNewsList(pageNum,index) {
     var categoryId;
     //如果是第一次加载或点击最新就加载所有新闻
