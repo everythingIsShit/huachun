@@ -3,13 +3,13 @@
  */
 
 
-  $(function(){
+ // $(function(){
       //异步加载头部尾部
-      $('#header').load('data/header.php');
-      $('#footer').load('data/footer.php');
-      var tid=getParam('tid');
-      loadnewsContent(tid);
-  });
+     // $('#header').load('data/header.php');
+     // $('#footer').load('data/footer.php');
+      //var tid=getParam('tid');
+      //loadnewsContent(tid);
+  //});
 
 
 

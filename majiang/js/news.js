@@ -8,10 +8,9 @@
 var pageNum=1;
 $(function(){
         //异步加载头部尾部
-        $('#header').load('data/header.php',function(){
-            $('.head_nav .main_nav li.news').addClass('active').siblings().removeClass('active');
-        });
-        $('#footer').load('data/footer.php');
+
+        $('.head_nav .main_nav li.news').addClass('active').siblings().removeClass('active');
+
         //新闻类别列表点击事件
         $('.news_list .hd li a').click(function(){
             var index=$('.news_list .hd li').index($(this).parent());
@@ -19,14 +18,14 @@ $(function(){
             $('.bt_r span').html($(this).html());
             $('.news_list .bd .tab-panel:eq('+index+') ').show().siblings().hide();
             pageNum=1;
-            loadNewsList(1,index);
+           // loadNewsList(1,index);
         });
         var parm1=getParam('categoryId');
         if(!parm1){
-            loadNewsList(pageNum,1);
+            //loadNewsList(pageNum,1);
         }else{
             setActiveBar(parm1);
-            loadNewsList(pageNum,parm1/10);
+            //loadNewsList(pageNum,parm1/10);
         }
 
 });

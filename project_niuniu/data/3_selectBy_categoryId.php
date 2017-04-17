@@ -14,7 +14,7 @@ $output = [
 	'pageNum' => $pageNum,	//当前显示的页号
 	'data'=>null	//当前页中的数据
 ];
-$conn=mysqli_connect('127.0.0.1','root','root','news',3306);
+$conn=mysqli_connect('127.0.0.1:8080','root','root','news',3306);
 $sql="SET NAMES UTF8";
 mysqli_query($conn,$sql);
 //SQL1: 查询总的记录数量

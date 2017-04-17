@@ -4,7 +4,6 @@
 }
 body{
     font:12px/1.5 tahoma,"Microsoft YaHei",sans-serif;
-    cursor: default;
     color:#000;
     min-width:1000px;
 }
@@ -110,6 +109,7 @@ a{
 }
 .main_nav a .icon_nav_hd{
     background-position: -169px 0;
+
 }
 
 
@@ -159,8 +159,14 @@ a{
     margin-bottom:45px;
     border-bottom:1px solid #f5f5f5;
     font-size:14px;
+    min-height:500px;
 }
-
+.acont p{
+    font-size:16px;
+    line-height:180%;
+    color:#363636;
+    text-indent: 2em;
+}
 
 
 /***************新闻列表总体样式*************/
@@ -280,6 +286,14 @@ a{
     font-size:14px;
     color:#666;
 }
+.news_list .info i{
+    display: inline-block;
+    position: relative;
+    top:-1px;
+    font-size:12px;
+    line-height:22px;
+    margin:0 10px;
+}
 .news_list .title{
     display:block;
     overflow:hidden;
@@ -290,6 +304,9 @@ a{
 }
 .news_list .title:hover{
     color:#ef3830;
+}
+.news_list .title span{
+    margin-right:-5px;
 }
 .page_btn{
     margin:20px 0 0;

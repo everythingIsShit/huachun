@@ -12,7 +12,7 @@ function headClick(target){
         $('.main_nav li:eq(' + target + ') a').addClass('hover').parent().siblings().children('a').removeClass('hover');
     }
     pageNum = 1;
-    loadNewsList(pageNum, target);
+    //loadNewsList(pageNum, target);
 }
 
 $('.main_nav li a').click(function () {
@@ -20,7 +20,7 @@ $('.main_nav li a').click(function () {
     var target = $('.main_nav li').index($(this).parent());
     navClick(target);
     pageNum = 1;
-    loadNewsList(pageNum,target);
+    //loadNewsList(pageNum,target);
 });
 
 function navClick(target){
@@ -32,7 +32,7 @@ function navClick(target){
 }
 
 var pageNum = 1;
-loadNewsList(pageNum);
+//loadNewsList(pageNum);
 //index 是判断加载哪一类新闻
 function loadNewsList(pageNum,index) {
     var categoryId;

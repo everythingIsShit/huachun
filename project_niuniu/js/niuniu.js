@@ -2,9 +2,9 @@
 
 /*****news��������������¼�****/
 $(function(){
-    $('#copyright').load('data/copyright.php');
+   // $('#copyright').load('data/copyright.php');
     $('.news-nav a').hover(function () {
-        $(this).addClass('on').siblings().removeClass('on');dsf
+        $(this).addClass('on').siblings().removeClass('on');
         var target = $('.news-nav a').index(this);
         $('.news-nav-box div.news-com').css("display", "none");
         $(".news-nav-box div.news-com:eq(" + target + ")").css("display", "block");
@@ -90,7 +90,7 @@ var adv = {
 };
 adv.init();
 
-loadNewsPage();
+//loadNewsPage();
 function loadNewsPage() {
     $.ajax({
         type: 'get',
@@ -123,10 +123,10 @@ function loadNewsPage() {
                         if (ggHtmlPage > 5) {
                             break;
                         } else if (ggHtmlPage === 1) {
-                            ggHtml += '<li class="first">\n<a href="news/news.html?tid=' + result[i].tid + '">\n<span>\u6700\u65B0</span>\n<p>&nbsp;&nbsp;' + result[i].tname + '</p>\n                                        </a>\n                                       </li>';
+                            ggHtml += '<li class="first">\n<a href="news/news.html?tid=' + result[i].tid + '">\n<span>\u6700\u65B0</span>\n<p>&nbsp;&nbsp;' + result[i].tname + '</p>\n</a>\n</li>';
                             ggHtmlPage++;
                         } else {
-                            ggHtml += '<li>\n <a href="news/news.html?tid=' + result[i].tid + '">\n<span>[' + result[i].tcategory + ']</span>\n                                                <p>&nbsp;&nbsp;' + result[i].tname + '</p>\n                                            </a>\n                                            <i class="time r">[' + y + '-' + m + '-' + d + ']</i>\n                                        </li>';
+                            ggHtml += '<li>\n <a href="news/news.html?tid=' + result[i].tid + '">\n<span>[' + result[i].tcategory + ']</span>\n<p>&nbsp;&nbsp;' + result[i].tname + '</p>\n</a>\n<i class="time r">[' + y + '-' + m + '-' + d + ']</i>\n</li>';
                             ggHtmlPage++;
                         }
                         break;
@@ -148,7 +148,7 @@ function loadNewsPage() {
                             hdHtml += '<li class="first">\n<a href="news/news.html?tid=' + result[i].tid + '">\n<span>\u6700\u65B0</span>\n<p>&nbsp;&nbsp;' + result[i].tname + '</p>\n</a>\n</li>';
                             hdHtmlPage++;
                         } else {
-                            hdHtml += '<li>\n<a href="news/news.html?tid=' + result[i].tid + '">\n  <span>[' + result[i].tcategory + ']</span>\n                                                        <p>&nbsp;&nbsp;' + result[i].tname + '</p>\n</a>\n<i class="time r">[' + y + '-' + m + '-' + d + ']</i>\n</li>';
+                            hdHtml += '<li>\n<a href="news/news.html?tid=' + result[i].tid + '">\n  <span>[' + result[i].tcategory + ']</span>\n<p>&nbsp;&nbsp;' + result[i].tname + '</p>\n</a>\n<i class="time r">[' + y + '-' + m + '-' + d + ']</i>\n</li>';
                             hdHtmlPage++;
                         }
                         break;

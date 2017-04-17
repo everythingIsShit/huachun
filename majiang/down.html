@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="Description" content="开心麻将"/>
+    <meta name="Keywords" content="开心麻将"/>
+    <!--<meta name="author" content="Tencent-HuanleMJ">-->
+    <title>开心麻将-华淳游戏-游戏下载</title>
+    <style>
+        img{max-width: 100%; height: auto;}
+        .weixin-tip{display: none; position: fixed; left:0; top:0; bottom:0; background: rgba(0,0,0,0.8); filter:alpha(opacity=80);  height: 100%; width: 100%; z-index: 100;}
+        .weixin-tip p{text-align: center; margin-top: 10%; padding:0 5%;}
+        *{margin:0;padding:0}
+        table{border-collapse:collapse;border-spacing:0}
+        em{font-style:normal}ol,ul{list-style:none}
+        fieldset,img,abbr,acronym{border:0}
+        input,select{vertical-align:middle}
+        h1,h2,h3,h4,h5,h6{font-size:100%}
+        q:before,q:after{content:''}
+        body{font:normal 12px/1.6em "microsoft yahei",helvetica;background:#f2f2f2;cursor:default;color:#363636}
+        a{text-decoration:none}
+        a:hover{text-decoration:underline}
+        .tips{min-width:320px;width:100%;margin-left:auto;margin-right:auto;text-align:center;position:absolute;top:50%;margin-top:-40px}
+        .tips-ctx{font-size:18px;line-height:25px;text-align:center;width:250px;margin:0 auto;text-align:center;padding:15px 0 5px;font-weight:bold}
+        .tips-bg{display:block;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAAAKCAIAAACBlGHRAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCODc1QThENjQ1NjExMUU0QjlDRUU0MTg5QzVENkNFMSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCODc1QThENzQ1NjExMUU0QjlDRUU0MTg5QzVENkNFMSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkI4NzVBOEQ0NDU2MTExRTRCOUNFRTQxODlDNUQ2Q0UxIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkI4NzVBOEQ1NDU2MTExRTRCOUNFRTQxODlDNUQ2Q0UxIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+ikehiAAAAzJJREFUeNp8VV1IVEEUPmfu3Lt/tv7kamVm+YOopBUZWkSQBEFvEQT1UFA9FPRQUC8JQQhKEfViRBJGPYZBVvZWENEPSLGVZNqD/be5obvm6u69M9Ps3uvu3burF3bv7Mw33/nOd2bOYjQaBQCdw8QMmdYJRRFw81VeQRAWfTjD8FeIhIAxWLYcymsEVWGJRzBMfAP9N4qEoKXgqRWgLQGP69Mz8R86i6nEXeBe7VaLzXkqP99n8XzQNzaN0QRQAiVu2FulH6+fX4yLDF6iT29gJAwMeIFHVLWyI70iULUYXg1dVMLdaIBMnxPgnhZ9zR3hWpsXHIoOv5q4MB17w0SUkoJC96bWtedWFbbLJZycih574Xv71/JRmGoATjQmjtXFne5ypjy4TO92mUhriwDRtFU/OwhUy3VUClV/dSfBmERaNL76eO0zIB6n0Mjw0MhOnsWe/Nrd+LiieBsZ+OIKpoQu8IA5vj6qjUwpDi6cCNKBLjtMhpciyMcX5Gm/U6cQGAuqoW4zqilUguUvZfYTDfflmvrhVz9Ps0NG0/uffVwY5PZnTZiTIgvDOQQj1Kl17JXgC16mwEm3UhuUoStOMKISey3xyXysmQUBCGq4M1fr7+gTMNUIm2KEydnnnBvkz7zNT9tQSorpzvuFc5E0Ip2VRRj5mRsbWcQiTltr6papJvLdKvYjmQ9myxFgsD/yRZpLnFLNrOSRLfdwZwNYXon2A2Dbxavb8jQArdKMnT6padeEtz4X73e12JFWJASv1ohIyOmmGMVMbKuyAC4K7QHdGbt5l9Ay9cmkrgA72JMbm/k7eIoa7UVL7TQqenPxa0r2gP3qgFWEisIOgipZX8T2VzOCYDes2AXX2mNlbuEkKyrXzwwJvy9rgYCx+6RYtzGPr3RFovoRp1kXS45Z6VHm3ZyLb1p5qMS7HW0lFghFni0tlcelryj/C+YMeDmp3hx3j0yBX4P2Mn64dr6hkC3WL2U3UIauKu/uQ9xgNW18zyneuANc3sz1x6yDTube0VCPMvNQ9mPha0gEOrl/JxBfXvJ5Y2o8dG80dOtfPFjg2lAXOFBfvs+jlcql/wIMANuiVdAbNm9sAAAAAElFTkSuQmCC");width:29px;height:5px;margin:0 auto;background-size:29px 5px}
+    </style>
+    <script src="http://open.mobile.qq.com/sdk/qqapi.js"></script>
+    <script src="js/jquery-1.11.3.js"></script>
+
+</head>
+<body>
+<div class="tips">
+    <p class="tips-ctx">下载链接中</p>
+    <span class="tips-bg"></span>
+</div>
+<div class="weixin-tip">
+    <p>
+        <img src="img/live_weixin.png" alt="点击右上角用浏览器打开"/>
+    </p>
+</div>
+<script>
+    var ua =  navigator.userAgent;
+    var winHeight = $(window).height();
+    //检测是否为qq
+    function isQQ(){
+        var REGEXP_IOS_QQ = /(iPad|iPhone|iPod).*? (IPad)?QQ\/([\d\.]+)/;
+        var REGEXP_ANDROID_QQ = /\bV1_AND_SQI?_([\d\.]+)(.*? QQ\/([\d\.]+))?/; // 国际版的 QQ 的 ua 是 sqi
+        if(isMobile()){
+            if(REGEXP_IOS_QQ.test(ua) || REGEXP_ANDROID_QQ.test(ua)){
+                return true;
+            }
+        }
+        return false;
+    }
+    //检测是否为微信
+    function isWx(){
+        var _ua = ua.toLowerCase();
+        if(_ua.match(/MicroMessenger/i)=="micromessenger") {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    //检测是否为移动浏览器
+    function isMobile(){
+        if(isAndroid()||isIos()){
+            return true;
+        }
+        return false;
+    }
+
+    //检测是否为安卓手机
+    function isAndroid(){
+        var REGXP_ANDROID = /.*(Android).*/;
+        if(REGXP_ANDROID.test(ua)){ //ios手机
+            return true;
+        }
+        return false;
+    }
+
+    //检测是否为ios手机
+    function isIos(){
+        var REGEXP_IOS = /.*?(iPad|iPhone|iPod).*/;
+        if(REGEXP_IOS.test(ua)){ //安卓手机
+            return true;
+        }
+        return false;
+    }
+
+
+    (function(){
+        window.setTimeout(function(){
+            var startDate = new Date();
+            var loadIframe = '';
+
+            var iosUrl = 'news.html';
+            var androidUrl = 'AppActivity9.apk';
+
+            var getIntentIframe = function(){
+                if(!loadIframe){
+                    var iframe = document.createElement("iframe");
+                    iframe.style.cssText = "display:none;width:0;height:0";
+                    document.body.appendChild(iframe);
+                    loadIframe = iframe;
+                }
+                return loadIframe;
+            };
+
+            var playGame =function (){ getIntentIframe().src = 'AppActivity9.apk';};
+            var webCallApp = function(url){
+                playGame();
+                setTimeout(function(){
+                    if(new Date() - startDate > 3500) return;
+                    window.location.href = url;
+                } , 2000);
+            };
+
+            if(isIos())
+            {
+                webCallApp(iosUrl);
+            }
+            else
+            {
+
+                if(isWx())
+                {
+                    $(".weixin-tip").css("height",winHeight);
+                    $(".weixin-tip").show();
+                    var callback = function() {
+                        WeixinJSBridge.invoke("getInstallState",{
+                            packageUrl : "AppActivity9.apk",
+                            packageName : 'kaixinniuniu'
+                        },function(res){
+                            if(res.err_msg.match('get_install_state:yes')){
+                                playGame();
+                            }else{
+                                window.location.href = androidUrl ;
+                            }
+                        });
+                    };
+
+//                    if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+//                        callback();
+//                    } else {
+//
+//                        if (document.addEventListener) {
+//                            document.addEventListener("WeixinJSBridgeReady", callback, false);
+//                        } else if (document.attachEvent) {
+//                            document.attachEvent("WeixinJSBridgeReady", callback);
+//                            document.attachEvent("onWeixinJSBridgeReady", callback);
+//                        }
+//                    }
+                }
+                else if(isQQ())
+                {
+                    mqq.app.isAppInstalled('AppActivity9.apk', function(result){
+                        if(result){
+                            playGame();
+                        }else{
+                            window.location.href = androidUrl;
+                        }
+                    });
+                }
+                else{
+                    var url = isIos() ? iosUrl : androidUrl;
+                    webCallApp(url);
+                }
+            }
+        }, 200);
+    })();
+
+</script>
+</body>
+</html><!--[if !IE]>|xGv00|27e686bfd62e2ab8fae463d762a197ff<![endif]-->

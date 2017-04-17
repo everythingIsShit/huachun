@@ -6,11 +6,11 @@
 var pageNum=1;
 $(function(){
     //异步加载头部尾部
-    $('#header').load('data/header.php',function(){
+    //$('#header').load('data/header.php',function(){
         $('.head_nav .main_nav li.skill').addClass('active').siblings().removeClass('active');
-    });
-    $('#footer').load('data/footer.php');
-    loadNewsList(pageNum);
+    //});
+    //$('#footer').load('data/footer.php');
+   /* loadNewsList(pageNum);*/
     //新闻类别列表点击事件
 });
 //加载新闻列表

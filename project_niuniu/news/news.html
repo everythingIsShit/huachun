@@ -64,7 +64,7 @@
             <div class="acont"></div>
         </div>
     </div>
-
+    <script src="../js/copyright.js"></script>
     <script src="js/news.js"></script>
     <script>
         var parm1=getParam('tid');
@@ -87,13 +87,13 @@
             return paramValue;
         }
 
-        getNewsContent(parm1);
+//        getNewsContent(parm1);
         function getNewsContent(tid) {
             $.ajax({
                 type: 'GET',
                 url: '../data/2_select_content.php',
                 data: { tid: tid },
-                success: function success(result) {
+                success: function(result) {
                     $('.cont_tit h1').html(result[0].tname);
                     $('.cont_tit .aprop').html('\u300A\u5F00\u5FC3\u725B\u725B\u300B\u8FD0\u8425\u56E2\u961F\u3000' + result[0].birthday + '\u3000');
                     $('.acont').html(result[0].content);
@@ -109,7 +109,7 @@
                             break;
                     }
                 },
-                error: function error() {
+                error: function() {
                     alert('响应完成，但有问题');
                 }
             });

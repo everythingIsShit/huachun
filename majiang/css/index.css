@@ -55,7 +55,7 @@ img{border:none;}
     border-bottom:2px solid #A07227;
 }
 .head_nav .main_nav{
-    width: 1000px;
+    width: 666px;
     margin:0 auto;
     position:relative;
     overflow: hidden;
@@ -102,6 +102,17 @@ img{border:none;}
 .video-box{
     background: url('../img/bg-video.jpg') no-repeat;
     background-size:100% ;
+    position:relative;
+}
+.video-box .words-box{
+    position: absolute;
+    width:40%;
+    left:31%;
+    bottom:22%;
+    z-index: 7;
+}
+.video-box .words-box img{
+    width:100%;
 }
 #my-video{
     position:relative;
@@ -189,19 +200,23 @@ img{border:none;}
 .lunbo{
     width:470px;
     height:311px;
-    background: url('../img/border-carou.png') center no-repeat;
-    background-size:470px;
     position:relative;
     margin:auto 10px;
     float:left;
     overflow:hidden;
     background-color: #fff;
 }
+.lunbo #imgs{
+    position: absolute;
+}
+.lunbo #imgs li{
+    float:left;
+}
 #indexs{
     position:absolute;
     bottom:30px;
     right:40px;
-    width:40px;
+    width:51px;
     height:12px;
 }
 #indexs li{
@@ -212,6 +227,9 @@ img{border:none;}
     height:12px;
     border-radius:50%;
     background:#B6B6B6;
+}
+#indexs li.hover{
+    background: #50ff54;
 }
 .news_swap{
     width:308px;
@@ -337,22 +355,56 @@ img{border:none;}
 .skill_swap .news_tit h1{
     padding-left:20px;
 }
-.ad_list{
-    position:relative;
-    margin: 0 7px 10px;
-    width:650px;
-    height:140px;
+.jiaox_list{
+    width: 625px;
+    position: relative;
+    margin: 45px auto 0;
+    height: 400px;
+    font-family: "Microsoft Yahei";
+    overflow: hidden;
+}
+.jiaox_list li{
+    line-height:20px;
+    position: relative;
+    height:40px;
+}
+.jiaox_list li a:hover span{
+    color:#878787;
+}
+.jiaox_list p{
+    color:#1A6B44;
+    font-size:17px;
+}
+.jiaox_list span{
+    width:580px;
+    display:block;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     float:left;
-    top:5px;
-    z-index:22;
 }
-.ad_list ul li{
-    float:left;
-    margin:4px;
+.jiaox_list i{
+    font-style: normal;
+    color:#878787;
+    position:absolute;
+    right:0;
 }
-.ad_list ul li img{
-    border:.5px solid #1f8e63;
-}
+/*.ad_list{*/
+    /*position:relative;*/
+    /*margin: 0 7px 10px;*/
+    /*width:650px;*/
+    /*height:140px;*/
+    /*float:left;*/
+    /*top:5px;*/
+    /*z-index:22;*/
+/*}*/
+/*.ad_list ul li{*/
+    /*float:left;*/
+    /*margin:4px;*/
+/*}*/
+/*.ad_list ul li img{*/
+    /*border:.5px solid #1f8e63;*/
+/*}*/
 .activ_swap,.schedule_swap{
     width:335px;
     float:left;
@@ -363,6 +415,42 @@ img{border:none;}
 }
 .huodong,.ricehng{
     background:url('../img/head-activ.png') 0 -16px no-repeat;
+}
+.sais_tab{
+    width:332px;
+    height:355px;
+    font-family:'Microsoft YaHei';
+}
+.sais_tab ul{
+    width:300px;
+    height:175px;
+    padding-top:13px;
+}
+.sais_tab ul li{
+    width:300px;
+    line-height:35px;
+    margin-left:15px;
+    font-size:14px;
+}
+.sais_tab ul li a{
+    color:#000;
+    text-decoration: none;
+}
+.sais_tab ul li a:hover span{
+    color:#878787;
+}
+.sais_tab ul li a span{
+    width:250px;
+    display:block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.sais_tab ul li a i{
+    font-style: normal;
+    float:right;
+    margin-top:-30px;
+    color:#878787;
 }
 /***************”Œœ∑ ”∆µ***************/
 .shipin{
@@ -395,7 +483,6 @@ img{border:none;}
     width:1000px;
     position:relative;
     margin:0 auto;
-
 }
 .cont{
     width:1000px;
@@ -405,6 +492,7 @@ img{border:none;}
     background-color:#fff;
     border:1px solid #29744b;
 }
+
 .news_title{
     background: url('../img/k1000.png') no-repeat;
     width:1000px;
@@ -528,6 +616,7 @@ img{border:none;}
     margin:0 auto;
     color:#545454;
 }
+
 .news_list_cont h1{
     color:#d7752c;
     text-align: center;
@@ -544,7 +633,9 @@ img{border:none;}
     font-size:13px;
     margin:20px 0;
 }
-
+.news_list_cont .content p:last-child{
+    margin-bottom:100px;
+}
 .news_list_cont .hr{
     width:955px;
     border:.05px solid #dddddd;

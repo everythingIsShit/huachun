@@ -1,7 +1,7 @@
 <?php
 header('Content-Type:application/json;charset=UTF-8');
 @$tid=$_REQUEST['tid'] or die("{'code':1,'msg':'tid required'}");
-$conn=mysqli_connect('127.0.0.1','root','root','news',3306);
+$conn=mysqli_connect('127.0.0.1:8080','root','root','news',3306);
 $sql="SET NAMES UTF8";
 mysqli_query($conn,$sql);
 $sql="SELECT * FROM title WHERE tid='$tid'";
