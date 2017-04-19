@@ -1,0 +1,155 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    font:12px/1.5 tahoma,"Microsoft YaHei",sans-serif;
+    cursor: default;
+    color:#000;
+    min-width:1000px;
+}
+ol,ul{
+    list-style:none;
+}
+a{
+    text-decoration: none;
+    color:#363636;
+}
+
+
+#main{
+    width:100%;
+    position:relative;
+    background:url('/project_niuniu/images/niuniu_images/gift_bg.jpg') center no-repeat;
+    height:1840px;
+}
+.go_index{
+    position: relative;
+    width:1000px;
+    margin:0 auto;
+    height:880px;
+}
+.go_index a{
+    position: absolute;
+    left:45%;
+    margin-left:-190px;
+    top:265px;
+    background: #2E93FD;
+    border:4px solid #F0ED18;
+    border-radius: 60px;
+    width:380px;
+    height:105px;
+    text-align: center;
+    color:#F0ED18;
+    font-size:67px;
+    font-weight:bold;
+}
+.get_gift{
+    width:1000px;
+    margin:0 auto;
+    height:730px;
+}
+.get_gift h3{
+    color:#FBFCFD;
+    font-size:60px;
+    text-align: center;
+    margin-top:145px;
+    padding-left:26px;
+}
+.get_gift h3 span{
+    color:#F6F900;
+}
+.get_gift .c-list{
+    margin-top:95px;
+    padding-left:58px;
+}
+.get_gift .c-list li{
+    float:left;
+    width:207px;
+    height:310px;
+    margin-right:23px;
+    background:url('/project_niuniu/images/niuniu_images/gift-bg.png') center no-repeat ;
+}
+#gift_now{
+    position: absolute;
+    bottom:150px;
+    left:50%;
+    margin-left:-194px;
+    width:350px;
+    height:111px;
+    padding:22px 0 0 50px;
+    background: url('/project_niuniu/images/niuniu_images/get_icon.png') center no-repeat;
+    color:#CB5700;
+    font-size:50px;
+    text-align: center;
+    font-weight:bold;
+    cursor: pointer;
+}
+
+
+
+/*Ä£Ì¬µÇÂ¼¿ò*/
+#head{
+    height:42px;
+}
+#head .logo_box{
+    width:1000px;
+    margin:0 auto;
+}
+#modal{
+    position:fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    background:rgba(170,170,170,.7);
+    padding-top:100px;
+    box-sizing: border-box;
+    display:none;
+}
+.modal-dialog{
+    position: relative;
+    width:1000px;
+    margin:0 auto;
+    height:621px;
+    background: url('/project_niuniu/images/niuniu_images/modal-bg.png') center no-repeat;
+}
+.modal-dialog .close{
+    position: absolute;
+    top:53px;
+    right:-11px;
+    width:50px;
+    height:50px;
+    line-height:44px;
+    text-align: center;
+    font-weight: bold;
+    font-size:52px;
+    color:#C0250E;
+    border-radius: 50%;
+    background: #EFE843;
+    cursor: pointer;
+}
+.modal-dialog .close:hover{
+    animation:gun linear 1s infinite;
+    -webkit-animation:gun linear 2s infinite
+}
+@keyframes gun{
+    0%{transform:rotateZ(0deg)}
+    50%{transform:rotateZ(180deg)}
+    100%{transform:rotateZ(360deg)}
+}
+.modal-dialog>div{
+    float:left;
+    width:500px;
+    height:100%;
+}
+.modal-dialog div h3{
+    text-align: center;
+    font-size:40px;
+    color:#C0250E;
+    margin-top:150px;
+}
+.modal-dialog .code_box{
+    width:300px;
+    margin:30px auto 0;
+}

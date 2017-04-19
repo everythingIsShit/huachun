@@ -17,14 +17,9 @@ img{border:none;}
     position: absolute;
     right:1px;
     bottom:1px;
-    filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-    -moz-transform: rotate(270deg);
-    -o-transform: rotate(270deg);
-    -webkit-transform: rotate(270deg);
-    transform: rotate(270deg);
 }
 .more{
-    background:url('../img/more.png') left center no-repeat;
+    background:url('/majiang/images/majiang_imgs/more.png') left center no-repeat;
     background-size:15px;
     padding-left:20px;
     width:34px;
@@ -96,11 +91,12 @@ img{border:none;}
     position: relative;
     margin-top:-20px;
     z-index: 99;
-    background: url('../img/bg-main.jpg') bottom center no-repeat;
+
+    background: url('/majiang/images/majiang_imgs/bg-main.jpg') bottom center no-repeat;
     background-size: 1920px;
 }
 .video-box{
-    background: url('../img/bg-video.jpg') no-repeat;
+    background: url('/majiang/images/majiang_imgs/bg-video.jpg') no-repeat;
     background-size:100% ;
     position:relative;
 }
@@ -121,10 +117,10 @@ img{border:none;}
 }
  .duration{
     position:relative;
-    z-index:7;
+    z-index:100;
     width:100%;
     margin-top:-11%;
-    background:url('../img/bg-duration.png') center no-repeat;
+    background:url('/majiang/images/majiang_imgs/bg-duration.png') center no-repeat;
     background-size: 1920px 100px;
     height:100px;
 }
@@ -148,7 +144,7 @@ img{border:none;}
     height:600px;
 }
 .m-tit{
-    background: url('../img/title-mess.png') no-repeat bottom;
+    background: url('/majiang/images/majiang_imgs/title-mess.png') no-repeat bottom;
     width:908px;
     height:90px;
     margin:0 auto;
@@ -164,7 +160,7 @@ img{border:none;}
     clear:both;
 }
 .download{
-    background: url('../img/border-down.png') 0 0 no-repeat;
+    background: url('/majiang/images/majiang_imgs/border-down.png') 0 0 no-repeat;
     background-size:199px;
     width:199px;
     height:313px;
@@ -187,7 +183,7 @@ img{border:none;}
 }
 .down a{
     display:block;
-    background: url('../img/bg-down.png') center no-repeat;
+    background: url('/majiang/images/majiang_imgs/bg-down.png') center no-repeat;
     background-size: 141px;
     width:140px;
     height:40px;
@@ -241,7 +237,7 @@ img{border:none;}
     height:49px;
 }
 .kuang{
-    background:url('../img/head-news.png') center no-repeat;
+    background:url('/majiang/images/majiang_imgs/head-news.png') center no-repeat;
 }
 .news_tit h1{
     font-family: "Microsoft Yahei";
@@ -329,7 +325,7 @@ img{border:none;}
     height:750px;
 }
 .b-tit{
-    background: url('../img/title-baike.png') no-repeat bottom;
+    background: url('/majiang/images/majiang_imgs/title-baike.png') no-repeat bottom;
     width:908px;
     height:90px;
     margin:0 auto;
@@ -350,7 +346,7 @@ img{border:none;}
     position: relative;
 }
 .jiqiao,.saishi{
-    background: url('../img/head-skill.png')  0 -24px no-repeat;
+    background: url('/majiang/images/majiang_imgs/head-skill.png')  0 -24px no-repeat;
 }
 .skill_swap .news_tit h1{
     padding-left:20px;
@@ -369,7 +365,7 @@ img{border:none;}
     height:40px;
 }
 .jiaox_list li a:hover span{
-    color:#878787;
+    color:#000;
 }
 .jiaox_list p{
     color:#1A6B44;
@@ -402,7 +398,7 @@ img{border:none;}
     /*float:left;*/
     /*margin:4px;*/
 /*}*/
-/*.ad_list ul li img{*/
+/*.ad_list ul li majiang_imgs{*/
     /*border:.5px solid #1f8e63;*/
 /*}*/
 .activ_swap,.schedule_swap{
@@ -414,7 +410,7 @@ img{border:none;}
     position: relative;
 }
 .huodong,.ricehng{
-    background:url('../img/head-activ.png') 0 -16px no-repeat;
+    background:url('/majiang/images/majiang_imgs/head-activ.png') 0 -16px no-repeat;
 }
 .sais_tab{
     width:332px;
@@ -449,7 +445,7 @@ img{border:none;}
 .sais_tab ul li a i{
     font-style: normal;
     float:right;
-    margin-top:-30px;
+    margin-top:-34px;
     color:#878787;
 }
 /***************游戏视频***************/
@@ -460,14 +456,14 @@ img{border:none;}
 }
 
 .v-tit{
-    background: url('../img/title-video.png') no-repeat bottom;
+    background: url('/majiang/images/majiang_imgs/title-video.png') no-repeat bottom;
     width:908px;
     height:90px;
     margin:0 auto;
 }
 /*新闻子页面*/
 .body{
-    background: url('../img/bg-main.jpg') bottom center no-repeat;
+    background: url('/majiang/images/majiang_imgs/bg-main.jpg') bottom center no-repeat;
 }
 .body:before{
     content: "";
@@ -494,7 +490,7 @@ img{border:none;}
 }
 
 .news_title{
-    background: url('../img/k1000.png') no-repeat;
+    background: url('/majiang/images/majiang_imgs/k1000.png') no-repeat;
     width:1000px;
     height:68px;
     color:#fff;
@@ -570,7 +566,10 @@ img{border:none;}
     display:block;
 }
 .news_list .tab-panel ul{
-    height:760px;
+    /*height:760px;*/
+    height:600px;
+    overflow: hidden;
+    padding-bottom: 160px;
 }
 .news_list .tab-panel ul li{
     width:960px;
@@ -665,7 +664,9 @@ img{border:none;}
     height:700px;
 }
 .list .list_cont ul{
-    height:760px;
+    height:610px;
+    overflow: hidden;
+    padding-bottom:150px;
 }
 .list .list_cont ul li{
     float:left;
@@ -708,6 +709,7 @@ img{border:none;}
 }
 .service-list li{
     display:inline-block;
+    *display:inline;
     zoom:1;
     vertical-align: top;
     width:180px;
@@ -717,7 +719,7 @@ img{border:none;}
     width:46px;
     height:46px;
     display:inline-block;
-    background: url('../img/sprite.png') no-repeat;
+    background: url('/majiang/images/majiang_imgs/sprite.png') no-repeat;
 }
 .service-list li span.weixin{
     background-position: -46px 0;

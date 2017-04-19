@@ -1,62 +1,13 @@
-﻿
-.cl:after {
-	content: ".";
-	display: block;
-	height: 0;
-	clear: both;
-	visibility: hidden;
-}
-.cl {
-	zoom: 1;
-}
-.temp {
-	margin: 1px;
-}
-.slideshow {
-	clear: both;
-}
-.slideshow li {
-	position: relative;
-	overflow: hidden;
-}
-.slidebar li {
-	float: left;
-	margin-right: 5px;
-	width: 12px;
-	height: 12px;
-	border-radius: 6px;
-	background-color: #fff;
-}
-.slidebar {
-	position: absolute;
-	bottom: 5px;
-	left: 70px;
-}
-.slidebar li.on {
-	width:20px;
-}
-.block {
-	position: relative;
-}
-.comiis_wrapad {
-	overflow: hidden;
-}
-.comiis_wrapad img {
-	float: left;
-}
-#slidesImgs li {
-	display: none;
-}
-/* 代码整理：懒人之家 www.lanrenzhijia.com */
-#slide{
-	width:1200px;
-	margin:0 auto;
-	overflow:hidden;
-	position: relative;
-}
-#slide-list{
-	margin-top:125px;
-}
-#slide-list li{
-	float: left;
-}
+﻿.wrapper{position: relative;height:300px;}
+.banner{overflow: hidden;}
+.imgList{z-index: 10;}
+.imgList li{display: none;height:300px;}
+.imgList .imgOn{display: inline;}
+.infoList li{display: none;}
+.indexList{position: absolute;right: 30px;bottom:14px;z-index: 30;}
+.indexList li{float: left;margin-right: 5px;cursor: pointer;width:12px;height:12px;border-radius:6px;background: #fff;}
+.indexList .indexOn{width:20px;}
+.imgList img{width:100%;vertical-align: bottom}
+.imgList2 li{display: none;}
+.imgList2 li.imgOn{display: inline;}
+.imgList2 img{width:1200px;vertical-align: bottom}

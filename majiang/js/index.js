@@ -17,12 +17,22 @@ $('.head_nav .main_nav li').click(function(){
         //判断浏览器是否支持video标签，不支持的话就用img代替
         var hasVideo = !!(document.createElement('video').canPlayType);
         if(!hasVideo){
-            $(".video-box").css({'height':'1083px','background-size':'1920px'});
+            var w=document.documentElement.clientWidth;
+            var s=1920/w;
+            $(".video-box").css({'height':1083/s+'px','background-size':w+'px'});
+            window.onresize=function(){
+                w=w=document.documentElement.clientWidth;
+                s=1920/w;
+                $(".video-box").css({'height':1083/s+'px','background-size':w+'px'});
+            };
         }else{//支持的话就让父元素高度随着video高度改变而改变
             setMainBgHeight();
             window.onresize=function(){
                 setMainBgHeight();
             };
+            setTimeout(function(){
+                document.getElementById('my-video').play();
+            },1000);
         }
         $('.news_swap .hd li').hover(function(){
                 $(this).addClass('on').siblings().removeClass('on');
@@ -36,9 +46,7 @@ $('.head_nav .main_nav li').click(function(){
             $('.video-box').css("height",mh);
         }
         //视频也预加载第一帧，1秒后播放
-        setTimeout(function(){
-            document.getElementById('my-video').play();
-        },1000);
+
         //数组内按对象某一属性排序
         function compare(property){
             return function(a,b){
@@ -126,6 +134,8 @@ $('.head_nav .main_nav li').click(function(){
 
 
     });
+/*上一页下一页点击事件及判断上一页下一页按钮是否隐藏*/
+
 
 
 

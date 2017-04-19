@@ -18,11 +18,15 @@ $(function(){
             $('.bt_r span').html($(this).html());
             $('.news_list .bd .tab-panel:eq('+index+') ').show().siblings().hide();
             pageNum=1;
+            //临时翻页功能
+            prevAndNext(index);
            // loadNewsList(1,index);
         });
         var parm1=getParam('categoryId');
         if(!parm1){
             //loadNewsList(pageNum,1);
+            //临时翻页功能
+            prevAndNext(1);
         }else{
             setActiveBar(parm1);
             //loadNewsList(pageNum,parm1/10);
@@ -57,6 +61,8 @@ function setActiveBar(target){
     $('.news_list .hd li:eq('+index+')').addClass('on').siblings().removeClass('on');
     $('.bt_r span').html($('.news_list .hd li:eq('+index+') a').html());
     $('.news_list .bd .tab-panel:eq('+index+') ').show().siblings().hide();
+    //临时翻页功能
+    prevAndNext(index);
 }
 //加载新闻列表
 function loadNewsList(pageNum,index){
@@ -127,4 +133,72 @@ function prev(index){
 function next(index){
     pageNum++;
     loadNewsList(pageNum,index);
+}
+function prevAndNext(target){
+    var pageSize=10;
+    var recordCount=$('.bd .tab-panel:eq('+target+')').children().length;
+    var pageCount=Math.ceil(recordCount/pageSize);
+    if(pageCount==1){
+        //判断上下页箭头显示隐藏
+        $('.page .prev').hide();
+        $('.page .next').hide();
+    }else if(pageNum<pageCount){
+        if(pageNum=1){
+            $('.page .prev').hide();
+            $('.page .next').show();
+        }else if(pageNum!=1){
+            $('.page .prev').show();
+            $('.page .next').show();
+        }
+    }else if(pageNum>=pageCount){
+        $('.page .prev').show();
+        $('.page .next').hide();
+    }
+    $('.list .list_cont .page .next').click(function(e){
+
+        for(var p=0;p<pageSize;p++){
+            var target=e.target||window.event;
+            $(target).parent().parent().children('ul').find("li").eq(p+(pageNum-1)*pageSize).hide();
+        }
+        pageNum++;
+        if(pageCount==1){
+            //判断上下页箭头显示隐藏
+            $('.page .prev').hide();
+            $('.page .next').hide();
+        }else if(pageNum<pageCount){
+            if(pageNum==1){
+                $('.page .prev').hide();
+                $('.page .next').show();
+            }else if(pageNum!=1){
+                $('.page .prev').show();
+                $('.page .next').show();
+            }
+        }else if(pageNum>=pageCount){
+            $('.page .prev').show();
+            $('.page .next').hide();
+        }
+    });
+    $('.list .list_cont .page .prev').click(function(e){
+        for(var p=pageSize;p>0;p--){
+            var target=e.target||window.event;
+            $(target).parent().parent().children('ul').find("li").eq(pageSize*(pageNum-1)-(pageSize-p)-1).show();
+        }
+        pageNum--;
+        if(pageCount==1){
+            //判断上下页箭头显示隐藏
+            $('.page .prev').hide();
+            $('.page .next').hide();
+        }else if(pageNum<pageCount){
+            if(pageNum==1){
+                $('.page .prev').hide();
+                $('.page .next').show();
+            }else if(pageNum!=1){
+                $('.page .prev').show();
+                $('.page .next').show();
+            }
+        }else if(pageNum>=pageCount){
+            $('.page .prev').show();
+            $('.page .next').hide();
+        }
+    });
 }

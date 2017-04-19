@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>牛牛大百科</title>
+    <link rel="stylesheet" href="css/news.css"/>
+    <script src="js/jquery-1.11.3.js"></script>
+</head>
+<body>
+    <div class="header_nav">
+        <div class="content">
+            <a href="index.html" class="logo" title="开心牛牛">
+                <i class="icon_logo"></i>
+            </a>
+            <div class="hd_title">
+                <h1>开心牛牛</h1>
+                <p>自由对战，想玩就玩</p>
+            </div>
+            <div class="f-right wechat"></div>
+            <ul class="main_nav">
+                <li>
+                    <a href="index.html">
+                        <i class="icon icon_nav_sy"></i>
+                        首页
+                    </a>
+                </li>
+                <li>
+                    <a href="news_list.html?categoryId=10">
+                        <i class="icon icon_nav_gg"></i>
+                        公告
+                    </a>
+                </li>
+                <li>
+                    <a href="news_list.html?categoryId=20">
+                        <i class="icon icon_nav_gl"></i>
+                        攻略
+                    </a>
+                </li>
+                <li>
+                    <a href="news_list.html?categoryId=30">
+                        <i class="icon icon_nav_hd"></i>
+                        活动
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="page_wrapper">
+        <div class="content">
+            <div class="page_header">
+                <h2 class="page_title">资讯中心</h2>
+                <div class="page_crumb">开心牛牛
+                    <a href="index.html">首页</a>
+                    <a href="javascript:void(0)">  >  攻略</a> > 资讯详情
+                </div>
+            </div>
+            <div class="article">
+                <div class="cont_tit">
+                    <h1>【牛牛大百科】《开心牛牛》游戏全攻略</h1>
+                    <div class="aprop">《开心牛牛》运营团队　2017-03-07　</div>
+                </div>
+            </div>
+            <div class="acont"></div>
+        </div>
+    </div>
+    <script src="js/copyright.js"></script>
+    <script src="js/news.js"></script>
+    <script>
+        var parm1=getParam('tid');
+        function getParam(paramName) {
+            paramValue = "";
+            isFound = false;
+            if (this.location.search.indexOf("?") == 0 && this.location.search.indexOf("=") > 1) {
+                arrSource = unescape(this.location.search).substring(1, this.location.search.length).split("&");
+                i = 0;
+                while (i < arrSource.length && !isFound) {
+                    if (arrSource[i].indexOf("=") > 0) {
+                        if (arrSource[i].split("=")[0].toLowerCase() == paramName.toLowerCase()) {
+                            paramValue = arrSource[i].split("=")[1];
+                            isFound = true;
+                        }
+                    }
+                    i++;
+                }
+            }
+            return paramValue;
+        }
+
+//        getNewsContent(parm1);
+        function getNewsContent(tid) {
+            $.ajax({
+                type: 'GET',
+                url: '../data/2_select_content.php',
+                data: { tid: tid },
+                success: function(result) {
+                    $('.cont_tit h1').html(result[0].tname);
+                    $('.cont_tit .aprop').html('\u300A\u5F00\u5FC3\u725B\u725B\u300B\u8FD0\u8425\u56E2\u961F\u3000' + result[0].birthday + '\u3000');
+                    $('.acont').html(result[0].content);
+                    switch (result[0].categoryId) {
+                        case "10":
+                            $('.main_nav li:nth-child(2) a').addClass('hover');
+                            break;
+                        case "20":
+                            $('.main_nav li:nth-child(3) a').addClass('hover');
+                            break;
+                        case "30":
+                            $('.main_nav li:nth-child(4) a').addClass('hover');
+                            break;
+                    }
+                },
+                error: function() {
+                    alert('响应完成，但有问题');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

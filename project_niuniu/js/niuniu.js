@@ -26,7 +26,7 @@ $(function(){
 });
 
 /***游戏特色广告轮播***/
-var imgs = [{ "i": 0, "img": "img/f1.png" }, { "i": 1, "img": "img/f2.png" }, { "i": 2, "img": "img/f3.png" }, { "i": 3, "img": "img/f4.png" }];
+/*var imgs = [{ "i": 0, "img": "/project_niuniu/images/niuniu_images/f1.png" }, { "i": 1, "img": "/project_niuniu/images/niuniu_images/f2.png" }, { "i": 2, "img": "/project_niuniu/images/niuniu_images/f3.png" }, { "i": 3, "img": "/project_niuniu/images/niuniu_images/f4.png" }];
 var adv = {
     LIWIDTH: 0,
     $ulImgs: null,
@@ -35,7 +35,6 @@ var adv = {
     timer: null,
     init: function init() {
         var _this = this;
-
         this.LIWIDTH = parseFloat($("#slide").css("width"));
         this.$ulImgs = $("#slide-list");
         this.updateView();
@@ -44,7 +43,7 @@ var adv = {
             _this.move(-1);
         });
         $('.next').click(function () {
-            _this.move(1 - parseFloat(imgs.length));
+            _this.move(1);
         });
     },
     autoMove: function autoMove() {
@@ -62,7 +61,6 @@ var adv = {
     },
     move: function move(n) {
         var _this3 = this;
-
         clearTimeout(this.timer);
         if (n < 0) {
             this.movePrev(n);
@@ -88,7 +86,7 @@ var adv = {
         this.$ulImgs.html(lis).css("width", imgs.length * this.LIWIDTH);
     }
 };
-adv.init();
+adv.init();*/
 
 //loadNewsPage();
 function loadNewsPage() {

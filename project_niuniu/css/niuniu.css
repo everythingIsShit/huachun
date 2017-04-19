@@ -40,7 +40,7 @@ a{
     position:relative;
     z-index:8;
     min-height:675px;
-    background: url("../img/bgMain.png") no-repeat;
+    background: url("/project_niuniu/images/niuniu_images/bgMain.png") no-repeat;
     background-size: 100%;
 }
 #main .main-bg video{
@@ -72,7 +72,7 @@ a{
     width:444px;
     height:77px;
     border-radius: 60px;
-    background-image: url('../img/topnavbg.png');
+    background-image: url('/project_niuniu/images/niuniu_images/topnavbg.png');
     background-repeat: no-repeat;
 }
 .nav-left{
@@ -111,12 +111,23 @@ a{
     color:#0988d7;
     font-size: 12px;
 }
+.words{
+    display: inline-block;
+    position: absolute;
+    width:60%;
+    z-index: 7;
+    left:28%;
+    top:47%;
+}
+.words img{
+    width:100%;
+}
     /*±³¾°01*/
 #main .transition-bg{
     margin-top:-130px;
     height:167px;
     position: relative;
-    background: url('../img/bg01.png') top center no-repeat;
+    background: url('/project_niuniu/images/niuniu_images/bg01.png') top center no-repeat;
     z-index: 9;
 }
 /*±³¾°02*/
@@ -124,7 +135,7 @@ a{
     margin-top:-158px;
     position: relative;
     z-index: 10;
-    background: url('../img/bg02.png') top center no-repeat;
+    background: url('/project_niuniu/images/niuniu_images/bg02.png') top center no-repeat;
     height:1020px;
 }
 #main .news-wrap:before{
@@ -172,7 +183,7 @@ a{
     right:45px;
     width:21px;
     height:21px;
-    background:url('../img/more.png') no-repeat;
+    background:url('/project_niuniu/images/niuniu_images/more.png') no-repeat;
 }
 .news a.more:hover{
     animation:gun linear 1s infinite;
@@ -281,7 +292,7 @@ a{
     height:990px;
     position: relative;
     z-index: 11;
-    background: url('../img/bg03.png') top center no-repeat;
+    background: url('/project_niuniu/images/niuniu_images/bg03.png') top center no-repeat;
 }
 .feature-warp:before{
     content:"";
@@ -293,7 +304,7 @@ a{
     width:311px;
     margin:60px auto 0;
     text-indent: -9999px;
-    background: url('../img/feature.png') no-repeat;
+    background: url('/project_niuniu/images/niuniu_images/feature.png') no-repeat;
 }
 .feature-box{
     position: relative;
@@ -310,10 +321,11 @@ a{
     position:absolute;
     width:100px;
     height:109px;
-    background-image:url('../img/icon.png') ;
+    background-image:url('/project_niuniu/images/niuniu_images/icon.png') ;
     background-repeat: no-repeat;
     top:305px;
     cursor: pointer;
+    z-index: 11;
 }
 .feature-img .prev{
     background-position:0 0;
@@ -344,7 +356,7 @@ a{
     z-index: 12;
     margin-top:-5px;
     height:1107px;
-    background: url('../img/bg04.png') top center no-repeat;
+    background: url('/project_niuniu/images/niuniu_images/bg04.png') top center no-repeat;
 }
 .animation-box{
     width:1100px;
@@ -367,7 +379,7 @@ a{
     height:365px;
     margin:0 auto 40px;
     position:relative;
-    background:url('../img/videoBg.png') center no-repeat;
+    background:url('/project_niuniu/images/niuniu_images/videoBg.png') center no-repeat;
 }
 .animation-video:before{
     content:"";
@@ -401,7 +413,7 @@ a{
     float:right;
     width:34px;
     height:34px;
-    background: url('../img/animation-more.png') center no-repeat;
+    background: url('/project_niuniu/images/niuniu_images/animation-more.png') center no-repeat;
 }
 .animation-nav>a:hover{
     animation:gun linear 1s infinite;
@@ -423,7 +435,7 @@ a{
     top:40px;
     height:47px;
     width:47px;
-    background:url('../img/leftIcon.png') center no-repeat;
+    background:url('/project_niuniu/images/niuniu_images/leftIcon.png') center no-repeat;
 }
 .animation-show .animation-right{
     position:absolute;
@@ -431,7 +443,7 @@ a{
     top:40px;
     height:47px;
     width:47px;
-    background:url('../img/rightIcon.png') center no-repeat;
+    background:url('/project_niuniu/images/niuniu_images/rightIcon.png') center no-repeat;
 }
 .animation-show .showList{
     width:100%;
@@ -485,7 +497,7 @@ a{
     outline: 0;
 }
 .icon_bottom{
-    background-image:url('../img/common.png') ;
+    background-image:url('/project_niuniu/images/niuniu_images/common.png') ;
     display: inline-block;
     width:44px;
     height:44px;

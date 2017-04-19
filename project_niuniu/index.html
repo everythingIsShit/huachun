@@ -11,27 +11,27 @@
     <link rel="stylesheet" href="css/niuniu.css"/>
     <script src="js/jquery-1.11.3.js"></script>
     <link href="css/slideshow.css" rel="stylesheet"/>
-    <script src="js/slideshow.js"></script>
+
 </head>
 <body>
     <div id="header">
     </div>
     <div id="main">
         <div class="main-bg">
-            <video id="my-video" class="video-js vjs-big-play-centered" loop autoplay="autoplay">
-                <source src="img/Sequence.mp4" type='video/mp4'>
+            <video id="my-video" class="video-js vjs-big-play-centered" loop autoplay>
+                <source src="images/niuniu_images/Sequence.mp4" type='video/mp4'>
             </video>
             <div class="by-nav">
                 <div class="by-nav-title">
                     <a href="index.html" class="logo">
-                        <img src="img/logo.png" alt=""/>
+                        <img src="/project_niuniu/images/niuniu_images/logo.png" alt=""/>
                     </a>
                     <div class="nav-left nav-list l">
-                        <a href="news/news_list.html" class="alink" target="_blank">
+                        <a href="news_list.html" class="alink" target="_blank">
                             <p>新闻资讯</p>
                             <!--<span>NEWS</span>-->
                         </a>
-                        <a href="news/news.html?tid=13?categoryId=30" class="alink" target="_blank">
+                        <a href="news.html?tid=13?categoryId=30" class="alink" target="_blank">
                             <p>游戏百科</p>
                             <!--<span>ENCYCLOPEDIA</span>-->
                         </a>
@@ -48,6 +48,9 @@
                     </div>
                 </div>
             </div>
+            <div class="words">
+                <img src="/project_niuniu/images/niuniu_images/words.png" alt="斗到极致方能牛"/>
+            </div>
         </div>
         <div class="transition-bg">
         </div>
@@ -55,35 +58,21 @@
             <div class="news-box">
                 <div class="Adnews-box">
                     <div class="Ad l">
-                        <div class="comiis_wrapad" id="slideContainer">
-                            <div id="frameHlicAe" class="frame cl">
-                                <div class="block">
-                                    <div class="cl">
-                                        <ul class="slideshow" id="slidesImgs">
-                                            <li>
-                                                <a href="#">
-                                                    <img src="img/carousel01.jpg" alt="邀请好友送礼包"/>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <img src="img/carousel02.jpg" alt="闯关赢万元大奖"/>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="slidebar" id="slideBar">
-                                        <ul>
-                                            <li class="on"></li>
-                                            <li></li>
-                                        </ul>
-                                    </div>
-                                </div>
+                        <div class="wrapper"><!-- 最外层部分 -->
+                            <div class="banner"><!-- 轮播部分 -->
+                                <ul class="imgList"><!-- 图片部分 -->
+                                    <li class="imgOn"><img src="/project_niuniu/images/niuniu_images/carousel01.jpg" alt="邀请好友送礼包"></li>
+                                    <li><img src="/project_niuniu/images/niuniu_images/carousel02.jpg" alt="闯关赢万元大奖"></li>
+                                </ul>
+                                <ul class="indexList"><!-- 图片右下角序号部分 -->
+                                    <li class="indexOn"></li>
+                                    <li></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                     <div class="news r">
-                        <a href="news/news_list.html" class="more"></a>
+                        <a href="news_list.html" class="more"></a>
                         <div class="news-nav">
                             <a href="javascript:void(0)" class="on">最新</a>
                             <a href="javascript:void(0)">公告</a>
@@ -93,7 +82,7 @@
                         <div class="news-nav-box">
                             <div class="news-com"><ul>
                                 <li class="first">
-                                    <a href="news/b1.html">
+                                    <a href="b1.html">
                                         <span>最新</span>
                                         <p>&nbsp;&nbsp;华淳游戏《开心牛牛》手游5月震撼发布</p>
                                     </a>
@@ -101,7 +90,7 @@
                             </ul></div>
                             <div class="news-com"><ul>
                                 <li class="first">
-                                    <a href="news/b1.html">
+                                    <a href="b1.html">
                                         <span>最新</span>
                                         <p>&nbsp;&nbsp;华淳游戏《开心牛牛》手游5月震撼发布</p>
                                     </a>
@@ -121,29 +110,29 @@
                 <div class="four-ad">
                     <ul>
                         <li>
-                            <a href="news/gift.html" target="_blank">
-                                <img src="img/ad01.png" alt=""/>
+                            <a href="gift.html" target="_blank">
+                                <img src="/project_niuniu/images/niuniu_images/ad01.png" alt=""/>
                                 <h3>新手礼包</h3>
                                 <span>GO>></span>
                             </a>
                         </li>
                         <li>
-                            <a href="news/news.html?tid=1" target="_blank">
-                                <img src="img/ad02.png" alt="游戏百科"/>
+                            <a href="news.html?tid=1" target="_blank">
+                                <img src="/project_niuniu/images/niuniu_images/ad02.png" alt="游戏百科"/>
                                 <h3>游戏百科</h3>
                                 <span>GO>></span>
                             </a>
                         </li>
                         <li>
                             <a href="#" target="_blank">
-                                <img src="img/ad03.png" alt=""/>
+                                <img src="/project_niuniu/images/niuniu_images/ad03.png" alt=""/>
                                 <h3>好友竞技</h3>
                                 <span>GO>></span>
                             </a>
                         </li>
                         <li>
                             <a target="_blank" onclick="unopened()" href="javascript:void(0)">
-                                <img src="img/ad04.png" alt=""/>
+                                <img src="/project_niuniu/images/niuniu_images/ad04.png" alt=""/>
                                 <h3>闯关有奖</h3>
                                 <span>GO>></span>
                             </a>
@@ -156,16 +145,23 @@
             <h3 class="feature-title">游戏特色</h3>
             <div class="feature-box">
                 <div class="feature-img">
+                    <div class="img">
+                        <div class="wrapper"><!-- 最外层部分 -->
+                            <div class="banner"><!-- 轮播部分 -->
+                                <ul class="imgList2"><!-- 图片部分 -->
+                                    <li class="imgOn"><img src="/project_niuniu/images/niuniu_images/f1.png" alt="每天都有大奖送"></li>
+                                    <li><img src="/project_niuniu/images/niuniu_images/f2.png" alt="过关斩将万元大奖等你拿"></li>
+                                    <li><img src="/project_niuniu/images/niuniu_images/f3.png" alt="聊天竞技乐不停"></li>
+                                    <li><img src="/project_niuniu/images/niuniu_images/f4.png" alt="随时随地说停就停"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                     <a class="icon prev"></a>
                     <a class="icon next"></a>
                 </div>
             </div>
-            <div class="img">
-                <div id="slide">
-                    <ul id="slide-list">
-                    </ul>
-                </div>
-            </div>
+
         </div>
        <!-- <div class="animation-warp">
             <div class="animation-box">
@@ -192,22 +188,22 @@
                                                 <ul>
                                                     <li>
                                                         <a href="#">
-                                                            <div class="animation-img">
-                                                                <img src="" alt=""/>
+                                                            <div class="animation-majiang_imgs">
+                                                                <majiang_imgs src="" alt=""/>
                                                             </div>
                                                         </a>
                                                     </li>
                                                     <li>
                                                         <a href="#">
-                                                            <div class="animation-img">
-                                                                <img src="" alt=""/>
+                                                            <div class="animation-majiang_imgs">
+                                                                <majiang_imgs src="" alt=""/>
                                                             </div>
                                                         </a>
                                                     </li>
                                                     <li>
                                                         <a href="#">
-                                                            <div class="animation-img">
-                                                                <img src="" alt=""/>
+                                                            <div class="animation-majiang_imgs">
+                                                                <majiang_imgs src="" alt=""/>
                                                             </div>
                                                         </a>
                                                     </li>
@@ -263,8 +259,9 @@
         <script src="js/copyright.js"></script>
     </div>
     <script src="js/niuniu.js"></script>
-    <script>
-        SlideShow(3000);
-     </script>
+    <script src="js/slideshow.js"></script>
+    <!--<script>-->
+        <!--SlideShow(3000);-->
+     <!--</script>-->
 </body>
 </html>

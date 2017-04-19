@@ -3,7 +3,7 @@
 /**
  * Created by Administrator on 2017/4/13.
  */
-var imgs = [{ "i": 0, "img": "img/001.jpg" }, { "i": 1, "img": "img/002.jpg" }, { "i": 2, "img": "img/003.jpg" }];
+var imgs = [{ "i": 0, "img": "/majiang/images/majiang_imgs/001.jpg" }, { "i": 1, "img": "/majiang/images/majiang_imgs/002.jpg" }, { "i": 2, "img": "/majiang/images/majiang_imgs/003.jpg" }];
 var adv = {
     LIWIDTH: 0, //每个li的宽度
     $ulImgs: null, //#imgs的ul
@@ -12,7 +12,6 @@ var adv = {
     timer: null, //自动轮播定时器的序号
     init: function init() {
         var _this = this;
-
         this.LIWIDTH = parseFloat($("#slider").css("width"));
         this.$ulImgs = $("#imgs");
         this.updateView(); //更新页面
