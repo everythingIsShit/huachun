@@ -14,17 +14,39 @@ $(function(){
     if(!hasVideo){
         $(".main-bg").css({'height':'1083px','background-size':'1920px'});
     }else{//支持的话就让父元素高度随着video高度改变而改变
-        setMainBgHeight();
-        window.onresize=function(){
+        //如果是用手机打开本页面的
+        if(!IsPC()){
+            $('video').css('display','none');
+        }else{
+            document.getElementById('my-video').play();
             setMainBgHeight();
-        };
+            window.onresize=function(){
+                setMainBgHeight();
+            };
+        }
+
     }
+
     function setMainBgHeight(){
         var mh=$('video').css("height");
         $('.main-bg').css("height",mh);
     }
 });
-
+//检测是否为pc
+function IsPC() {
+    var userAgentInfo = navigator.userAgent;
+    var Agents = ["Android", "iPhone",
+        "SymbianOS", "Windows Phone",
+        "iPad", "iPod"];
+    var flag = true;
+    for (var v = 0; v < Agents.length; v++) {
+        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+            flag = false;
+            break;
+        }
+    }
+    return flag;
+}
 /***游戏特色广告轮播***/
 /*var imgs = [{ "i": 0, "img": "/project_niuniu/images/niuniu_images/f1.png" }, { "i": 1, "img": "/project_niuniu/images/niuniu_images/f2.png" }, { "i": 2, "img": "/project_niuniu/images/niuniu_images/f3.png" }, { "i": 3, "img": "/project_niuniu/images/niuniu_images/f4.png" }];
 var adv = {

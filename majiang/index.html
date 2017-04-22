@@ -12,16 +12,14 @@
     <!--<script>-->
         <!--(function(){function b(a){if(window.sessionStorage)sessionStorage.setItem("channel",a);else{var b=b||0,c="";0!=b&&(c=new Date,c.setTime(c.getTime()+1E3*b),c="; expires="+c.toGMTString());document.cookie="channel="+escape(a)+c+"; path=/"}}var a=navigator.userAgent;if(-1!=a.indexOf("iPhone")||-1!=a.indexOf("iPad")||-1!=a.indexOf("iPod")||-1!=a.indexOf("Android"))a=document.referrer,-1<a.indexOf("baidu.com")?b("seo_baidu"):-1<a.indexOf("sogou.com")?b("seo_sogou"):-1<a.indexOf("sm.cn")?b("seo_sm"):-1<a.indexOf("so.com")?b("seo_360"):-1<a.indexOf("bing.com")?b("seo_bing"):-1<a.indexOf("google.com")&&b("seo_google"),self.location="/m/"})();-->
     <!--</script>-->
-    <!--[if lte IE 8]>
-    <script>
-        var s=confirm('您使用的浏览器版本太低，可能造成您无法浏览该网页，是否立即前往更新？');
-        if(s)self.location.href="https://www.microsoft.com/zh-cn/download/internet-explorer.aspx";
-    </script>
-    <![endif]-->
     <script src="js/jquery-1.11.3.js"></script>
 
 </head>
 <body>
+<!--[if lt IE 9]>
+<p class="chromeframe">您使用的IE浏览器版本过低，本站不再支持，<a href="//windows.microsoft.com/">升级您的IE浏览器</a>，或使用<a href="//www.google.cn/chrome/">Google Chrome</a>、<a href="//www.firefox.com.cn/download/">Firefox</a>等高级浏览器，将会得到更好的体验！</p>
+<![endif]-->
+<script src="../fast-path.js"></script>
     <div id="header">
         <script src="js/header.js"></script>
     </div>
@@ -29,10 +27,10 @@
         <div class="view">
             <div class="video-box">
                 <video id="my-video" class="video-js vjs-big-play-centered" loop>
-                    <source src="/majiang/images/majiang_imgs/Sequence.mp4" type='video/mp4'>
+                    <source src="/majiang/images/majiang_images/Sequence.mp4" type='video/mp4'>
                 </video>
                 <div class="words-box">
-                    <img src="/majiang/images/majiang_imgs/words.png"/>
+                    <img src="/majiang/images/majiang_images/words.png"/>
                 </div>
             </div>
             <div class="duration"></div>
@@ -44,7 +42,7 @@
                     <div class="bg1_po">
                         <div class="download">
                             <div class="code">
-                                <img src="/majiang/images/majiang_imgs/code.png"/>
+                                <img src="/majiang/images/majiang_images/code.png"/>
                             </div>
                             <div class="down">
                                 <a href="#">IOS下载</a>
@@ -129,7 +127,7 @@
                                 <ul>
                                     <li>
                                         <a href="#">
-                                            <majiang_imgs src="" alt=""/>
+                                            <majiang_images src="" alt=""/>
                                         </a>
                                     </li>
                                     <li></li>
@@ -188,8 +186,8 @@
                                     </li>
                                 </ul>
                             </div>
-                            <img src="/majiang/images/majiang_imgs/frame-left.png" class="left-frame"/>
-                            <img src="/majiang/images/majiang_imgs/frame-right.png" class="right-frame"/>
+                            <img src="/majiang/images/majiang_images/frame-left.png" class="left-frame"/>
+                            <img src="/majiang/images/majiang_images/frame-right.png" class="right-frame"/>
                         </div>
                         <div class="activ_swap">
                             <div class="news_tit huodong">
@@ -202,35 +200,35 @@
                                         <a href="b1.html">
                                             <p>
                                                 <span>· 华淳游戏《开心麻将》手游5月震撼发布</span>
-                                                <i>05/30</i>
+                                                <i>04/30</i>
                                             </p>
                                         </a>
                                     </li>
                                 </ul>
                             </div>
-                            <img src="/majiang/images/majiang_imgs/frame-left.png" class="left-frame"/>
-                            <img src="/majiang/images/majiang_imgs/frame-right.png" class="right-frame"/>
+                            <img src="/majiang/images/majiang_images/frame-left.png" class="left-frame"/>
+                            <img src="/majiang/images/majiang_images/frame-right.png" class="right-frame"/>
                         </div>
                     </div>
                 </div>
-                <div class="shipin">
+                <!--<div class="shipin">
                     <div class="v-tit"></div>
                     <div class="bg3_po">
                         <div class="video_swap">
                             <div class="news_tit saishi"></div>
-                            <img src="/majiang/images/majiang_imgs/frame-left.png" class="left-frame"/>
-                            <img src="/majiang/images/majiang_imgs/frame-right.png" class="right-frame"/>
+                            <img src="/majiang/images/majiang_images/frame-left.png" class="left-frame"/>
+                            <img src="/majiang/images/majiang_images/frame-right.png" class="right-frame"/>
                         </div>
                         <div class="schedule_swap">
                             <div class="news_tit ricehng">
                                 <h1>赛事日程</h1>
                                 <a href="news.html?categoryId=30" class="more">更多</a>
                             </div>
-                            <img src="/majiang/images/majiang_imgs/frame-left.png" class="left-frame"/>
-                            <img src="/majiang/images/majiang_imgs/frame-right.png" class="right-frame"/>
+                            <img src="/majiang/images/majiang_images/frame-left.png" class="left-frame"/>
+                            <img src="/majiang/images/majiang_images/frame-right.png" class="right-frame"/>
                         </div>
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
     </div>
@@ -259,7 +257,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="http://www.hcyx178.com/">
+                    <a href="aboutUs.html" target="_blank">
                         <span class="aboutUs"></span>
                         <h4>关于我们</h4>
                         <p>游戏最新版本下载</p>
@@ -268,7 +266,7 @@
             </ul>
         </div>
     </div>
-    <script src="js/footer.js"></script>
+    <div style="background: rgb(0,0,0);"><script src="js/footer.js"></script></div>
     <script src="js/index.js"></script>
     <script src="js/carousel.js"></script>
 </body>

@@ -1,7 +1,7 @@
 /*广告图片数组*/
 var imgs=[
-    {"i":0,"img":"../majiang_imgs/carousel01.jpg"},
-    {"i":1,"img":"../majiang_imgs/carousel02.jpg"}
+    {"i":0,"img":"../majiang_images/carousel01.jpg"},
+    {"i":1,"img":"../majiang_images/carousel02.jpg"}
 ];
 var adv={
     LIWIDTH:0,//每个li的宽度

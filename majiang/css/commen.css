@@ -1,0 +1,17 @@
+*{
+    margin:0;
+    padding:0;
+}
+img {
+    border: none;
+}
+a{
+    text-decoration: none;;
+}
+body, input, textarea, select {
+    font: 12px/1.5 Microsoft YaHei,Tahoma,Arial,Helvetica,Geneva,sans-serif !important;
+    color: #333;
+}
+ul {
+    list-style: none;
+}

@@ -67,8 +67,35 @@ a{
     float:left;
     width:207px;
     height:310px;
-    margin-right:23px;
+    margin:0 45px;
     background:url('/project_niuniu/images/niuniu_images/gift-bg.png') center no-repeat ;
+    position: relative;
+}
+.get_gift .c-list li img{
+    position: absolute;
+    top:50%;
+    left:50%;
+    width:50%;
+}
+.get_gift .c-list li:nth-child(1) img{
+    margin:-28% 0 0 -27%;
+}
+.get_gift .c-list li:nth-child(2) img{
+    margin:-12% 0 0 -25%;
+}
+.get_gift .c-list li:nth-child(3) img{
+    margin:-12% 0 0 -25%;
+}
+.get_gift .c-list li p{
+    font-size: 24px;
+    font-weight:bold;
+    color:#38608f;
+    line-height:60px;
+    text-align: center;
+    margin-top:260px;
+}
+.get_gift .c-list li p strong{
+    color:#e32d35;
 }
 #gift_now{
     position: absolute;
@@ -112,21 +139,28 @@ a{
     width:1000px;
     margin:0 auto;
     height:621px;
-    background: url('/project_niuniu/images/niuniu_images/modal-bg.png') center no-repeat;
+
+
+}
+.modal-dialog h1{
+    background: url('/project_niuniu/images/niuniu_images/gift-title.png') top center no-repeat;
+    height:124px;
+    position: relative;
+    z-index: 4;
 }
 .modal-dialog .close{
     position: absolute;
-    top:53px;
-    right:-11px;
-    width:50px;
-    height:50px;
-    line-height:44px;
+    top:45px;
+    right:110px;
+    width:48px;
+    z-index: 5;
+    height:45px;
+    line-height:39px;
     text-align: center;
-    font-weight: bold;
-    font-size:52px;
-    color:#C0250E;
+    font-size:36px;
+    color:#EFE843;
     border-radius: 50%;
-    background: #EFE843;
+    background:#4DAFE5;
     cursor: pointer;
 }
 .modal-dialog .close:hover{
@@ -138,18 +172,49 @@ a{
     50%{transform:rotateZ(180deg)}
     100%{transform:rotateZ(360deg)}
 }
-.modal-dialog>div{
+.modal-dialog .user{
+    position: relative;
+    width:650px;
+    height: 250px;
+    z-index: 3;
     float:left;
-    width:500px;
-    height:100%;
+    margin-left:118px;
+    margin-top:-55px;
+    background-color: #f8f8f8;
+    padding:100px 50px 50px 50px;
+    border-radius: 20px;
 }
-.modal-dialog div h3{
-    text-align: center;
-    font-size:40px;
-    color:#C0250E;
-    margin-top:150px;
+.modal-dialog div.user:before{
+    content:"";
+    display:table;
+    clear:both
 }
 .modal-dialog .code_box{
+    float:left;
+    width:200px;
+    margin:30px 0 0 90px;
+}
+.modal-dialog .code_box img{
+    width:100%;
+}
+.modal-dialog .down-box{
+    float:left;
     width:300px;
-    margin:30px auto 0;
+    margin:0 0 0 50px;
+}
+.modal-dialog .down-box a:first-child{
+    background:url('/project_niuniu/images/niuniu_images/IOS-icon.png') left top no-repeat;
+}
+.modal-dialog .down-box a{
+    display:block;
+    width:300px;
+    height:51px;
+    font-size:25px;
+    border-radius:10px;
+    margin-top:50px;
+    margin-left:30px;
+    text-align: center;
+    color:#fff;
+    font-weight:bold;
+    background:url('/project_niuniu/images/niuniu_images/Andriod-icon.png') left top no-repeat;
 }

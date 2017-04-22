@@ -90,7 +90,7 @@ $(".feature-img>a.prev").each(function(){
     })
 });
 function changeTo2(num){
-    $(".imgList2").find("li").removeClass("imgOn").hide().eq(num).fadeIn(1000).addClass("imgOn");
+    $(".imgList2").find("li").removeClass("imgOn").hide().eq(num).fadeIn(500).addClass("imgOn");
 }
 
 

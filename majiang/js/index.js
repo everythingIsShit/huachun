@@ -17,7 +17,7 @@ $('.head_nav .main_nav li').click(function(){
         //判断浏览器是否支持video标签，不支持的话就用img代替
         var hasVideo = !!(document.createElement('video').canPlayType);
         if(!hasVideo){
-            var w=document.documentElement.clientWidth;
+            var w=window.screen.width;
             var s=1920/w;
             $(".video-box").css({'height':1083/s+'px','background-size':w+'px'});
             window.onresize=function(){
@@ -26,14 +26,21 @@ $('.head_nav .main_nav li').click(function(){
                 $(".video-box").css({'height':1083/s+'px','background-size':w+'px'});
             };
         }else{//支持的话就让父元素高度随着video高度改变而改变
-            setMainBgHeight();
-            window.onresize=function(){
+            if(!IsPC()){
+                $('video').hide();
+            }else{
                 setMainBgHeight();
-            };
-            setTimeout(function(){
-                document.getElementById('my-video').play();
-            },1000);
+                window.onresize=function(){
+                    setMainBgHeight();
+                };
+                setTimeout(function(){
+                    document.getElementById('my-video').play();
+                },1000);
+            }
+
         }
+        //如果是用手机打开本页面的
+
         $('.news_swap .hd li').hover(function(){
                 $(this).addClass('on').siblings().removeClass('on');
                 var target = $('.news_swap .hd li').index(this);
@@ -134,7 +141,21 @@ $('.head_nav .main_nav li').click(function(){
 
 
     });
-/*上一页下一页点击事件及判断上一页下一页按钮是否隐藏*/
+//检测是否为pc
+function IsPC() {
+    var userAgentInfo = navigator.userAgent;
+    var Agents = ["Android", "iPhone",
+        "SymbianOS", "Windows Phone",
+        "iPad", "iPod"];
+    var flag = true;
+    for (var v = 0; v < Agents.length; v++) {
+        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+            flag = false;
+            break;
+        }
+    }
+    return flag;
+}
 
 
 

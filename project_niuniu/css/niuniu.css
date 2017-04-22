@@ -35,6 +35,18 @@ a{
     color:#fff;
     text-align:center;
 }
+/*IEä¯ÀÀÆ÷tips*/
+.chromeframe{
+    background: #000;
+    width:100%;
+    text-align: center;
+    color:#fff;
+    padding:10px 0;
+    font-size:14px;
+}
+.chromeframe a{
+    color:#f13c35;
+}
 /*Ö÷±³¾°*/
 #main .main-bg{
     position:relative;
@@ -114,10 +126,10 @@ a{
 .words{
     display: inline-block;
     position: absolute;
-    width:60%;
+    width:50%;
     z-index: 7;
-    left:28%;
-    top:47%;
+    left:41%;
+    top:34%;
 }
 .words img{
     width:100%;
@@ -132,7 +144,7 @@ a{
 }
 /*±³¾°02*/
 #main .news-wrap{
-    margin-top:-158px;
+    margin-top:-8%;
     position: relative;
     z-index: 10;
     background: url('/project_niuniu/images/niuniu_images/bg02.png') top center no-repeat;
