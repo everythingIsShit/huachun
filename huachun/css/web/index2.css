@@ -1,0 +1,370 @@
+body{
+    min-width:960px;
+    overflow-x: hidden;
+}
+img{
+    vertical-align: bottom;
+}
+
+ .wrap{
+    width: 960px;
+    margin: 0 auto;
+    position: relative;
+    zoom: 1;
+ }
+.main{
+    background: #EEF1F0;
+    margin-top:-5px;
+}
+/*首页大图*/
+
+.product-img{
+    background: #191d3a;
+}
+.imgs li{
+    background: url('/images/index2_images/huachungames.jpg') no-repeat;
+    background-size:100%;
+}
+/*大图中的公司介绍*/
+.bg-wrap{
+    width: 960px;
+    margin: 0 auto;
+    position: relative;
+    zoom: 1;
+}
+    .bg-wrap:after{
+        content:"";
+        display: table;
+        clear:both;
+    }
+.company-info{
+    float:right;
+    width:460px;
+    padding-top:50px;
+}
+    .company-logo img{
+        height:70px;
+        width:auto;
+        display: block;
+    }
+    .company-info .intro{
+        width: 460px;
+        margin:20px 0 0 0;
+        position: relative;
+        color:#fff;
+        font-size:18px;
+        line-height: 25px;
+    }
+    .company-info .download dt {
+        color: #FFFF7C;
+        font-size: 18px;
+        font-weight: bold;
+        padding-left: 30px;
+        height: 35px;
+        line-height: 35px;
+        background: url('/images/index2_images/down-icon.png') no-repeat 5px 10px;
+        margin-bottom: 8px;
+    }
+    .company-info .download dd{
+        border-radius: 10px;
+        overflow: hidden;
+        width:452px;
+        background: #4C6BBA;
+    }
+        .download dd a.downlink{
+            float: left;
+            width:135px;
+            height: 140px;
+            margin-right: 1px;
+            background: url('/images/index2_images/down-area.png') no-repeat;
+            background-size: 460px;
+            background-color: #fff;
+            background-color: rgba(255,255,255,.7);
+        }
+        .download dd a.Android{
+            background: url('/images/index2_images/down-area.png') no-repeat -137px 0;
+            width:140px;
+            background-color: rgba(255,255,255,.7);
+        }
+        .download dd span{
+            background: url('/images/index2_images/down-area.png') no-repeat -279px 0;
+            width:175px;
+            background-color: rgba(255,255,255,.7);
+            float: left;
+            height: 140px;
+        }
+
+
+
+/*信息中心*/
+.info_center{
+    margin-top: 34px;
+    background: url('/images/index2_images/info.png') 0 28px no-repeat;
+}
+.info_center .item{
+    width:860px;
+    margin:0 auto;
+}
+/*信息中心>轮播*/
+.lunbo {
+    width: 462px;
+    height: 282px;
+    position: relative;
+    float: left;
+    overflow: hidden;
+    background-color: #fff;
+    margin-right:10px;
+    border-radius: 10px;
+}
+
+.lunbo #imgs {
+    position: absolute;
+}
+
+.lunbo #imgs li {
+    float: left;
+}
+
+#indexs {
+    position: absolute;
+    bottom: 30px;
+    right: 40px;
+    width: 51px;
+    height: 12px;
+}
+
+#indexs li {
+    cursor: pointer;
+    margin-right: 5px;
+    float: left;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #B6B6B6;
+}
+
+#indexs li.hover {
+    background: #50ff54;
+}
+
+
+/*信息中心>新闻*/
+.news_swap {
+    width: 384px;
+    float: left;
+    height: 282px;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+}
+.news_tit {
+    height: 49px;
+    background:#299963;
+    overflow: hidden;
+}
+.news_tit h1 {
+    font-family: "Microsoft Yahei";
+    color: #fff;
+    font-size: 18px;
+    padding: 11px;
+    float: left;
+}
+.more {
+    background: url('/images/majiang_images/more.png') left center no-repeat;
+    background-size: 15px;
+    padding-left: 20px;
+    width: 34px;
+    height: 49px;
+    line-height: 49px;
+    float: right;
+    margin-right: 5px;
+    font-size: 15px;
+    color: #000;
+}
+
+.news_tab {
+    background-color: #fff;
+    height: 235px;
+    font-family: "Microsoft Yahei";
+}
+/*新闻列表头部*/
+.news_tab .hd {
+    height: 40px;
+    font-size: 16px;
+}
+
+.news_tab .hd ul {
+    position: relative;
+    margin: 0 auto;
+}
+.news_tab .hd ul:after{
+    content:"";
+    display: table;
+    clear: both;
+}
+
+.news_tab .hd ul li {
+    float: left;
+    width: 128px;
+    border-bottom: 1px solid #e6c082;
+}
+
+.news_tab .hd ul li.on {
+    height: 39px;
+    border-bottom: 2px solid #CB8511;
+}
+
+.news_tab .hd .on a {
+    color: #e6c082;
+}
+
+.news_tab .hd a {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+
+
+.news_tab .tab-panel {
+    font-family: "Microsoft Yahei";
+    display: none;
+}
+
+.news_tab .dis {
+    display: block;
+}
+
+.news_tab .tab-panel ul {
+    padding-top: 13px;
+}
+
+.news_tab .tab-panel ul li {
+    line-height: 30px;
+    margin-left: 15px;
+    font-size: 14px;
+}
+
+.news_tab .tab-panel ul li a:hover p span {
+    color: #878787;
+}
+
+.news_tab .tab-panel ul li p span {
+    width:300px;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #000;
+}
+
+.news_tab .tab-panel ul li p i {
+    margin-top: -30px;
+    color: #878787;
+    float: right;
+    font-style: normal;
+    padding-right:10px;
+}
+
+
+/*游戏中心*/
+.game_center{
+    margin-top: 34px;
+    background: url('/images/index2_images/game.png') 0 28px no-repeat;
+}
+.wrap .head {
+    height:28px;
+    line-height: 28px;
+    margin-left: 63px;
+    background: url('/images/index2_images/bgPoint.gif') repeat-x 0 48px;
+    padding: 30px 0;
+}
+.wrap .head .tleft {
+    float: left;
+    background:#EEF1F0;
+    color:green;
+    font-size:30px;
+    padding-right: 5px;
+}
+.wrapCent {
+    padding-top: 4px;
+}
+.wrapCent:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.overflow {
+    overflow: hidden;
+    float: left;
+    width: 960px;
+    position: relative;
+    height: 330px;
+}
+#gList:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+#gList li{
+    height: 330px;
+    float: left;
+    padding: 0 12px;
+    width: 216px;
+}
+#gList li a{
+    display: block;
+}
+#gList li a img{
+    display: block;
+}
+#gList li .glTitle{
+    height: 45px;
+    line-height: 55px;
+    text-align: center;
+    color: #20a238;
+    font-size: 14px;
+}
+#gList li .glContent{
+    line-height: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #ababab;
+    font-size: 12px;
+}
+.fixed-box{
+    width:132px;
+    position: fixed;
+    background: #fff;
+    border-radius:15px;
+}
+.kefu-box{
+    left:3%;
+    height:132px;
+    top:29%;
+}
+.weixin-code{
+    height:188px;
+    top:28%;
+    padding:10px 10px 0;
+    right:3%;
+}
+.fixed-box p{
+    color:#444866;
+    font-size:18px;
+    font-weight:bold;
+    text-align: center;
+    padding:0 10px;
+}
+.fixed-box img{
+    display: block;
+    margin:10px auto 10px;
+    width:110px;
+}
+.kefu-box img{
+    width:70px;
+}
+/*****************************************新闻列表*****************************************/

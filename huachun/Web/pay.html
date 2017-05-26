@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=" utf-8" />
+    <title>华淳科技</title>
+    <script src="/js/jquery/jquery-1.8.3.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            border: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        body {
+            font: 12px/1.5 Microsoft YaHei,Tahoma,Arial,Helvetica,Geneva,sans-serif !important;
+            color: #333;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .content {
+            width: 800px;
+            height: auto;
+            margin: 0 auto 80px;
+            text-align: center;
+            position: relative;
+        }
+
+        .main {
+            width: 100%;
+            height: auto;
+            text-align: left;
+        }
+
+        .detail li {
+            height: 42px;
+            line-height: 40px;
+        }
+
+        .detail i {
+            font-style: normal;
+            color: red;
+        }
+
+        .detail span {
+            color: #999999;
+            font-size: 14px;
+            float: left;
+            margin-right: 10px;
+        }
+
+        .detail b {
+            font-weight: normal;
+            font-size: 17px;
+            float: left;
+            line-height: 38px;
+        }
+
+        .pay-load {
+            position: relative;
+            min-height: 480px;
+            background-color: #fff;
+            padding: 12px 30px 0;
+            -moz-box-shadow: 0 0 20px rgba(0,0,0,.12);
+            -webkit-box-shadow: 0 0 20px rgba(0,0,0,.12);
+            box-shadow: 0 0 20px rgba(0,0,0,.12);
+            -moz-transition: all .2s ease-in-out;
+            -o-transition: all .2s ease-in-out;
+            -webkit-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+        }
+
+        .notice {
+            height: 32px;
+            line-height: 32px;
+            font-size: 15px;
+            margin-bottom: 15px;
+            color: #4b5b78;
+        }
+
+        .paybox {
+            border-bottom: 1px solid #ddd;
+            padding: 0 2px 1px;
+        }
+
+            .paybox .pay-wrap {
+                position: relative;
+                padding: 15px 0;
+            }
+
+                .paybox .pay-wrap:after {
+                    content: "";
+                    display: table;
+                    clear: both;
+                }
+
+        input[type=radio] {
+            float: left;
+            width: 20px;
+            height: 20px;
+            line-height: 26px;
+        }
+
+        .weixin .pay-wrap b {
+            height: 21px;
+            line-height: 21px;
+            float: left;
+            font-size: 16px;
+            background: url('/images/weixin.png') left center no-repeat;
+            background-size: auto 21px;
+            padding-left: 30px;
+            margin: 0 10px;
+        }
+
+        .paybox .pay-wrap span {
+            float: left;
+            color: #999999;
+            font-size: 12px;
+            height: 21px;
+            line-height: 21px;
+        }
+
+        .Unionpay .pay-wrap b {
+            height: 21px;
+            line-height: 21px;
+            float: left;
+            font-size: 16px;
+            background: url('/images/Unionpay.png') left center no-repeat;
+            background-size: auto 21px;
+            padding-left: 30px;
+            margin: 0 10px;
+        }
+
+        .pay-button {
+            margin-top: 35px;
+            padding-left: 40px;
+        }
+
+            .pay-button input {
+                display: inline-block;
+                height: 50px;
+                line-height: 48px;
+                font-size: 18px;
+                width: 220px;
+                font-family: "Microsoft Yahei";
+                font-weight: 700;
+                border: none;
+                background: #e4393c;
+                color: #fff;
+            }
+    </style>
+    <script>
+        $(function () {
+            var pname = getUrlParam("pname");
+            var price = getUrlParam("price");
+
+            $("b[data-name]").html(pname);
+            $("i[data-price]").html(price);
+        });
+
+        //获取url中的参数
+        function getUrlParam(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+            var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+            if (r != null) return decodeURI(r[2]); return null; //返回参数值
+        }
+    </script>
+</head>
+<body>
+    <script src="/js/web/fast-path.js"></script>
+    <div class="content">
+        <div class="main">
+            <div class="detail">
+                <ul>
+                    <li style="border-bottom:1px solid #F2F4F5">
+                        <span>商品名称:</span>
+                        <b data-name>500元 小叠房卡</b>
+                    </li>
+                    <li>
+                        <span>支付金额:</span>
+                        <b><i data-price>500</i>元</b>
+                    </li>
+                </ul>
+            </div>
+            <div class="pay-load">
+                <div class="notice">
+                    请选择支付方式
+                </div>
+                <div class="pay-channel">
+                    <form>
+                        <div class="paybox weixin">
+                            <div class="pay-wrap">
+
+                                <input type="radio" name="pay-mode" checked />
+                                <b>微信支付</b>
+                                <span>仅适用于单笔低于3000的支付</span>
+                            </div>
+                        </div>
+                        <div class="paybox Unionpay">
+                            <div class="pay-wrap">
+
+                                <input type="radio" name="pay-mode" />
+                                <b>快捷支付</b>
+                                <span>适用于大额支付</span>
+                            </div>
+                        </div>
+                        <div class="pay-button">
+                            <input type="button" value="立即支付" />
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="background:#e6e6e6;position:fixed;bottom:0; width:100%;">
+        <script src="/js/web/footer.js"></script>
+    </div>
+
+</body>
+</html>
