@@ -1,0 +1,122 @@
+.servicebanner{
+    background: url('/images/index_images/serviceAd.jpg') repeat-x center top;
+    height:260px;
+    width: 100%;
+}
+/*客服方式*/
+.area{
+    clear: both;
+}
+.location{
+    height: 29px;
+    padding: 25px 0 15px;
+    border-bottom: 1px solid #c7d6e5;
+}
+.qlink{
+    float: right;
+    line-height: 20px;
+    height: 20px;
+    margin-top: 4px;
+    color: #444866;
+}
+.qlink a.home {
+    width: 25px;
+    height: 20px;
+    color: #444866;
+}
+.qlink em {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 7px;
+    line-height: 20px;
+    border:4px solid transparent;
+    border-left-color:#aaa;
+}
+.qlink a, .qlink label {
+    display: inline-block;
+    vertical-align: middle;
+}
+.location h2,{
+    line-height: 29px;
+    font-size: 20px;
+    color: #444866;
+    height: 29px;
+}
+.text{
+    width: 1000px;
+    margin:20px auto 100px;
+    position: relative;
+    min-height: 480px;
+    background-color: #fff;
+    padding: 12px 30px 0;
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,.12);
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,.12);
+    box-shadow: 0 0 10px rgba(0,0,0,.12);
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+/*客服列表*/
+.combox{
+    padding-bottom:40px;
+}
+    .fcontact {
+        padding: 30px 0 26px 0;
+        overflow: hidden;
+        color: #444866;
+        margin-top:50px;
+    }
+        .fconul {
+            width: 105%;
+        }
+        .fconul:after{
+            content: "";
+            display: table;
+            clear:both;
+        }
+            .fcontact li {
+                float: left;
+                width: 320px;
+                height: 170px;
+                background-color: #f1f1f1;
+                margin-right: 20px;
+                text-align: center;
+                border-radius: 3px;
+            }
+                .fcontact li .fconimg {
+                    width: 52px;
+                    height: 62px;
+                    background: url('/images/index_images/faqicon.png') no-repeat;
+                    margin:20px auto 0;
+                    padding-right: 12px;
+                }
+                .fcontact p {
+                    line-height: 20px;
+                    font-size: 1.166em;
+                }
+                .fcontact h1 {
+                    line-height: 26px;
+                    font-size: 24px;
+                    font-weight: normal;
+                }
+                .fcontact li.fconli2 .fconimg {
+                    background-position: 0 -63px;
+                    width: 56px;
+                }
+                .fcontact li.fconli2 h1 a {
+                    margin-left:5px;
+                    font-size: 12px;
+                    background: #38B774;
+                    color:#fff;
+                    padding: 5px;
+                    border-radius:5px;
+                }
+                .fcontact li.fconli3 .fconimg {
+                    background:url('/images/niuniu_images/weixin.jpg') no-repeat;
+                    background-size: 80px;
+                    width: 70px;
+                    height:80px;
+                    margin-top:12px;
+                }
+

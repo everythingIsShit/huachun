@@ -9,52 +9,18 @@
     <meta name="keywords" content="游戏排行榜">
     <title>开心牛牛-开心牛牛官方网站-华淳游戏</title>
     <link href="/css/web/niuniu_index.css" rel="stylesheet" />
+    <link href="/css/web/public.css" rel="stylesheet" />
     <link href="/css/web/niuniu_slideshow.css" rel="stylesheet" />
     <script src="/js/jquery/jquery-1.8.3.min.js"></script>
 
 </head>
 <body>
-    <!--[if lt IE 9]>
-    <p class="chromeframe">您使用的IE浏览器版本过低，本站不再支持，<a href="//windows.microsoft.com/">升级您的IE浏览器</a>，或使用<a href="//www.google.cn/chrome/">Google Chrome</a>、<a href="//www.firefox.com.cn/download/">Firefox</a>等高级浏览器，将会得到更好的体验！</p>
-    <![endif]-->
-    <script src="/js/web/fast-path.js"></script>
-    <div id="header">
-    </div>
+    <script src="/js/web/header.js"></script>
     <div id="main">
         <div class="main-bg">
-            <video id="my-video" class="video-js vjs-big-play-centered" loop>
+            <video id="my-video" class="video-js vjs-big-play-centered" loop autoplay>
                 <source src="/images/niuniu_images/niuniu.mp4" type='video/mp4'>
             </video>
-            <div class="by-nav">
-                <div class="by-nav-title">
-                    <a href="niuniu_index.html" class="logo">
-                        <img src="/images/niuniu_images/logo.png" alt="" />
-                    </a>
-                    <div class="nav-left nav-list l">
-                        <a href="news_list.html" class="alink" target="_blank">
-                            <p>新闻资讯</p>
-                            <!--<span>NEWS</span>-->
-                        </a>
-                        <a href="niuniu_raiders_7.html" class="alink" target="_blank">
-                            <p>游戏百科</p>
-                            <!--<span>ENCYCLOPEDIA</span>-->
-                        </a>
-                    </div>
-                    <div class="nav-right nav-list r">
-                        <a href="#feature-warp" class="alink">
-                            <p>游戏特色</p>
-                            <!--<span>FEATURE</span>-->
-                        </a>
-                        <a href="javascript:void(0)" class="alink" target="_blank" onclick="unopened()">
-                            <p>游戏论坛</p>
-                            <!--<span>VIDEO</span>-->
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="words">
-                <img src="/images/niuniu_images/words.png" alt="斗到极致方能牛" />
-            </div>
         </div>
         <div class="transition-bg">
         </div>
@@ -275,129 +241,12 @@
             </div>
 
         </div>
-        <!-- <div class="animation-warp">
-             <div class="animation-box">
-                 <h3 class="title">游戏影画</h3>
-                 <div class="animation-v-p">
-                     <div class="animation-video-box">
-                         <div class="animation-video">
-                             <div class="animation-content">
-                                 <div class="animation-nav id=animation-video">
-                                     <span class="cur">
-                                         官方视频
-                                     </span>
-                                     <span>
-                                         攻略视频
-                                     </span>
-                                     <a href="#"></a>
-                                 </div>
-                                 <div class="animation-show">
-                                     <a href="#"  target=‘_blank' class="animation-left"></a>
-                                     <a href="#" target="_blank" class="animation-right"></a>
-                                     <div class="animation-show-video">
-                                         <div class="comList">
-                                             <div class="showList">
-                                                 <ul>
-                                                     <li>
-                                                         <a href="#">
-                                                             <div class="animation-majiang_images">
-                                                                 <majiang_images src="" alt=""/>
-                                                             </div>
-                                                         </a>
-                                                     </li>
-                                                     <li>
-                                                         <a href="#">
-                                                             <div class="animation-majiang_images">
-                                                                 <majiang_images src="" alt=""/>
-                                                             </div>
-                                                         </a>
-                                                     </li>
-                                                     <li>
-                                                         <a href="#">
-                                                             <div class="animation-majiang_images">
-                                                                 <majiang_images src="" alt=""/>
-                                                             </div>
-                                                         </a>
-                                                     </li>
-                                                 </ul>
-                                             </div>
-                                         </div>
-                                     </div>
-                                 </div>
-                             </div>
-                         </div>
-                         <div class="animation-video">
-                         </div>
-                     </div>
-                 </div>
-             </div>
-         </div>-->
-    </div>
-    <div id="footer">
-        <div class="service">
-            <div class="content">
-                <ul>
-                    <li>
-                        <a href="gift.html">
-                            <i class="icon_bottom icon_bottom_down"></i>
-                            <h4>游戏下载</h4>
-                            <p>最新游戏版本</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="weixin">
-                            <!-- 微信公众号图片-->
-                            <div> <img src="/images/niuniu_images/weixin.jpg" alt="搜索微信公众号'华淳游戏'" /></div>
-                            <i class="icon_bottom icon_bottom_wx"></i>
-                            <h4>游戏微信</h4>
-                            <p>
-                                1. 微信扫描二维码<br />
-                                2. 微信搜索公众号 "华淳游戏"
-                            </p>
-                        </a>
 
-                    </li>
-                    <li>
-                        <a href="javascript:;">
-                            <i class="icon_bottom icon_bottom_serv"></i>
-                            <h4>游戏客服</h4>
-                            <p>点击图标查看客服联系方式</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="aboutUs.html">
-                            <i class="icon_bottom icon_bottom_self"></i>
-                            <h4>关于我们</h4>
-                            <p>关于我们</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div style="background: rgb(13,22,61); ">
-            <script src="/js/web/niuniu_copyright.js"></script>
-        </div>
     </div>
-    <div class="modal-kefu">
-        <div class="lay">
-            <a class="close">×</a>
-            <i class="title-kefu">客服反馈</i>
-            <div class="path">
-                <p class="method">方式一：</p>
-                <p class="connect"><span>客服QQ:</span>3523107539</p>
-                <p class="connect phone"><span>客服电话:</span>4008-393-808</p>
-            </div>
-            <div class="path">
-                <p class="method">方式二：</p>
-                <p class="intr">
-                    微信扫描下方二维码,或者微信搜索公众号<span>"华淳游戏"</span>，关注华淳游戏官方微信，进入人工客服。
-                </p>
-                <p class="QR-code">
-                    <img src="/images/niuniu_images/weixin.jpg" />
-                </p>
-            </div>
-        </div>
+    <div style="background: rgb(0,0,0);">
+        <script src="/js/web/footer.js"></script>
     </div>
+
     <script src="/js/web/niuniu_index.js"></script>
     <script src="/js/web/niuniu_slideshow.js"></script>
 </body>

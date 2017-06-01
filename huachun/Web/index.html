@@ -1,377 +1,253 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-<head lang="en">
+<head lang="zh-cn">
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="robots" content="all">
-    <meta name="copyright" content="huachun">
-    <meta name="description" content="游戏排行榜">
-    <meta name="keywords" content="游戏排行榜">
-    <title>开心麻将-开心麻将官方网站-华淳游戏</title>
+    <title>华淳游戏</title>
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
     <meta name="mobile-agent" content="format=[wml|xhtml|html5]; url=http://www.hcyx178.com/Web/mobile.html"/>
-    <link href="/css/web/index.css" rel="stylesheet" />
-    <script src="/js/jquery/jQuery-2.2.0.min.js"></script>
+    <meta name="copyright" content="huachun">
+    <meta name="keywords" content="华淳游戏，华淳科技，牛牛游戏，麻将，棋牌游戏，">
+    <meta name="description" content="华淳游戏成立于2016年11月，华淳游戏以休闲棋牌游戏为核心业务，集游戏研发及发行于一体，致力于为全球华人用户提供优质精彩的棋牌、游戏、娱乐及服务的互联网公司。 公司倡导开放、平等的工作环境，尊重、鼓励员工的自主性和创造力，致力于为员工营造轻松和谐、富有激情并充满创意的工作氛围，帮助员工最大程度实现自我价值，为促进游戏产业的健康发展做出应有的贡献。">
+    <link rel="stylesheet" href="/css/web/commen.css"/>
+    <link rel="stylesheet" href="/css/web/index.css"/>
+    <link rel="stylesheet" href="/css/web/public.css"/>
+    <script src="/js/jquery/jquery-1.8.3.min.js"></script>
 </head>
 <body>
-    <!--[if lt IE 9]>
-    <p class="chromeframe">您使用的IE浏览器版本过低，本站不再支持，<a href="//windows.microsoft.com/">升级您的IE浏览器</a>，或使用<a href="//www.google.cn/chrome/">Google Chrome</a>、<a href="//www.firefox.com.cn/download/">Firefox</a>等高级浏览器，将会得到更好的体验！</p>
-    <![endif]-->
-    <script src="/js/web/fast-path.js"></script>
-    <div id="header">
-        <script src="/js/web/header.js"></script>
-    </div>
-    <div class="main">
-        <div class="view">
-            <div class="video-box">
-                <video id="my-video" class="video-js vjs-big-play-centered" loop>
-                    <source src="/images/majiang_images/Sequence.mp4" type='video/mp4'>
-                </video>
-                <div class="words-box">
-                    <img src="/images/majiang_images/words.png" />
-                </div>
-            </div>
-            <div class="duration"></div>
-            <div class="section">
-                <div class="message" id="down">
-                    <div class="m-tit">
-
-                    </div>
-                    <div class="bg1_po">
+<!--[if lt IE 9]>
+<p class="chromeframe">您使用的IE浏览器版本过低，本站不再支持，<a href="//windows.microsoft.com/">升级您的IE浏览器</a>，或使用<a href="//www.google.cn/chrome/">Google Chrome</a>、<a href="//www.firefox.com.cn/download/">Firefox</a>等高级浏览器，将会得到更好的体验！</p>
+<![endif]-->
+<script src="/js/web/header.js"></script>
+<div class="main">
+    <div class="product-img">
+        <ul class="imgs">
+            <li>
+                <div class="bg-wrap">
+                    <div class="company-info">
+                        <div class="company-logo">
+                            <img src="/images/index_images/com-logo.png" alt="华淳游戏"/>
+                        </div>
+                        <div class="intro">
+                           华淳理念：精品、精致、精细游戏。
+                        </div>
                         <div class="download">
-                            <div class="code">
-                                <img src="/images/majiang_images/down.png" />
-                            </div>
-                            <div class="down">
-                                <a href="https://itunes.apple.com/cn/app/id1217332000?mt=8">IOS下载</a>
-                                <a href="down.html">安卓下载</a>
-                            </div>
+                            <dl>
+                                <dt>游戏下载</dt>
+                                <dd>
+                                    <a href="http://www.hcyx178.com/Web/down.html" class="downlink"></a>
+                                    <a href="http://www.hcyx178.com/Web/down.html" class="downlink Android"></a>
+                                    <span></span>
+                                </dd>
+                            </dl>
                         </div>
-                        <div class="lunbo" id="slider">
-                            <ul id="imgs"></ul>
-                            <ul id="indexs"></ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="wrap">
+        <div class="info_center">
+            <div class="head">
+                <div class="tleft">信息中心</div>
+
+            </div>
+            <div class="wrapCent">
+                <div class="item">
+                    <div class="lunbo" id="slider">
+                        <ul id="imgs">
+                            <li>
+                                <img src="/images/index_images/carousel-1.jpg" alt=""/>
+                            </li>
+                        </ul>
+                        <ul id="indexs"></ul>
+                    </div>
+                    <div class="news_swap">
+                        <div class="news_tit">
+                            <h1>新闻资讯</h1>
+                            <a href="newsList.html" class="more">更多</a>
                         </div>
-                        <div class="news_swap">
-                            <div class="kuang news_tit">
-                                <h1>资讯</h1>
-                                <a href="news.html?categoryId=00" class="more">更多</a>
+                        <div class="news_tab">
+                            <div class="hd">
+                                <ul>
+                                    <li class="on">
+                                        <a href="javascript:">最新资讯</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:">新闻公告</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:">精彩活动</a>
+                                    </li>
+                                </ul>
                             </div>
-                            <div class="news_tab">
-                                <div class="hd">
+                            <div class="bd">
+                                <div class="tab-panel dis">
                                     <ul>
-                                        <li class="on">
-                                            <a href="news.html?categoryId=00">综合</a>
+                                        <li>
+                                            <a href="a2.html">
+                                                <p>
+                                                    <span title="《华淳开心麻将》上线公测，开启掌上棋牌新时代！">·&nbsp;《华淳开心麻将》上线公测，开启掌上棋牌新时代！</span>
+                                                    <i>05/12</i>
+                                                </p>
+                                            </a>
                                         </li>
                                         <li>
-                                            <a href="news.html?categoryId=10">新闻公告</a>
+                                            <a href="b2.html">
+                                                <p>
+                                                    <span title="华淳游戏《开心麻将》提交问题建议 领取官方大礼包">·&nbsp;华淳游戏《开心麻将》提交问题建议 领取官方大礼包</span>
+                                                    <i>05/07</i>
+                                                </p>
+                                            </a>
                                         </li>
                                         <li>
-                                            <a href="news.html?categoryId=20">活动公告</a>
+                                            <a href="a1.html">
+                                                <p>
+                                                    <span title="华淳游戏《开心麻将》内测震撼开启">·&nbsp;华淳游戏《开心麻将》内测震撼开启</span>
+                                                    <i>05/07</i>
+                                                </p>
+                                            </a>
                                         </li>
                                         <li>
-                                            <a href="news.html?categoryId=30">精彩赛事</a>
+                                            <a href="b3.html">
+                                                <p>
+                                                    <span title="华淳游戏《开心麻将》内测活动一览">·&nbsp;华淳游戏《开心麻将》内测活动一览</span>
+                                                    <i>05/07</i>
+                                                </p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="b1.html">
+                                                <p>
+                                                    <span title="华淳游戏《开心麻将》手游5月震撼发布">·&nbsp;华淳游戏《开心麻将》手游5月震撼发布</span>
+                                                    <i>04/30</i>
+                                                </p>
+                                            </a>
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="bd">
-                                    <div class="tab-panel dis">
-                                        <ul>
-                                            <li>
-                                                <a href="a2.html">
-                                                    <p>
-                                                        <span title="《华淳开心麻将》上线公测，开启掌上棋牌新时代！">·&nbsp;《华淳开心麻将》上线公测，开启掌上棋牌新时代！</span>
-                                                        <i>05/12</i>
-                                                    </p>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="b2.html">
-                                                    <p>
-                                                        <span title="华淳游戏《开心麻将》提交问题建议 领取官方大礼包">·&nbsp;华淳游戏《开心麻将》提交问题建议 领取官方大礼包</span>
-                                                        <i>05/07</i>
-                                                    </p>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="a1.html">
-                                                    <p>
-                                                        <span title="华淳游戏《开心麻将》内测震撼开启">·&nbsp;华淳游戏《开心麻将》内测震撼开启</span>
-                                                        <i>05/07</i>
-                                                    </p>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="b3.html">
-                                                    <p>
-                                                        <span title="华淳游戏《开心麻将》内测活动一览">·&nbsp;华淳游戏《开心麻将》内测活动一览</span>
-                                                        <i>05/07</i>
-                                                    </p>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="b1.html">
-                                                    <p>
-                                                        <span title="华淳游戏《开心麻将》手游5月震撼发布">·&nbsp;华淳游戏《开心麻将》手游5月震撼发布</span>
-                                                        <i>04/30</i>
-                                                    </p>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="tab-panel">
-                                        <ul>
-                                            <li>
-                                                <a href="a2.html">
-                                                    <p>
-                                                        <span title="《华淳开心麻将》上线公测，开启掌上棋牌新时代！">·&nbsp;《华淳开心麻将》上线公测，开启掌上棋牌新时代！</span>
-                                                        <i>05/12</i>
-                                                    </p>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="a1.html">
-                                                    <p>
-                                                        <span title="华淳游戏《开心麻将》内测震撼开启">·&nbsp;华淳游戏《开心麻将》内测震撼开启</span>
-                                                        <i>05/07</i>
-                                                    </p>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="tab-panel">
-                                        <ul>
-                                            <li>
-                                                <a href="b2.html">
-                                                    <p>
-                                                        <span title="华淳游戏《开心麻将》提交问题建议 领取官方大礼包">·&nbsp;华淳游戏《开心麻将》提交问题建议 领取官方大礼包</span>
-                                                        <i>05/07</i>
-                                                    </p>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="b3.html">
-                                                    <p>
-                                                        <span title="华淳游戏《开心麻将》内测活动一览">·&nbsp;华淳游戏《开心麻将》内测活动一览</span>
-                                                        <i>05/07</i>
-                                                    </p>
-                                                </a>
-                                            </li>
+                                <div class="tab-panel">
+                                    <ul>
+                                        <li>
+                                            <a href="a2.html">
+                                                <p>
+                                                    <span title="《华淳开心麻将》上线公测，开启掌上棋牌新时代！">·&nbsp;《华淳开心麻将》上线公测，开启掌上棋牌新时代！</span>
+                                                    <i>05/12</i>
+                                                </p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="a1.html">
+                                                <p>
+                                                    <span title="华淳游戏《开心麻将》内测震撼开启">·&nbsp;华淳游戏《开心麻将》内测震撼开启</span>
+                                                    <i>05/07</i>
+                                                </p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="tab-panel">
+                                    <ul>
+                                        <li>
+                                            <a href="b2.html">
+                                                <p>
+                                                    <span title="华淳游戏《开心麻将》提交问题建议 领取官方大礼包">·&nbsp;华淳游戏《开心麻将》提交问题建议 领取官方大礼包</span>
+                                                    <i>05/07</i>
+                                                </p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="b3.html">
+                                                <p>
+                                                    <span title="华淳游戏《开心麻将》内测活动一览">·&nbsp;华淳游戏《开心麻将》内测活动一览</span>
+                                                    <i>05/07</i>
+                                                </p>
+                                            </a>
+                                        </li>
 
-                                            <li>
-                                                <a href="b1.html">
-                                                    <p>
-                                                        <span title="华淳游戏《开心麻将》手游5月震撼发布">·&nbsp;华淳游戏《开心麻将》手游5月震撼发布</span>
-                                                        <i>04/30</i>
-                                                    </p>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="tab-panel"></div>
+                                        <li>
+                                            <a href="b1.html">
+                                                <p>
+                                                    <span title="华淳游戏《开心麻将》手游5月震撼发布">·&nbsp;华淳游戏《开心麻将》手游5月震撼发布</span>
+                                                    <i>04/30</i>
+                                                </p>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="baike">
-                    <div class="b-tit"></div>
-                    <div class="bg2_po">
-                        <div class="skill_swap">
-                            <div class="news_tit jiqiao">
-                                <h1>麻将技巧</h1>
-                                <a href="skill.html" class="more">更多</a>
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="game_center">
+            <div class="head">
+                <div class="tleft">游戏中心</div>
+                <!--<a href="javascript:" class="tright">查看全部</a>-->
+            </div>
+            <div class="wrapCent">
+                <div class="overflow">
+                    <ul id="gList">
+                        <li>
+                            <a href="majiang.html" target="_blank" title="华淳开心麻将" class="game game_majiang"></a>
+                            <a href="majiang.html" class="glTitle" target="_blank">华淳开心麻将</a>
+                            <div class="glContent">
+                                房卡模式的麻将，绿色安全无外挂，让您和您的朋友玩的放心胡的开心。
                             </div>
-                            <!--<div class="ad_list">
-                                <ul>
-                                    <li>
-                                        <a href="#">
-                                            <majiang_images src="" alt=""/>
-                                        </a>
-                                    </li>
-                                    <li></li>
-                                    <li></li>
-                                </ul>
-                            </div>-->
-                            <div class="jiaox_list">
-                                <ul>
-                                    <li>
-                                        <a href="6.html">
-                                            <p>
-                                                <span>【新手入门】麻将高胜率技巧二：如何舍牌</span>
-                                                <i>4/30</i>
-                                            </p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="5.html">
-                                            <p>
-                                                <span>【新手入门】麻将高胜率技巧一：如何猜牌</span>
-                                                <i>4/30</i>
-                                            </p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="4.html">
-                                            <p>
-                                                <span>【新手入门】什么叫做红中当将？开心麻将胡牌须知技巧</span>
-                                                <i>4/30</i>
-                                            </p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="3.html">
-                                            <p>
-                                                <span>【新手入门】拆牌留牌有章法！开心麻将实例解析和牌之道</span>
-                                                <i>4/29</i>
-                                            </p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="2.html">
-                                            <p>
-                                                <span>【新手入门】必胜秘诀</span>
-                                                <i>4/29</i>
-                                            </p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="1.html">
-                                            <p>
-                                                <span>【新手入门】吃碰原则</span>
-                                                <i>4/29</i>
-                                            </p>
-                                        </a>
-                                    </li>
-                                </ul>
+                        </li>
+                        <li>
+                            <a href="niuniu.html" target="_blank" title="华淳开心牛牛" class="game game_niuniu"></a>
+                            <a href="niuniu.html" class="glTitle" target="_blank">华淳开心牛牛</a>
+                            <div class="glContent">
+                                抢庄牛牛，万人在线，开启牛牛新篇章，拼的就是智慧与勇气。
                             </div>
-                            <img src="/images/majiang_images/frame-left.png" class="left-frame" />
-                            <img src="/images/majiang_images/frame-right.png" class="right-frame" />
-                        </div>
-                        <div class="activ_swap">
-                            <div class="news_tit huodong">
-                                <h1>活动</h1>
-                                <a href="skill.html" class="more">更多</a>
-                            </div>
-                            <div class="sais_tab">
-                                <ul>
-                                    <li>
-                                        <a href="b2.html">
-                                            <p>
-                                                <span title="华淳游戏《开心麻将》提交问题建议 领取官方大礼包">·&nbsp;华淳游戏《开心麻将》提交问题建议 领取官方大礼包</span>
-                                                <i>05/07</i>
-                                            </p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="b3.html">
-                                            <p>
-                                                <span title="华淳游戏《开心麻将》内测活动一览">·&nbsp;华淳游戏《开心麻将》内测活动一览</span>
-                                                <i>05/07</i>
-                                            </p>
-                                        </a>
-                                    </li>
+                        </li>
+                        <li>
+                            <a href="javascript:" target="_blank" title="华淳开心斗地主" class="game game_doudizhu" onclick="unopened()"></a>
+                            <a href="javascript:" class="glTitle" onclick="unopened()">华淳开心斗地主</a>
+                            <div class="glContent">
+                                经典玩法加癞子玩法，全民牌技PK，感受真实的斗地主。
 
-                                    <li>
-                                        <a href="b1.html">
-                                            <p>
-                                                <span title="华淳游戏《开心麻将》手游5月震撼发布">·&nbsp;华淳游戏《开心麻将》手游5月震撼发布</span>
-                                                <i>04/30</i>
-                                            </p>
-                                        </a>
-                                    </li>
-                                </ul>
                             </div>
-                            <img src="/images/majiang_images/frame-left.png" class="left-frame" />
-                            <img src="/images/majiang_images/frame-right.png" class="right-frame" />
-                        </div>
-                    </div>
+                        </li>
+                        <li>
+                            <a href="javascript:" target="_blank" title="华淳开心捕鱼" class="game game_buyu" onclick="unopened()"></a>
+                            <a href="javascript:" class="glTitle" onclick="unopened()">华淳开心捕鱼</a>
+                            <div class="glContent">
+                                绝不一样的体验，全真人、倍率超高、人气火爆、奖励丰厚的超级好玩捕鱼游戏。
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-                <!--<div class="shipin">
-                    <div class="v-tit"></div>
-                    <div class="bg3_po">
-                        <div class="video_swap">
-                            <div class="news_tit saishi"></div>
-                            <img src="/images/majiang_images/frame-left.png" class="left-frame"/>
-                            <img src="/images/majiang_images/frame-right.png" class="right-frame"/>
-                        </div>
-                        <div class="schedule_swap">
-                            <div class="news_tit ricehng">
-                                <h1>赛事日程</h1>
-                                <a href="news.html?categoryId=30" class="more">更多</a>
-                            </div>
-                            <img src="/images/majiang_images/frame-left.png" class="left-frame"/>
-                            <img src="/images/majiang_images/frame-right.png" class="right-frame"/>
-                        </div>
-                    </div>
-                </div>-->
             </div>
         </div>
     </div>
-    <div class="footer">
-        <div class="section-ctn">
-            <ul class="service-list">
-                <li>
-                    <a href="#down">
-                        <span class="downGame"></span>
-                        <h4>游戏下载</h4>
-                        <p>游戏最新下载</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:" class="weixinFocus">
-                        <!-- 微信公众号图片-->
-                        <div> <img src="/images/niuniu_images/weixin.jpg" alt="搜索微信公众号'华淳游戏'" /></div>
-                        <span class="weixin">
-                        </span>
-                        <h4>游戏微信</h4>
-                        <p>
-                            1. 微信扫描二维码<br />
-                            2. 微信搜索公众号 "华淳游戏"
-                        </p>
-                    </a>
+</div>
+<div class="m-slide">
+    <a class="m-slide-trigger">
+        <span>收起</span>
+        <i></i>
+    </a>
+    <div class="kefu-box fixed-box">
+        <a href="http://tb.53kf.com/webCompany.php?arg=10156056&style=1" id="kefuDialogIn" target="_blank">
+            <p>在线客服</p>
+            <img src="/images/index_images/kefu.png" alt="点击咨询客服"/>
 
-                </li>
-                <li>
-                    <a href="javascript:">
-                        <span class="kefu"></span>
-                        <h4>游戏客服</h4>
-                        <p>点击图标查看客服联系方式</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="aboutUs.html" target="_blank">
-                        <span class="aboutUs"></span>
-                        <h4>关于我们</h4>
-                        <p>关于我们</p>
-                    </a>
-                </li>
-            </ul>
-        </div>
+        </a>
     </div>
-    <div style="background: rgb(0,0,0);">
+    <div class="weixin-code fixed-box">
+        <p class="title">官方微信</p>
+        <img src="/images/niuniu_images/weixin.jpg"/>
+    </div>
+</div>
 
-        <script src="/js/web/footer.js"></script>
-    </div>
-    <div class="modal-kefu">
-        <div class="lay">
-            <a class="close">×</a>
-            <i class="title-kefu">客服反馈</i>
-            <div class="path">
-                <p class="method">方式一：</p>
-                <p class="connect"><span>客服QQ:</span>3523107539</p>
-                <p class="connect phone"><span>客服电话:</span>4008-393-808</p>
-            </div>
-            <div class="path">
-                <p class="method">方式二：</p>
-                <p class="intr">
-                    微信扫描下方二维码,或者微信搜索公众号<span>"华淳游戏"</span>，关注华淳游戏官方微信，进入人工客服。
-                </p>
-                <p class="QR-code">
-                    <img src="/images/niuniu_images/weixin.jpg" />
-                </p>
-            </div>
-        </div>
-    </div>
-    <script src="/js/web/index.js"></script>
-    <script src="/js/web/carousel.js"></script>
+<div style="background:#2E2E2E;">
+    <script src="/js/web/footer.js"></script>
+</div>
+<script src="/js/web/index.js"></script>
+
 </body>
 </html>
