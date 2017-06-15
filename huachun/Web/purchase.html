@@ -1,12 +1,25 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=" utf-8" />
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
     <title>华淳科技</title>
     <link href="/css/web/commen.css" rel="stylesheet" />
+    <link href="/css/web/public.css" rel="stylesheet" />
     <script src="/js/jquery/jquery-1.8.3.min.js"></script>
     <style>
+        html{
+            height:100%;
+        }
+        body{
+            display: flex;
+            flex-direction:
+            column; height: 100%;
+        }
+        header{
+            flex: 0 0 auto;
+        }
         .content {
+            flex: 1 0 auto;
             width: 800px;
             height: auto;
             margin: 80px auto 80px;
@@ -68,7 +81,7 @@
             }
 
         .category .fangka-cate span {
-            left: 126px;
+            left: 123px;
         }
 
         .category .kaixinbi-cate span {
@@ -116,12 +129,36 @@
             .btn:hover {
                 background: #4eb7cb;
             }
+        body:after{
+            content: "";
+            display: table;
+            clear:both;
+        }
+        .IDNumber{
+            line-height: 35px;;
+        }
+        .IDNumber label{
+            font-size:27px;
+            vertical-align: middle;
+        }
+        .IDNumber input{
+            height:25px;
+            font-size:18px;
+            vertical-align: middle;
+            width:200px;
+            border-radius: 5px;
+            padding-left: 8px;
+        }
     </style>
 </head>
 <body>
-    <script src="/js/web/fast-path.js"></script>
+    <script src="/js/web/header.js"></script>
     <div class="content">
         <div class="main">
+            <div class="IDNumber">
+                <label for="IDNumber">请输入玩家ID：</label>
+                <input type="text" id="IDNumber" name="IDNumber"/>
+            </div>
             <div class="choose">
                 <ul>
                     <li class="on">充房卡</li>
@@ -132,96 +169,103 @@
                 <div class="category" data-id=category>
                     <ul class="fangka-cate">
                         <li>
-                            <a data-value="500张小叠房卡&500">
-                                <img src="/images/sm-fangka.png" />
-                                <span>×500</span>
-                            </a>
-                            <p>￥500</p>
-                        </li>
-                        <li>
-                            <a data-value="6000张中叠房卡&6000">
-                                <img src="/images/mid-fangka.png" />
-                                <span>×6000</span>
+                            <a data-value="840张小叠房卡&1000&1">
+                                <img src="/images/index_images/sm-fangka.png" />
+                                <span>×840</span>
                             </a>
                             <p>￥1000</p>
                         </li>
                         <li>
-                            <a data-value="26800张大叠房卡&20000">
-                                <img src="/images/lg-fangka.png" />
-                                <span>×26800</span>
+                            <a data-value="30000张中叠房卡&20000&3">
+                                <img src="/images/index_images/mid-fangka.png" />
+                                <span>×30000</span>
                             </a>
                             <p>￥20000</p>
+                        </li>
+                        <li>
+                            <a data-value="26800张大叠房卡&20000&4">
+                                <img src="/images/index_images/lg-fangka.png" />
+                                <span>×83000</span>
+                            </a>
+                            <p>￥50000</p>
                         </li>
                     </ul>
                     <ul style="display:none" class="kaixinbi-cate">
                         <li>
-                            <a data-value="280万小框开心币&200">
-                                <img src="/images/sm-kaixinbi.png" />
+                            <a data-value="280万小框开心币&200&5">
+                                <img src="/images/index_images/sm-kaixinbi.png" />
                                 <span>×280万</span>
                             </a>
                             <p>￥200</p>
                         </li>
                         <li>
-                            <a data-value="1450万小框开心币&1000">
-                                <img src="/images/mid-kaixinbi.png" />
+                            <a data-value="1450万小框开心币&1000&6">
+                                <img src="/images/index_images/mid-kaixinbi.png" />
                                 <span>×1450万</span>
                             </a>
                             <p>￥1000</p>
                         </li>
                         <li>
-                            <a data-value="3000万小框开心币&2000">
-                                <img src="/images/lg-kaixinbi.png" />
+                            <a data-value="3000万小框开心币&2000&7">
+                                <img src="/images/index_images/lg-kaixinbi.png" />
                                 <span>×3000万</span>
                             </a>
                             <p>￥2000</p>
                         </li>
                     </ul>
                 </div>
-                <form action="pay.html" method="get" onsubmit="return CheckData()">
-                    <input id="name" name="pname" type="hidden" value="" />
-                    <input id="pr" name="price" type="hidden" value="" />
-                    <input id="Submit1" class="btn" type="submit" value="立即购买" />
-                </form>
+                <input id="Submit1" class="btn" type="submit" value="立即购买" />
             </div>
         </div>
     </div>
-    <div style="background:#e6e6e6;position:fixed;bottom:0; width:100%;">
+    <div style="background: #211E22;flex: 0 0 auto;">
         <script src="/js/web/footer.js"></script>
     </div>
     <script>
         $(function () {
+            var pname,price, IDNumber,ID,array=[];
             $('.category li a').click(function () {
                 if ($(this).hasClass('active')) {
                     $(this).removeClass('active');
-                    $("input[name=pname]").val("");
-                    $("input[name=price]").val("");
                 } else {
                     $(this).addClass('active').parent().siblings().children('a').removeClass('active');
-                    var array = $(this).attr("data-value").split('&');
-                    $("input[name=pname]").val(array[0]);
-                    $("input[name=price]").val(array[1]);
+                    array = $(this).attr("data-value").split('&');
+                    pname=array[0];
+                    price=array[1];
+                    ID=array[2];
                 }
             });
             $('.choose li').click(function () {
 
                 $("div[data-id=category]").find("li a").removeClass("active");
-                $("input[name=pname]").val("");
-                $("input[name=price]").val("");
+                pname=null;
+                price=null;
+                ID=null;
                 $(this).addClass('on').siblings().removeClass('on');
                 var target = $('.choose li').index(this);
                 $('.category ul:eq(' + target + ')').show().siblings().hide();
             });
+            $("#Submit1").click(function(){
+                IDNumber=$("#IDNumber").val();
+                if(!IDNumber){
+                    alert("请填写用户ID");
+                    return;
+                }else if(!pname){
+                    alert("请选中商品");
+                    return;
+                }else{
+                    document.cookie = 'price='+price;
+                    document.cookie = 'pname='+pname;
+                    document.cookie = 'IDNumber='+IDNumber;
+                    document.cookie = 'productID='+ID;
+                    location.href="pay.html";
+                }
+
+            });
         });
 
-        //检查用户是否选中商品
-        function CheckData() {
-            var pname = $("input[name=pname]").val();
-            if (pname == "" || pname == undefined) {
-                alert("请选择商品！");
-                return false;
-            }
-            return true;
-        }
+
+
     </script>
 </body>
 </html>

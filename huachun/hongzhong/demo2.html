@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html style="font-size: 35.5701px;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=320,minimum-scale=1,maximum-scale=5,user-scalable=no"/>
+    <title>玩法说明</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: "SimSun","Microsoft YaHei","微软雅黑", Helvetica, Arial, Tahoma;
+            box-sizing: border-box;
+            color: #820f00;
+        }
+        a,img,button,input,textarea,span{-webkit-tap-highlight-color:rgba(255,255,255,0);}
+        a {
+            text-decoration: none;
+        }
+        body{
+            background: #fff8da;
+            height:100%;
+        }
+        nav{
+            width:80px;
+            height:100%;
+            position: fixed;
+            top:0;
+            background: url('CreateRoom_015.png') 0 0 no-repeat;
+            background-size: cover;
+        }
+        nav div {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        nav span{
+            width:60px;
+            height:30px;
+            border-radius: 4px;
+            margin: 10px auto 0;
+            display: block;
+            cursor: pointer;
+        }
+        nav span:nth-child(2) {
+            background: url('CreateRoom_004.png') no-repeat;
+            background-size: 100% 100%;
+        }
+
+        nav span:nth-child(2).current {
+            background: url('CreateRoom_005.png') no-repeat;
+            background-size: 100% 100%;
+        }
+        nav span:nth-child(1) {
+            background: url('CreateRoom_003.png') no-repeat;
+            background-size: 100% 100%;
+        }
+        nav span:nth-child(1).current {
+            background: url('CreateRoom_007.png') no-repeat;
+            background-size: 100% 100%;
+        }
+        .tab-list{
+            width:240px;
+            height:30px;
+            margin-top:3px;
+        }
+        .tab-list li{
+            float:left;
+            width:60px;
+            height:30px;
+            line-height: 30px;
+            text-align: center;
+            font-size: 12px;
+            background: -webkit-linear-gradient(#C4E569, #A6D247 50%,#C4E569 100%); /* Safari 5.1 - 6.0 */
+            background: -o-linear-gradient(#C4E569, #A6D247 50%,#C4E569 100%); /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient(#C4E569, #A6D247 50%,#C4E569 100%); /* Firefox 3.6 - 15 */
+            background: linear-gradient(#C4E569, #A6D247 50%,#C4E569 100%); /* 标准的语法 */
+            color: #295180;
+            border-top: none;
+            border-radius:5px 5px 0 0;
+        }
+        .niuniu li{
+            width:120px;
+        }
+        .tab-list li:first-child{
+            border-left:none;
+        }
+        .tab-list li.active{
+            background: -webkit-linear-gradient(#E8A52C, transparent 50%,transparent 100%); /* Safari 5.1 - 6.0 */
+            background: -o-linear-gradient(#E8A52C , transparent 50%,transparent 100%); /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient(#E8A52C , transparent 50%,transparent 100%); /* Firefox 3.6 - 15 */
+            background: linear-gradient(#E8A52C , transparent 50%,transparent 100%); /* 标准的语法 */
+            color:#662600;
+            height:33px;
+            margin-top:-3px;
+        }
+        #ContentBox{
+            padding:0 0 40px 80px;
+        }
+        .content_detail{
+            display: none;
+            width:240px;
+            padding:0 6px;
+        }
+        .content_detail .item-title {
+            color: #662600;
+            font-size: 12px;
+            line-height:20px;
+            text-align: left;
+        }
+
+        .content_detail .item-content {
+            font-size:12px;
+            line-height:20px;
+            color: #662600;
+            /*text-indent: 1em;*/
+            text-align: justify;
+            font-weight:500;
+            font-family:sans-serif, Microsoft YaHei, Segoe UI, Tahoma, Arial, Verdana;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <div id="Nav">
+        <span class="current"></span>
+        <span class=""></span>
+    </div>
+</nav>
+<div id="ContentBox">
+    <!--hongzhong-->
+    <div class="content" style="display: block;">
+        <ul class="tab-list">
+            <li class="active">基本规则</li>
+            <li>基本番型</li>
+            <li>特殊规则</li>
+            <li>结算</li>
+        </ul>
+        <div class="content_detail" style="display: block">
+            <p class="item-title">红中麻将无字牌，不能吃牌，红中做赖子。</p>
+            <p class="item-title">【用牌】</p>
+            <p class="item-content">牌数共112张牌，包括筒、索、万，1-9各4张，外加4张红中。</p>
+            <p class="item-title">【打牌】</p>
+            <p class="item-content item-indent">
+                庄家先出牌，打出的牌，其余的人都能碰和杠，不能吃牌。
+            </p>
+            <p class="item-content item-indent">
+                红中即为王牌，可以代替任意一张牌。
+            </p>
+            <p class="item-content item-indent">
+                红中不能碰和杠红中，也不能辅助其它牌来碰和杠。
+            </p>
+            <p class="item-content item-indent">
+                庄家打牌后，如果没有人“碰、杠”，则下家摸牌，然后自主选择一张手上的牌打出，依次类推，直至有人胡牌。
+            </p>
+            <p class="item-title">【杠牌】</p>
+            <p class="item-content item-indent">
+                明杠：先碰了的牌，后面有自己摸到的一个该牌，则可以选择杠，（公杠必须第一时间杠，如果没有第一时间杠，则不能再杠）。
+            </p>
+            <p class="item-content item-indent">
+                暗杠：手里有4张相同的牌，可以选择杠（暗杠，不需要第一时间杠，只要有这个牌型，每一次轮到该用户打牌，都可以选择杠）。
+            </p>
+            <p class="item-content item-indent">
+                放杠：自己打出一张牌，同桌有玩家手里有一坎相同的该牌，则该用户可以接杠，打出该牌的玩家就是放杠。
+            </p>
+            <p class="item-content item-indent">
+                接杠：与放杠对应，有人放就对应有人接。
+            </p>
+            <p class="item-content item-indent">
+                抢杠胡：A玩家选择公杠，而杠好此时B玩家可以胡这牌，则B玩家可以选择抢杠，抢杠就是B玩家胡牌，但是只有A玩家一个输全部的钱。多人抢杠，多人胡。能胡牌的情况下，直接胡。
+            </p>
+            <p class="item-title">【庄家】</p>
+            <p class="item-content">
+                A、第一局由房主做庄家。
+            </p>
+            <p class="item-content">
+                B、以后谁胡牌，下局谁做庄家。
+            </p>
+            <p class="item-content">
+                C、如臭庄、则最后摸牌的人做庄。
+            </p>
+        </div>
+        <div class="content_detail">
+            <p class="item-content">红中麻将没有番型，自摸赢2倍底分。可以胡七小对</p>
+        </div>
+        <div class="content_detail">
+            <p class="item-title">【抓鸟】（同买马）</p>
+            <p class="item-content">胡牌玩家随机获得几张牌，如果麻将点数为1、5、9、红中，则算中鸟，中鸟1分。</p>
+            <p class="item-title">【红中赖子】</p>
+            <p class="item-content">红中为赖子，即为万能牌，可以做任何牌，可以打出，但不能吃、碰、杠</p>
+        </div>
+        <div class="content_detail">
+            <p class="item-content">
+                放杠出3分。
+            </p>
+            <p class="item-content">
+                接杠得3分。
+            </p>
+            <p class="item-content">
+                A玩家公杠，则其他三人1人出1分，A玩家得3分。
+            </p>
+            <p class="item-content">
+                A玩家暗杠，则其他三人1人出2分，A玩家得6分。
+            </p>
+            <p class="item-content">
+                自摸 每人出2分；再算扎码。
+            </p>
+            <p class="item-content">
+                扎鸟：有人胡牌后，从敦上摸牌，1、5、9、红中算庄家中鸟。
+            </p>
+            <p class="item-content">
+                中1个鸟，则每人多出1分。
+            </p>
+            <p class="item-content">
+                扎鸟数量由开房时确定，（2-4-6个）。
+            </p>
+            <p class="item-content">
+                抢杠胡：只可抢公杠，抢杠后，如胡牌玩家中2个鸟，则每人多出3分，赢家得9分，9分全由被抢玩家出。
+            </p>
+        </div>
+    </div>
+    <div class="content niuniu" style="display: none;">
+        <ul class="tab-list">
+            <li class="active">基本规则</li>
+            <li>基本牌型</li>
+            <!--<li>结算</li>-->
+        </ul>
+        <div class="content_detail" style="display: block">
+            <p class="item-title">【看牌抢庄】</p>
+            <p class="item-content">1.所有玩家点击准备，游戏立即开始。</p>
+            <p class="item-content">2.系统为每位玩家发五张牌，玩家可以看到自己的四张明牌。</p>
+            <p class="item-content">3.发完牌后玩家可以选择翻倍抢庄或者不抢，选择倍数高者优先坐庄，若选择倍数相同，系统将在参与抢庄的玩家中随机挑选一人坐庄。</p>
+            <p class="item-content">4.确定庄家后，闲家二次选择当局的倍数。</p>
+            <p class="item-content">5.系统为每位玩家发第五张牌，闲家只需与庄家比较牌型大小即可，闲家之间无需比较。</p>
+            <p class="item-content">6.结算倍数以庄家倍数和闲家倍数相乘进行计算。</p>
+            <p class="item-title">【游戏规则】</p>
+            <p class="item-content">游戏使用一副标准扑克牌，去掉大小王，共52张，JQK视为10。</p>
+            <p class="item-content">每人随机发五张牌，与他人比较。</p>
+            <p class="item-content">玩家需要将其中3张牌拼成10、20、30的整数，再将剩余2张相加保留个位数，得出最终牌型。</p>
+            <p class="item-content">游戏使用一副标准扑克牌，去掉大小王，共52张，JQK视为10。</p>
+            <p class="item-content"><img src="demo01.png" style="width:80%;"/></p>
+            <p class="item-content">例如上图，将2、3、5相加，得到10，再将Q、7相加，保留各位数，得出牌型“牛七”。</p>
+            <p class="item-content"><img src="demo02.png" style="width:80%;"/></p>
+            <p class="item-content">再例如上图，任意3张牌都无法拼出10、20、30的整数，得出牌型为“无牛”。</p>
+            <p class="item-content">其中五花牛：五张牌均为JQK。</p>
+        </div>
+        <div class="content_detail">
+            <p class="item-title">【牌型比较】</p>
+            <p class="item-content">五花牛>牛牛>牛九>牛八>牛七>牛六>牛五>牛四>牛三>牛二>牛一>无牛。</p>
+            <p class="item-content">单牌按分值比大小，依次是K>Q>J>10>9>8>7>6>5>4>3>2>A</p>
+            <p class="item-title">【牌型大小】</p>
+            <p class="item-content">五花牛翻5倍；牛牛翻3倍；牛九--牛七翻2倍；牛六--无牛不翻倍。</p>
+            <p class="item-content">牌型相同时，比较最大那张牌的花色：黑桃>红桃>梅花>方块</p>
+        </div>
+        <!--<div class="content_detail">6</div>-->
+
+    </div>
+
+
+</div>
+
+<script>
+    window.onload = window.onresize = function() {
+        var oNav = document.getElementById('Nav');
+        var a = oNav.children;
+        var oC = document.getElementById('ContentBox');
+        var aC = oC.children;
+        var lis=document.querySelectorAll('.tab-list li');
+        var con_dets=document.getElementsByClassName('content_detail');
+        for(var i = 0; i < a.length; i++) {
+            a[i].index = i;
+            a[i].onclick = function() {
+                window.scrollTo(0,0);
+                for(var i = 0; i < a.length; i++) {
+                    a[i].className = '';
+                    aC[i].style.display = 'none';
+                }
+                this.className = 'current';
+                aC[this.index].style.display = 'block';
+                for(var j = 0; j < lis.length; j++) {
+                    lis[j].className = '';
+                    con_dets[j].style.display = 'none';
+                }
+
+                aC[this.index].getElementsByClassName("content_detail")[0].style.display = 'block';
+                aC[this.index].getElementsByTagName("li")[0].className = 'active';
+            };
+        }
+        for(var j = 0; j < lis.length; j++) {
+            lis[j].index = j;
+            lis[j].onclick = function() {
+                for(var j = 0; j < lis.length; j++) {
+                    lis[j].className = '';
+                    con_dets[j].style.display = 'none';
+                }
+                this.className = 'active';
+                con_dets[this.index].style.display = 'block';
+            };
+        }
+    };
+</script>
+
+</body></html>

@@ -1,0 +1,142 @@
+.area{
+    width:100%;
+    margin: auto;
+    clear: both;
+}
+.news-swap{
+    width: 100%;
+    height: auto;
+    padding:20px;
+    box-sizing: border-box;
+    background: #FAFAFA;
+}
+.news_tab {
+    font-family: "Microsoft Yahei";
+}
+/*新闻列表头部*/
+.news_tab .hd {
+    height: 40px;
+    font-size: 14px;
+    /*background: #d0dbe4;*/
+    border-radius: 5px 5px 0 0;
+}
+
+.news_tab .hd ul {
+    position: relative;
+    margin: 0 auto;
+}
+.news_tab .hd ul:after{
+    content:"";
+    display: table;
+    clear: both;
+}
+
+.news_tab .hd ul li {
+    float: left;
+    width: 90px;
+    background: url('/images/index_images/news-tit-bg.jpg') 0 0 no-repeat;
+    background-size: 100% auto;
+}
+.news_tab .hd ul li + li{
+    margin-left:5px;
+}
+
+
+
+.news_tab .hd .on a {
+    color: #fff;
+}
+
+.news_tab .hd a {
+    display: block;
+    height: 36px;
+    line-height: 36px;
+    color: #414141;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+
+.news_tab .bd{
+
+}
+.news_tab .tab-panel {
+    font-family: "Microsoft Yahei";
+    display: none;
+    min-height:350px;
+}
+
+.news_tab .dis {
+    display: block;
+}
+
+.news_tab .tab-panel ul {
+
+}
+
+.news_tab .tab-panel ul li {
+    line-height: 30px;
+    /*margin-left: 15px;*/
+    font-size: 14px;
+    border-bottom: 1px solid #dbe1e7;
+    padding:10px 10px 0 0;
+}
+
+.news_tab .tab-panel ul li a:active p span {
+    color: #33b972;
+}
+
+.news_tab .tab-panel ul li p span {
+    width:220px;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #414141;
+}
+.news_tab .tab-panel ul li p span b{
+    color:#73C1C8;
+}
+
+.news_tab .tab-panel ul li p i {
+    margin-top: -30px;
+    float:right;
+    font-size: 12px;
+    color: #878787;
+    font-style: normal;
+}
+
+.page{
+    margin-top:10px;
+    padding:0 50px;
+}
+.page:after{
+    content:"";
+    display: table;
+    clear:both;
+}
+.page>a{
+    width:60px;
+    height:30px;
+    line-height: 30px;
+    text-align: center;
+    border:1px solid #414141;
+    color:#414141;
+    border-radius: 4px;
+}
+.page .prev{
+    float:left;
+}
+.page .next{
+    float:right;
+}
+.page-indicator{
+    display: block;
+    width:54px;
+    margin: 0 auto;
+    height:30px;
+    line-height:30px;
+    color:#878787;
+    text-align: center;
+}

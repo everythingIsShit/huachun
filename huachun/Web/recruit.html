@@ -7,15 +7,20 @@
     <meta name="copyright" content="huachun">
     <meta name="description" content="游戏排行榜">
     <meta name="keywords" content="游戏排行榜">
-    <title>华淳科技</title>
+    <title>华淳游戏</title>
     <link href="/css/web/commen.css" rel="stylesheet" />
     <link rel="stylesheet" href="/css/web/public.css"/>
     <script src="/js/jquery/jquery-1.8.3.min.js"></script>
+    <script>
+        if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)){
+            window.location.href ="/Web/m/m-recruit.html";
+        }
+    </script>
     <style>
         .content {
             width: 1016px;
             height: auto;
-            margin: 100px auto 80px;
+            margin: 50px auto 80px;
             text-align: center;
             position: relative;
         }
@@ -62,14 +67,19 @@
             margin-top:10px;
             margin-bottom:10px;
         }
+        .recruitbanner{
+            background: url('/images/index_images/recruitbanner.jpg') repeat-x center top;
+            height:320px;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
 <script src="/js/web/header.js"></script>
+<section class="recruitbanner"></section>
 <div class="content">
-    <div class="main">
+
         <div class="main">
-            <p class="text" style="text-indent: 2em">我公司是一家专注棋牌手游开发的游戏公司，办公地点在安徽省合肥市经开区。办公环境优雅、提供宿舍，高于同行业的福利待遇和广阔的发展空间。现急聘以下职位，诚邀您的加盟。</p>
             <p class="title">一、C++服务端程序</p>
             <p class="sm-title">岗位职责：</p>
             <p class="text">1.负责服务器端游戏逻辑开发；</p>
@@ -138,16 +148,16 @@
             <p class="text" style="margin-top:40px;">办公环境：</p>
             <p class="text">AAAA级写字楼、总面积1400平方、办公舒适、交通便利、无需出差。</p>
             <p class="text">福利：</p>
-            <p class="text">1.节假日福利；</p>
-            <p class="text">2.带薪年假，高额提成；</p>
+            <p class="text">1.节假日福利，生日party；</p>
+            <p class="text">2.带薪年假，高额提成，五险一金；</p>
             <p class="text">3.每年多次旅游、培训、拓展机会。</p>
-            <p class="text" style="margin-top:40px">联系qq:974660677</p>
-            <p class="text">联系电话:15655103407</p>
+            <p class="text" style="margin-top:40px">人事QQ:974660677</p>
+            <p class="text">人事电话:15655103407</p>
             <p class="text">简历邮箱:974660677@qq.com</p>
             <p class="text">公司由集团控股，资金充足 ，有广阔的发展空间；公司薪资福利待遇高于行业平均水平，如午餐补助、项目奖金、年终奖金、定期体检、国内外旅游等，期待您的加入!</p>
         </div>
     </div>
-</div>
+
 <div style="background:#2E2E2E;">
     <script src="/js/web/footer.js"></script>
 </div>

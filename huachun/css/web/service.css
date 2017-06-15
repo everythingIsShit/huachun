@@ -80,9 +80,11 @@
                 width: 320px;
                 height: 170px;
                 background-color: #f1f1f1;
-                margin-right: 20px;
                 text-align: center;
                 border-radius: 3px;
+            }
+            .fcontact li + li{
+                margin-left: 20px;
             }
                 .fcontact li .fconimg {
                     width: 52px;
@@ -113,7 +115,7 @@
                     border-radius:5px;
                 }
                 .fcontact li.fconli3 .fconimg {
-                    background:url('/images/niuniu_images/weixin.jpg') no-repeat;
+                    background:url('/images/index_images/weixin.jpg') no-repeat;
                     background-size: 80px;
                     width: 70px;
                     height:80px;

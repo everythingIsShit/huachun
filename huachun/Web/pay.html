@@ -1,9 +1,10 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=" utf-8" />
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
     <title>华淳科技</title>
     <script src="/js/jquery/jquery-1.8.3.min.js"></script>
+    <link rel="stylesheet" href="/css/web/public.css"/>
     <style>
         * {
             margin: 0;
@@ -21,6 +22,18 @@
         body {
             font: 12px/1.5 Microsoft YaHei,Tahoma,Arial,Helvetica,Geneva,sans-serif !important;
             color: #333;
+            display: flex;
+            flex-direction:
+            column; height: 100%;
+        }
+        html{
+            height:100%;
+        }
+        header{
+            flex: 0 0 auto;
+        }
+        .content{
+            flex: 1 0 auto;
         }
 
         ul {
@@ -56,6 +69,8 @@
             font-size: 14px;
             float: left;
             margin-right: 10px;
+            width:60px;
+            text-align: right;
         }
 
         .detail b {
@@ -115,7 +130,7 @@
             line-height: 21px;
             float: left;
             font-size: 16px;
-            background: url('/images/weixin.png') left center no-repeat;
+            background: url('/images/index_images/weixin.png') left center no-repeat;
             background-size: auto 21px;
             padding-left: 30px;
             margin: 0 10px;
@@ -129,12 +144,22 @@
             line-height: 21px;
         }
 
-        .Unionpay .pay-wrap b {
+        /*.Unionpay .pay-wrap b {*/
+            /*height: 21px;*/
+            /*line-height: 21px;*/
+            /*float: left;*/
+            /*font-size: 16px;*/
+            /*background: url('/images/Unionpay.png') left center no-repeat;*/
+            /*background-size: auto 21px;*/
+            /*padding-left: 30px;*/
+            /*margin: 0 10px;*/
+        /*}*/
+        .alipay .pay-wrap b {
             height: 21px;
             line-height: 21px;
             float: left;
             font-size: 16px;
-            background: url('/images/Unionpay.png') left center no-repeat;
+            background: url('/images/index_images/zhifubao.png') left center no-repeat;
             background-size: auto 21px;
             padding-left: 30px;
             margin: 0 10px;
@@ -152,7 +177,6 @@
                 font-size: 18px;
                 width: 220px;
                 font-family: "Microsoft Yahei";
-                font-weight: 700;
                 border: none;
                 background: #e4393c;
                 color: #fff;
@@ -160,23 +184,27 @@
     </style>
     <script>
         $(function () {
-            var pname = getUrlParam("pname");
-            var price = getUrlParam("price");
-
+            var arr = document.cookie.split('; ');
+            var cookieData = {};
+            for(var i=0; i<arr.length; i++){
+                var kv = arr[i];    //"k=v"形式的键值对
+                var pair = kv.split('='); //使用=拆分每个键值对
+                cookieData[pair[0]] = pair[1];
+            }
+            var price=cookieData['price'];
+            var pname=cookieData['pname'];
+            var IDNumber=cookieData['IDNumber'];
+            var productID=cookieData['productID'];
             $("b[data-name]").html(pname);
             $("i[data-price]").html(price);
+            $("b[data-ID]").html(IDNumber);
+            $("#productID").val(productID);
         });
 
-        //获取url中的参数
-        function getUrlParam(name) {
-            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
-            var r = window.location.search.substr(1).match(reg);  //匹配目标参数
-            if (r != null) return decodeURI(r[2]); return null; //返回参数值
-        }
     </script>
 </head>
 <body>
-    <script src="/js/web/fast-path.js"></script>
+    <script src="/js/web/header.js"></script>
     <div class="content">
         <div class="main">
             <div class="detail">
@@ -189,6 +217,10 @@
                         <span>支付金额:</span>
                         <b><i data-price>500</i>元</b>
                     </li>
+                    <li>
+                        <span>玩家ID:</span>
+                        <b data-ID>12568</b>
+                    </li>
                 </ul>
             </div>
             <div class="pay-load">
@@ -199,21 +231,28 @@
                     <form>
                         <div class="paybox weixin">
                             <div class="pay-wrap">
-
                                 <input type="radio" name="pay-mode" checked />
                                 <b>微信支付</b>
                                 <span>仅适用于单笔低于3000的支付</span>
                             </div>
                         </div>
-                        <div class="paybox Unionpay">
-                            <div class="pay-wrap">
+                        <!--<div class="paybox Unionpay">-->
+                            <!--<div class="pay-wrap">-->
 
-                                <input type="radio" name="pay-mode" />
-                                <b>快捷支付</b>
-                                <span>适用于大额支付</span>
+                                <!--&lt;!&ndash;<input type="radio" name="pay-mode" />&ndash;&gt;-->
+                                <!--<b>快捷支付</b>-->
+                                <!--<span>适用于大额支付</span>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <div class="paybox alipay">
+                            <div class="pay-wrap">
+                                <input type="radio" name="pay-mode" checked />
+                                <b>支付宝支付</b>
+                                <span>登录网页版支付宝支付</span>
                             </div>
                         </div>
                         <div class="pay-button">
+                            <input type="hidden" value="" id="productID"/>
                             <input type="button" value="立即支付" />
                         </div>
                     </form>
@@ -222,7 +261,7 @@
             </div>
         </div>
     </div>
-    <div style="background:#e6e6e6;position:fixed;bottom:0; width:100%;">
+    <div style="background: #211E22;flex: 0 0 auto;">
         <script src="/js/web/footer.js"></script>
     </div>
 

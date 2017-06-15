@@ -1,5 +1,5 @@
 body{
-    min-width:960px;
+    min-width:1060px;
     overflow-x: hidden;
 }
 img{
@@ -20,6 +20,11 @@ header{
     position: relative;
     zoom: 1;
 }
+.nav:after{
+    content: "";
+    display: table;
+    clear:both;
+}
 header .wrap .logo{
     float: left;
     background: url('/images/index_images/logo.png') no-repeat 0 bottom;
@@ -30,7 +35,6 @@ header .wrap .logo{
 }
 #nav{
     float: left;
-    padding: 0 10px;
     color: #fff;
     font-size: 18px;
     zoom: 1;
@@ -39,7 +43,7 @@ header .wrap .logo{
     float:left;
 }
 #nav li a{
-    width:150px;
+    width:120px;
     line-height: 85px;
     height: 78px;
     display: block;
@@ -53,4 +57,38 @@ header .wrap .logo{
 }
 #nav li a:hover{
     color:#fff;
+}
+/*用户中心*/
+.userCenter{
+    position: absolute;
+    right:0;
+    top:0;
+    line-height: 84px;
+}
+.userCenter>span{
+    float:right;
+    font-size:13px;
+    color: #aaa;
+}
+.userCenter .recharge{
+    display: inline-block;
+    margin: 12px 10px 0 10px;
+    height: 32px;
+    line-height: 2;
+    width: 98px;
+    border: 1px solid #3aca7a;
+    border-radius: 3px;
+    background-color: #38b774;
+    font-size: 1.166em;
+    color: #fff;
+    text-align: center;
+}
+.userCenter .login{
+    color:#a0a0a0;
+}
+.userCenter .register{
+    color:#a0a0a0;
+}
+.userCenter .login:hover,.userCenter .register:hover{
+    color:#38b774;
 }

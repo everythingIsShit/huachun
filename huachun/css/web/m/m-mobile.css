@@ -1,0 +1,322 @@
+
+
+
+/*��ͼ��ȵ�����Ļ���*/
+.indexbanner{
+    background: url('/images/index_images/huachungames.jpg') repeat-x -90px top;
+    background-size: auto 100%;
+    height:118px;
+    width: 100%;
+    position: relative;
+}
+.indexbanner .info{
+    position: absolute;
+    right:5px;
+    top:20px;
+    width:160px;
+    color:#fff;
+    font-size: 10px;
+    line-height:20px;
+    font-weight:bold;
+    background: rgba(0,0,0,.5);
+    padding: 10px 5px;
+    border-radius: 5px;
+}
+.indexbanner .info b{
+    float:right;
+}
+
+/*游戏特色*/
+.area{
+    width:100%;
+    margin: auto;
+    clear: both;
+    border-bottom: 1px solid #e1e1e1;
+}
+.feature-swap{
+    height:auto;
+    margin:10px 0 0;
+    padding:0 20px 20px;
+    box-sizing: border-box;
+}
+.swiper-container {
+    width: 100%;
+    height: 170px;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 1
+}
+.swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    -ms-transition-property: -ms-transform;
+    transition-property: transform;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box
+}
+.swiper-wrapper {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -o-transform: translate(0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0)
+}
+.swiper-slide {
+    -webkit-flex-shrink: 0;
+    -ms-flex: 0 0 auto;
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative
+}
+.swiper-pagination {
+    position: absolute;
+    bottom:10px;
+    right:10px;
+    text-align: center;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    z-index: 10
+}
+.swiper-container img{
+    width:100%;
+}
+.swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border-radius: 100%;
+    background: #fff;
+
+}
+.swiper-pagination-bullet-active {
+    background: #33b972;
+}
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 5px;
+}
+/*游戏新闻*/
+.news-swap{
+    height: auto;
+    overflow-x: hidden;
+}
+.s-tit {
+    background: url('/images/index_images/txt-bg.jpg') 0 0 no-repeat;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    width: 100%;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    margin: 10px auto;
+    font-size: 14px;
+    color: #26626f;
+}
+.more{
+    position: absolute;
+    bottom:0;
+    width:100%;
+}
+.more a{
+    width: 100%;
+    text-align: center;
+    text-decoration: underline;
+    color: #909090;
+    margin: 10px 0;
+    display: block;
+}
+
+
+.news_tab {
+    font-family: "Microsoft Yahei";
+    position: relative;
+    height:203px;
+}
+
+/*新闻导航*/
+.news_tab .hd {
+    height: 40px;
+    font-size: 14px;
+    border-radius: 5px 5px 0 0;
+    margin:0 20px;
+}
+
+.news_tab .hd ul {
+    position: relative;
+    margin: 0 auto;
+}
+.news_tab .hd ul:after{
+    content:"";
+    display: table;
+    clear: both;
+}
+
+.news_tab .hd ul li {
+    float: left;
+    width: 90px;
+    background: url('/images/index_images/news-tit-bg.jpg') 0 0 no-repeat;
+    background-size: 100% auto;
+}
+
+.news_tab .hd ul li + li{
+    margin-left:5px;
+}
+
+
+
+.news_tab .hd .on a {
+    /*color: #327a93;*/
+    color:#fff;
+}
+
+.news_tab .hd a {
+    display: block;
+    height: 36px;
+    line-height: 36px;
+    color: #414141;
+    text-align: center;
+    text-decoration: none;
+}
+
+.news_tab .bd{
+    width:960px;
+    position: absolute;
+    top:40px;
+    left:0;
+}
+
+.news_tab .bd:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.news_tab .tab-panel {
+    font-family: "\5FAE\8F6F\96C5\9ED1",Helvetica;
+    margin:0 20px;
+    float: left;
+    width:280px;
+    box-sizing: border-box;
+}
+
+/*.news_tab .dis {*/
+    /*display: block;*/
+/*}*/
+
+.news_tab .tab-panel ul {
+
+}
+
+.news_tab .tab-panel ul li {
+    line-height: 25px;
+    /*margin-left: 15px;*/
+    font-size: 12px;
+}
+
+
+
+.news_tab .tab-panel ul li a:active p span {
+    color: #33b972;
+}
+.news_tab .tab-panel ul li p span b{
+    color:#73C1C8;
+}
+
+.news_tab .tab-panel ul li p span {
+    width:225px;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #414141;
+}
+
+.news_tab .tab-panel ul li p i {
+    margin-top: -25px;
+    color: #878787;
+    float: right;
+    font-style: normal;
+    padding-right:10px;
+}
+/*游戏中心*/
+.games-swap{
+    margin-top:10px;
+    width:280px;
+    padding: 0 20px;
+}
+.tit {
+    width: 100%;
+    border-bottom: 1px solid #e1e1e1;
+    margin-bottom:10px;
+    height:23px;
+}
+.tit strong{
+    display: block;
+    height: 23px;
+    border-bottom: 1px solid #f05b21;
+    color: #f05b21;
+    width: 60px;
+    line-height: 23px;
+    text-align: center;
+}
+.games-swap ul:after{
+    content:"";
+    display: table;
+    clear:both;
+}
+.games-swap li{
+    width: 50%;
+    height: auto;
+    box-sizing: border-box;
+    margin-right: 0;
+    overflow: hidden;
+    float:left;
+}
+.games-swap li a{
+    display: block;
+}
+.games-swap li a img{
+    width:100%;
+}
+.games-swap li a p{
+    text-align: center;
+    color:#61657E;
+    padding: 5px 0 10px 0;
+}
+.games-swap li:nth-of-type(2n+1){
+    padding-right:10px;
+}
+.games-swap li:nth-of-type(2n+2){
+    padding-left:10px;
+}
+
+
+
+
+
+
+
+
+
+

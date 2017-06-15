@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+    <title>华淳科技</title>
+    <link href="/css/web/commen.css" rel="stylesheet" />
+    <link href="/css/web/public.css" rel="stylesheet" />
+    <script src="/js/jquery/jquery-1.8.3.min.js"></script>
+    <style>
+        html{
+            height:100%;
+        }
+        body{
+            display: flex;
+            flex-direction:
+            column; height: 100%;
+        }
+        header{
+            flex: 0 0 auto;
+        }
+        .content {
+            flex: 1 0 auto;
+            height: auto;
+            margin: 0 auto 80px;
+            position: relative;
+        }
+        .hidden{
+            display: none;
+        }
+        /*订单号和金额*/
+        .order{
+            display: block;
+            position: relative;
+        }
+        .order:after {
+            content: ".";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+        .o-left{
+            float: left;
+            width: 640px;
+            padding-top: 32px;
+            padding-bottom: 32px;
+        }
+        .order .o-title {
+            line-height: 26px;
+            height: 26px;
+            overflow: hidden;
+            font-size: 14px;
+        }
+
+        .order .o-right {
+            float: right;
+            width: 190px;
+            padding-top: 32px;
+            padding-bottom: 10px;
+            padding-right: 10px;
+            overflow: hidden;
+        }
+        .order .o-price {
+            text-align: right;
+            line-height: 26px;
+        }
+        .order .o-price em {
+            vertical-align: bottom;
+            font-style: normal;
+        }
+        .order .o-price strong {
+            font-size: 18px;
+            vertical-align: bottom;
+            color: #ff5d5b;
+            margin: 0 3px;
+        }
+        /*支付页面*/
+        .payment{
+            width:859px;
+            height:538px;
+            background-color: #fff;
+            padding: 12px 30px 0;
+            -moz-box-shadow: 0 0 20px rgba(0,0,0,.12);
+            -webkit-box-shadow: 0 0 20px rgba(0,0,0,.12);
+            box-shadow: 0 0 20px rgba(0,0,0,.12);
+            -moz-transition: all .2s ease-in-out;
+            -o-transition: all .2s ease-in-out;
+            -webkit-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+        }
+        .pay-weixin{
+            zoom:1;
+        }
+        .p-w-hd {
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-family: "Microsoft Yahei";
+        }
+        .p-w-bd:after, .pay-weixin:after {
+            display: table;
+            content: "";
+            clear: both;
+        }
+        .p-w-bd {
+            padding-left: 130px;
+            margin-bottom: 30px;
+            zoom:1;
+            position: relative;
+        }
+        .p-w-box{
+            float: left;
+            width: 300px;
+        }
+        .pw-box-hd {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            width: 298px;
+            height: 298px;
+        }
+        .pw-box-hd img {
+            width: 298px;
+            height: 298px;
+            background: url('/images/index_images/ui-modal-loading.gif') center center no-repeat;
+        }
+        .p-w-sidebar {
+            float: left;
+            width: 379px;
+            height: 421px;
+            padding-left: 50px;
+            margin-top: -20px;
+            background: url('/images/index_images/phone-bg.png') 50px 0 no-repeat;
+        }
+        .pw-box-ft {
+            height: 44px;
+            padding: 8px 0 8px 125px;
+            background: url('/images/index_images/icon-red.png') 50px 8px no-repeat #ff7674;
+        }
+        .pw-box-ft p {
+            margin: 0;
+            font-size: 14px;
+            line-height: 22px;
+            color: #fff;
+            font-weight: 700;
+        }
+        .payment-change .pc-wrap {
+            display: block;
+            height: 60px;
+            line-height: 56px;
+            padding: 0 20px;
+            -moz-transition: all .1s;
+            -o-transition: all .1s;
+            -webkit-transition: all .1s;
+            transition: all .1s;
+            color: #2ea7e7;
+        }
+        .payment-change .pc-wrap .pc-w-arrow-left {
+            float: left;
+            margin-right: 15px;
+        }
+        .pc-w-arrow-left{
+            float: right;
+            font-family: "\5b8b\4f53";
+            font-style: normal;
+            font-size: 22px;
+            width: 20px;
+            text-align: center;
+            color: #2fa1dd;
+        }
+        .payment-change .pc-wrap strong {
+            color: #2ea7e7;
+            margin-right: 30px;
+            font-size: 15px;
+            float: left;
+            cursor: pointer;
+        }
+        /*支付成功*/
+        .pay-success{
+            margin-top:160px;
+            font-size: 20px;
+            text-align: center;
+            color:green;
+            font-weight: bold;
+            float:left;
+            width:300px;
+            height:380px;
+        }
+        .pay-success p{
+            height:30px;
+            background: url('/images/index_images/pay-success.jpg') left center no-repeat;
+            padding-left:38px;
+            width:120px;
+            margin:0 auto;
+        }
+        .pay-success span{
+            margin-top:10px;
+            float:left;
+            width:100%;
+            color:#aaa;
+            font-size: 14px;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+<script src="/js/web/header.js"></script>
+
+<div class="content">
+    <button id="btn">点我测试</button>
+    <div class="order">
+        <div class="o-left">
+            <h3 class="o-title">订单提交成功，请尽快付款！订单号：58515245032</h3>
+        </div>
+        <div class="o-right">
+            <div class="o-price">
+                <em>应付金额</em>
+                <strong>749.00</strong>
+                <em>元</em>
+            </div>
+        </div>
+    </div>
+   <div class="payment">
+       <div class="pay-weixin">
+           <div class="p-w-hd">微信支付</div>
+           <div class="p-w-bd">
+               <div class="p-w-box">
+                    <div class="pw-box-hd">
+                        <img src="/images/index_images/weixinPay.png" alt=""/>
+                    </div>
+                    <div class="pw-box-ft">
+                        <p>请使用微信扫一扫</p>
+                        <p>扫描二维码支付</p>
+                    </div>
+                </div>
+               <div class="pay-success hidden">
+                   <p>支付成功！</p>
+                   <span>到账可能会有延迟，请您耐心等待</span>
+               </div>
+               <div class="p-w-sidebar"></div>
+           </div>
+       </div>
+   </div>
+</div>
+
+<div style="background: #211E22;flex: 0 0 auto;">
+    <script src="/js/web/footer.js"></script>
+</div>
+<script>
+    $("#btn").click(function(){
+        $(".p-w-box").hide();
+        $(".pay-success").show();
+    });
+</script>
+</body>
+</html>

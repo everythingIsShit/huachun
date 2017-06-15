@@ -59,7 +59,7 @@
         position: relative;
         color:#fff;
         font-size:18px;
-        line-height: 25px;
+        line-height: 30px;
     }
     .company-info .download dt {
         color: #FFFF7C;
@@ -175,7 +175,7 @@
     float: left;
 }
 .more {
-    background: url('/images/majiang_images/more.png') left center no-repeat;
+    background: url('/images/index_images/more.png') left center no-repeat;
     background-size: 15px;
     padding-left: 20px;
     width: 34px;

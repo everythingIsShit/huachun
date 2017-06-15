@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html style="font-size: 35.5701px;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0,maximum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>玩法说明</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: sans-serif, Microsoft YaHei, Segoe UI, Tahoma, Arial, Verdana;
+            box-sizing: border-box;
+            color: #820f00;
+        }
+
+        html {
+            font-size: 20px;
+        }
+
+        a, img, button, input, textarea, span {
+            -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        body {
+            background: #fff8da;
+            height: 100%;
+        }
+
+        nav {
+            height: 100%;
+            border-top: 1px solid #CF9B86;
+            border-bottom: 1px solid #CF9B86;
+            padding: 0 0 0 0.8rem;
+            position: fixed;
+            width: 10rem;
+            top: 0;
+            background: url('/images/majiang_images/CreateRoom_015.png') 0 0 no-repeat;
+            background-size: cover;
+            z-index: 2;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        nav div {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            position: relative;
+            z-index: 2;
+        }
+
+        nav span {
+            width: 8.5rem;
+            height: 4.33rem;
+            border-radius: 0.5rem;
+            margin-top: 0.5rem;
+            display: block;
+            cursor: pointer;
+            background: url('/images/majiang_images/play.png') no-repeat;
+            background-size: 100% 100%;
+            color: #A18F4B;
+            text-align: center;
+            line-height: 3.53rem;
+            font-size: 1.6rem;
+        }
+
+        nav span.current {
+            background: url('/images/majiang_images/playActive.png') no-repeat;
+            background-size: 100% 100%;
+            width: 9.5rem;
+            color: #fff;
+        }
+
+        .tab-list {
+            width: 100%;
+            height: 3rem;
+            margin-top: 0.6rem;
+            background: -webkit-linear-gradient(#C4E569, #A6D247 50%, #C4E569 100%); /* Safari 5.1 - 6.0 */
+            background: -o-linear-gradient(#C4E569, #A6D247 50%, #C4E569 100%); /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient(#C4E569, #A6D247 50%, #C4E569 100%); /* Firefox 3.6 - 15 */
+            background: linear-gradient(#C4E569, #A6D247 50%, #C4E569 100%); /* 标准的语法 */
+            border-radius: 0.8rem 0.8rem 0 0;
+        }
+
+        .tab-list li {
+            float: left;
+            width: 25%;
+            height: 3rem;
+            line-height: 3rem;
+            text-align: center;
+            font-size: 1.6rem;
+            color: #295180;
+            border: 1px solid transparent;
+            border-top: none;
+            border-bottom: none;
+        }
+
+        .niuniu li {
+            width: 50%;
+        }
+
+        .tab-list li:first-child {
+            border-left: none;
+        }
+
+        .tab-list li.active {
+            background: -webkit-linear-gradient(#E8A52C, #FFF8DA 50%, #FFF8DA 100%); /* Safari 5.1 - 6.0 */
+            background: -o-linear-gradient(#E8A52C, #FFF8DA 50%, #FFF8DA 100%); /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient(#E8A52C, #FFF8DA 50%, #FFF8DA 100%); /* Firefox 3.6 - 15 */
+            background: linear-gradient(#E8A52C, #FFF8DA 50%, #FFF8DA 100%); /* 标准的语法 */
+            color: #662600;
+            height: 3.5rem;
+            line-height: 4rem;
+            margin-top: -0.5rem;
+            border-radius: 0.8rem 0.8rem 0 0;
+        }
+
+        /*#ContentBox{
+            padding:0 0 7.5rem 15rem;
+        }*/
+        .content {
+            padding: 0 0 0.75rem 10rem;
+            background: #fff8da;
+            display: none;
+        }
+
+        .content_detail {
+            margin-top: 0.1rem;
+            display: none;
+            width: 100%;
+            padding: 0 0.5rem 5rem;
+        }
+
+        .content_detail .item-title {
+            color: #662600;
+            font-size: 1.6rem;
+            line-height: 2.3rem;
+            text-align: left;
+        }
+
+        .content_detail .item-content {
+            font-size: 1.6rem;
+            line-height: 2rem;
+            color: #662600;
+            /*text-indent: 1em;*/
+            font-family: sans-serif, Microsoft YaHei, Segoe UI, Tahoma, Arial, Verdana;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <div id="Nav">
+        <span class="current">红中麻将</span>
+        <span>抢庄牛牛</span>
+        <span>血战到底</span>
+        <span>血流成河</span>
+        <span>四川倒倒胡</span>
+    </div>
+</nav>
+<div id="ContentBox">
+    <!--hongzhong-->
+    <div class="content" style="display: block;">
+        <ul class="tab-list">
+            <li class="active">基本规则</li>
+            <li>基本番型</li>
+            <li>特殊规则</li>
+            <li>结算</li>
+        </ul>
+        <div class="content_detail" style="display: block">
+            <p class="item-title">红中麻将无字牌，不能吃牌，红中做赖子。</p>
+
+            <p class="item-title">【用牌】</p>
+
+            <p class="item-content">牌数共112张牌，包括筒、索、万，1-9各4张，外加4张红中。</p>
+
+            <p class="item-title">【打牌】</p>
+
+            <p class="item-content item-indent">
+                庄家先出牌，打出的牌，其余的人都能碰和杠，不能吃牌。
+            </p>
+
+            <p class="item-content item-indent">
+                红中即为王牌，可以代替任意一张牌。
+            </p>
+
+            <p class="item-content item-indent">
+                红中不能碰和杠红中，也不能辅助其它牌来碰和杠。
+            </p>
+
+            <p class="item-content item-indent">
+                庄家打牌后，如果没有人“碰、杠”，则下家摸牌，然后自主选择一张手上的牌打出，依次类推，直至有人胡牌。
+            </p>
+
+            <p class="item-title">【杠牌】</p>
+
+            <p class="item-content item-indent">
+                明杠：先碰了的牌，后面有自己摸到的一个该牌，则可以选择杠，（公杠必须第一时间杠，如果没有第一时间杠，则不能再杠）。
+            </p>
+
+            <p class="item-content item-indent">
+                暗杠：手里有4张相同的牌，可以选择杠（暗杠，不需要第一时间杠，只要有这个牌型，每一次轮到该用户打牌，都可以选择杠）。
+            </p>
+
+            <p class="item-content item-indent">
+                放杠：自己打出一张牌，同桌有玩家手里有一坎相同的该牌，则该用户可以接杠，打出该牌的玩家就是放杠。
+            </p>
+
+            <p class="item-content item-indent">
+                接杠：与放杠对应，有人放就对应有人接。
+            </p>
+
+
+            <p class="item-title">【庄家】</p>
+
+            <p class="item-content">
+                A、第一局由房主做庄家。
+            </p>
+
+            <p class="item-content">
+                B、以后谁胡牌，下局谁做庄家。
+            </p>
+
+            <p class="item-content">
+                C、如臭庄、则上轮胡牌的人做庄。
+            </p>
+        </div>
+        <div class="content_detail">
+            <p class="item-content">红中麻将没有番型，自摸赢2倍底分，可以胡七小对。</p>
+        </div>
+        <div class="content_detail">
+            <p class="item-title">【抓鸟】（同买马）</p>
+
+            <p class="item-content">胡牌玩家随机获得几张牌，如果麻将点数为1、5、9、红中，则算中鸟，中鸟2分。</p>
+
+            <p class="item-title">【红中赖子】</p>
+
+            <p class="item-content">红中为赖子，即为万能牌，可以做任何牌，可以打出，但不能吃、碰、杠。</p>
+        </div>
+        <div class="content_detail">
+            <p class="item-content">
+                放杠出3分。
+            </p>
+
+            <p class="item-content">
+                接杠得3分。
+            </p>
+
+            <p class="item-content">
+                A玩家公杠，则其他三人1人出1分，A玩家得3分。
+            </p>
+
+            <p class="item-content">
+                A玩家暗杠，则其他三人1人出2分，A玩家得6分。
+            </p>
+
+            <p class="item-content">
+                自摸：每人出2分，再算扎码。
+            </p>
+
+            <p class="item-content">
+                扎鸟：有人胡牌后，从敦上摸牌，1、5、9、红中算庄家中鸟。
+            </p>
+
+            <p class="item-content">
+                中1个鸟，则每人多出2分。
+            </p>
+
+            <p class="item-content">
+                扎鸟数量由开房时确定（2-4-6个）。
+            </p>
+
+        </div>
+    </div>
+    <div class="content niuniu" style="display: none;">
+        <ul class="tab-list">
+            <li class="active">基本规则</li>
+            <li>基本牌型</li>
+            <!--<li>结算</li>-->
+        </ul>
+        <div class="content_detail" style="display: block">
+            <p class="item-title">【看牌抢庄】</p>
+
+            <p class="item-content">1.所有玩家点击准备，游戏立即开始。</p>
+
+            <p class="item-content">2.系统为每位玩家发五张牌，玩家可以看到自己的四张明牌。</p>
+
+            <p class="item-content">3.发完牌后玩家可以选择翻倍抢庄或者不抢，选择倍数高者优先坐庄，若选择倍数相同，系统将在参与抢庄的玩家中随机挑选一人坐庄。</p>
+
+            <p class="item-content">4.确定庄家后，闲家二次选择当局的倍数。</p>
+
+            <p class="item-content">5.系统为每位玩家发第五张牌，闲家只需与庄家比较牌型大小即可，闲家之间无需比较。</p>
+
+            <p class="item-content">6.结算倍数以庄家倍数和闲家倍数相乘进行计算。</p>
+
+            <p class="item-title">【游戏规则】</p>
+
+            <p class="item-content">游戏使用一副标准扑克牌，去掉大小王，共52张，JQK视为10。</p>
+
+            <p class="item-content">每人随机发五张牌，与他人比较。</p>
+
+            <p class="item-content">玩家需要将其中3张牌拼成10、20、30的整数，再将剩余2张相加保留个位数，得出最终牌型。</p>
+
+            <p class="item-content">游戏使用一副标准扑克牌，去掉大小王，共52张，JQK视为10。</p>
+
+            <p class="item-content"><img src="/images/majiang_images/demo01.png"
+                                         style="width:80%;margin:0 auto;display:block;"/></p>
+
+            <p class="item-content">例如上图，将2、3、5相加，得到10，再将Q、7相加，保留各位数，得出牌型“牛七”。</p>
+
+            <p class="item-content"><img src="/images/majiang_images/demo02.png"
+                                         style="width:80%;margin:0 auto;display:block;"/></p>
+
+            <p class="item-content">再例如上图，任意3张牌都无法拼出10、20、30的整数，得出牌型为“无牛”。</p>
+
+            <p class="item-content">其中五花牛：五张牌均为JQK。</p>
+        </div>
+        <div class="content_detail">
+            <p class="item-title">【牌型比较】</p>
+
+            <p class="item-content">五花牛>牛牛>牛九>牛八>牛七>牛六>牛五>牛四>牛三>牛二>牛一>无牛。</p>
+
+            <p class="item-content">单牌按分值比大小，依次是：K>Q>J>10>9>8>7>6>5>4>3>2>A</p>
+
+            <p class="item-title">【牌型大小】</p>
+
+            <p class="item-content">五花牛翻5倍；牛牛翻3倍；牛九--牛七翻2倍；牛六--无牛不翻倍。</p>
+
+            <p class="item-content">牌型相同时，比较最大那张牌的花色：黑桃>红桃>梅花>方块。</p>
+        </div>
+        <!--<div class="content_detail">6</div>-->
+
+    </div>
+    <div class="content xuezhan" style="display: none;">
+        <ul class="tab-list">
+            <li class="active">基本规则</li>
+            <li>术语解释</li>
+            <li>基本番型</li>
+            <li>结算</li>
+        </ul>
+        <div class="content_detail" style="display: block">
+            <p class="item-title">血战到底无字牌</p>
+
+            <p class="item-title">【游戏人数】 4人</p>
+
+            <p class="item-title">【用牌】 麻将筒、条、万共108张。</p>
+
+            <p class="item-title">【打牌】</p>
+
+            <p class="item-content">玩家胡牌后，其余玩家继续游戏，直到流局或只有一位未胡牌玩家为止。</p>
+
+            <p class="item-content">胡牌时，手牌最多只有2种花色，否则不可以胡牌。</p>
+
+            <p class="item-content">牌墙剩余4张牌时，能胡牌必须胡，不能跳过。</p>
+
+            <p class="item-content">流局时查叫，即未叫玩家要赔偿有叫玩家最大可能番数。（不含已胡牌玩家）</p>
+
+            <p class="item-title">【坐庄规则】</p>
+
+            <p class="item-content">上一局最先胡牌玩家当庄，如一炮多响则点炮玩家为庄，流局则此局庄家的下家当庄。</p>
+        </div>
+        <div class="content_detail">
+            <p class="item-title">【定缺】</p>
+
+            <p class="item-content">摸牌结束后由玩家选择一种花色作为该局游戏定缺的花色。游戏中必须优先打该花色的牌。</p>
+
+            <p class="item-title">【刮风（明杠）】</p>
+
+            <p class="item-content">分为直杠和面下杠（弯杠）</p>
+
+            <p class="item-content">直杠：玩家手中有三张一样的牌，其他玩家打出此牌，该玩家选择杠。</p>
+
+            <p class="item-content">面下杠：玩家已经碰出一对牌，又自摸到碰出的牌选择杠，此时可以被其他玩家抢杠胡，若抢杠胡则此杠不结算。</p>
+
+            <p class="item-title">【下雨（暗杠）】</p>
+
+            <p class="item-content">玩家手中含有4张相同的牌（未碰），此时玩家选择杠。暗杠不可被抢杠胡。</p>
+
+            <p class="item-title">【过手胡】</p>
+
+            <p class="item-content">再某一回合中，若有人点炮，玩家没有胡，则此回合有其他玩家点炮，只要没有加番就也不能胡，自摸除外。当该玩家摸牌，碰牌，杠牌后，过手胡限制解除。</p>
+
+            <p class="item-title">【查大叫】</p>
+
+            <p class="item-content">流局时没叫的玩家赔给有叫的玩家最大可能的番数，并刮风下雨不再结算。</p>
+
+            <p class="item-title">【自摸】</p>
+
+            <p class="item-content">玩家自摸胡牌时，赢得其他3位玩家的积分。</p>
+        </div>
+        <div class="content_detail">
+            <p class="item-title">【平胡（0番）】</p>
+
+            <p class="item-content">四坎（除4副刻子）加一对将。</p>
+
+            <p class="item-title">【对对胡(1番)】</p>
+
+            <p class="item-content">四副刻子加一对将。</p>
+
+            <p class="item-title">【清一色（2番）】</p>
+
+            <p class="item-content">全部是一种花色的平胡。</p>
+
+            <p class="item-title">【七对（2番）】</p>
+
+            <p class="item-content">玩家手牌都是对子，没有碰和刮风下雨。</p>
+
+            <p class="item-title">【龙七对（3番）】</p>
+
+            <p class="item-content">特殊的七对，只是7对中含有4张相同牌且没有杠出。</p>
+
+            <p class="item-title">【清对（3番）】</p>
+
+            <p class="item-content">清一色+对对胡</p>
+
+            <p class="item-title">【清七对（4番）】</p>
+
+            <p class="item-content">清一色+七对</p>
+
+            <p class="item-title">【清龙七对（5番）】</p>
+
+            <p class="item-content">清一色+龙七对。</p>
+
+            <p class="item-title">【全幺九（3番）】</p>
+
+            <p class="item-content">所有牌当中,全部都是1或者9组成的一句话、刻子、将牌。</p>
+
+            <p class="item-title">【将对（3番）】</p>
+
+            <p class="item-content">所有牌当中，全部是2 、5、8组成的对对胡。</p>
+
+            <p class="item-title">【天胡（5番）】</p>
+
+            <p class="item-content">庄家在游戏开始时直接胡牌，没有出牌。</p>
+
+            <p class="item-title">【地胡（5番）】</p>
+
+            <p class="item-content">在第一回合中，没有出现任何吃，碰，杠，非庄家自摸胡牌。</p>
+        </div>
+        <div class="content_detail">
+            <p class="item-content">1.基本输（赢）积分=2的总番数次方（最大番数可由建房者选择）+刮风下雨</p>
+
+            <p class="item-content">2.点炮结算方式为1对1，自摸结算方式为1对多。</p>
+
+            <p class="item-content">3.另加番</p>
+
+            <p class="item-content">根：+1番 所有牌中有4张一样的牌，（无论是否碰、杠），可累计计算。</p>
+
+            <p class="item-content">杠上开花：+1番 </p>
+
+            <p class="item-content">杠上炮：+1番</p>
+
+            <p class="item-content">抢杠胡：+1番</p>
+
+            <p class="item-content">海底胡：+1番</p>
+
+            <p class="item-content">金钩胡：+1番</p>
+
+            <p class="item-content">备注：各个牌型不重复计算，只收取最大番。</p>
+        </div>
+    </div>
+
+
+    <div class="content xueliu" style="display: none;">
+        <ul class="tab-list">
+            <li class="active">基本规则</li>
+            <li>术语解释</li>
+            <li>基本番型</li>
+            <li>结算</li>
+        </ul>
+        <div class="content_detail" style="display: block">
+            <p class="item-title">血流成河无字牌</p>
+            <p class="item-title">【游戏人数】  4人</p>
+
+            <p class="item-title">【用牌】  麻将筒、条、万共108张。</p>
+            <p class="item-title">【打牌】</p>
+            <p class="item-content">玩家胡牌后仍然可以继续胡牌，直至牌墙中无牌为止。</p>
+            <p class="item-content">1、胡牌之后继续抓牌打牌，但是不能换张。有玩家点炮或自摸，仍可以胡，直到牌墙中无牌为止。</p>
+            <p class="item-content">2、胡牌后，不可以碰，不可以直杠和暗杠，只可以弯杠。查叫时，无叫玩家要赔偿有叫玩家及已胡牌玩家最大可能翻数的分。</p>
+            <p class="item-title">【坐庄规则】</p>
+            <p class="item-content">上一局最先胡牌玩家当庄，如一炮多响则点炮玩家为庄，流局则此局庄家的下家当庄。</p>
+        </div>
+        <div class="content_detail">
+            <p class="item-title">【定缺】</p>
+            <p class="item-content">摸牌结束后由玩家选择一种花色作为该局游戏定缺的花色。游戏中必须优先打该花色的牌。</p>
+            <p class="item-title">【刮风（明杠）】</p>
+            <p class="item-content">分为直杠和面下杠（弯杠）</p>
+            <p class="item-content">直杠：玩家手中有三张一样的牌，其他玩家打出此牌，该玩家选择杠。</p>
+            <p class="item-content">面下杠：玩家已经碰出一对牌，又自摸到碰出的牌选择杠，此时可以被其他玩家抢杠胡，若抢杠胡则此杠不结算。</p>
+            <p class="item-title">【下雨（暗杠）】</p>
+            <p class="item-content">玩家手中含有4张相同的牌（未碰），此时玩家选择杠。暗杠不可被抢杠胡。</p>
+            <p class="item-title">【过手胡】</p>
+            <p class="item-content">再某一回合中，若有人点炮，玩家没有胡，则此回合有其他玩家点炮，只要没有加番就也不能胡，自摸除外。当该玩家摸牌，碰牌，杠牌后，过手胡限制解除。</p>
+            <p class="item-title">【查大叫】</p>
+            <p class="item-content">流局时没叫的玩家赔给有叫的玩家最大可能的番数，并刮风下雨不再结算。</p>
+            <p class="item-title">【自摸】</p>
+            <p class="item-content">玩家自摸胡牌时，赢得其他3位玩家的积分。</p>
+        </div>
+        <div class="content_detail">
+            <p class="item-title">【平胡（0番）】</p>
+            <p class="item-content">四坎（除4副刻子）加一对将。</p>
+            <p class="item-title">【对对胡(1番)】</p>
+            <p class="item-content">四副刻子加一对将。</p>
+            <p class="item-title">【清一色（2番）】</p>
+            <p class="item-content">全部是一种花色的平胡。</p>
+            <p class="item-title">【七对（2番）】</p>
+            <p class="item-content">玩家手牌都是对子，没有碰和刮风下雨。</p>
+            <p class="item-title">【龙七对（3番）】</p>
+            <p class="item-content">特殊的七对，只是7对中含有4张相同牌且没有杠出。</p>
+            <p class="item-title">【清对（3番）】</p>
+            <p class="item-content">清一色+对对胡</p>
+            <p class="item-title">【清七对（4番）】</p>
+            <p class="item-content">清一色+七对</p>
+            <p class="item-title">【清龙七对（5番）】</p>
+            <p class="item-content">清一色+龙七对。</p>
+            <p class="item-title">【全幺九（3番）】</p>
+            <p class="item-content">所有牌当中,全部都是1或者9组成的一句话、刻子、将牌。</p>
+            <p class="item-title">【将对（3番）】</p>
+            <p class="item-content">所有牌当中，全部是2 、5、8组成的对对胡。</p>
+            <p class="item-title">【天胡（5番）】</p>
+            <p class="item-content">庄家在游戏开始时直接胡牌，没有出牌。</p>
+            <p class="item-title">【地胡（5番）】</p>
+            <p class="item-content">在第一回合中，没有出现任何吃，碰，杠，非庄家自摸胡牌。</p>
+        </div>
+        <div class="content_detail">
+            <p class="item-content">1.基本输（赢）积分=2的总番数次方（最大番数可由建房者选择）+刮风下雨</p>
+            <p class="item-content">2.点炮结算方式为1对1，自摸结算方式为1对多。</p>
+            <p class="item-content">3.另加番</p>
+            <p class="item-content">根：+1番 所有牌中有4张一样的牌，（无论是否碰、杠），可累计计算。</p>
+            <p class="item-content">杠上开花：+1番 </p>
+            <p class="item-content">杠上炮：+1番</p>
+            <p class="item-content">抢杠胡：+1番</p>
+            <p class="item-content">海底胡：+1番</p>
+            <p class="item-content">金钩胡：+1番</p>
+            <p class="item-content">备注：各个牌型不重复计算，只收取最大番。</p>
+        </div>
+
+    </div>
+    <div class="content daodaohu" style="display: none;">
+        <ul class="tab-list">
+            <li class="active">术语解释</li>
+            <li>坐庄规则</li>
+            <li>胡牌规则</li>
+            <li>结算</li>
+        </ul>
+        <div class="content_detail" style="display: block">
+            <p class="item-title">【自摸】</p>
+            <p class="item-content">所胡牌为知己正常摸得，即称之为自模胡。简称自摸。</p>
+            <p class="item-title">【明杠】</p>
+            <p class="item-content">明杠分为两类，一类为自己手中已有三张相同牌，此时另外的玩家放出一张该牌，玩家即可选择杠牌，此明杠为对方放杠。另一类杠为玩家又摸到一张自己已将碰过的牌，选择杠后为摸明杠。</p>
+            <p class="item-title">【暗杠】</p>
+            <p class="item-content">自己摸得四张（四张全部为玩家摸得）一样的牌后，选择杠后称之为暗杠。</p>
+            <p class="item-title">【抢杠】</p>
+            <p class="item-content">玩家明杠时，有人正胡其所杠这张牌，即称之为抢杠胡，简称抢杠。</p>
+        </div>
+        <div class="content_detail">
+
+            <p class="item-content">游戏中采用连庄方式，仅第一局为创建房间的玩家为庄，之后将由本局胡牌的玩家下局坐庄，如庄家胡牌，则继续连庄。若荒庄则摸最后一张牌的玩家下局坐庄。</p>
+        </div>
+        <div class="content_detail">
+            <p class="item-title">【点炮】</p>
+            <p class="item-content">玩家打出一张牌，可以点炮胡，由放炮者支付积分。</p>
+            <p class="item-title">【自摸】</p>
+            <p class="item-content">所胡牌由自己正常摸得，三家各自负积分。</p>
+            <p class="item-title">【抢杠】</p>
+            <p class="item-content">杠的那张牌刚好是别人要胡的牌，此时被胡掉就叫做抢杠。抢杠胡由杠的玩家负积分，按点炮算，暗杠不能抢。</p>
+            <p class="item-title">【一炮多响】</p>
+            <p class="item-content">玩家打出一张牌，如果同时有两家以上叫这张牌，该两家可以同时胡，称一炮双响或一炮三响。</p>
+        </div>
+        <div class="content_detail">
+            <p class="item-content">底分为1</p>
+            <p class="item-content">明杠：1</p>
+            <p class="item-content">暗杠：2</p>
+            <p class="item-content">平胡点炮：1</p>
+            <p class="item-content">平胡自摸：2 </p>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+    window.onload = window.onresize = function () {
+        document.documentElement.style.fontSize = 20 * document.documentElement.clientWidth / 1070 + 'px';
+        var oNav = document.getElementById('Nav');
+        var a = oNav.children;
+        var oC = document.getElementById('ContentBox');
+        var aC = oC.children;
+        var lis = document.querySelectorAll('.tab-list li');
+        var con_dets = document.getElementsByClassName('content_detail');
+        for (var i = 0; i < a.length; i++) {
+            a[i].index = i;
+            a[i].onclick = function () {
+                window.scrollTo(0, 0);
+                for (var i = 0; i < a.length; i++) {
+                    a[i].className = '';
+                    aC[i].style.display = 'none';
+                }
+                this.className = 'current';
+                aC[this.index].style.display = 'block';
+                for (var j = 0; j < lis.length; j++) {
+                    lis[j].className = '';
+                    con_dets[j].style.display = 'none';
+                }
+                aC[this.index].getElementsByClassName("content_detail")[0].style.display = 'block';
+                aC[this.index].getElementsByTagName("li")[0].className = 'active';
+            };
+        }
+        for (var j = 0; j < lis.length; j++) {
+            lis[j].index = j;
+            lis[j].onclick = function () {
+                for (var j = 0; j < lis.length; j++) {
+                    lis[j].className = '';
+                    con_dets[j].style.display = 'none';
+                }
+                this.className = 'active';
+                con_dets[this.index].style.display = 'block';
+            };
+        }
+    };
+</script>
+
+</body>
+</html>

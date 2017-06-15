@@ -12,6 +12,11 @@
     <link rel="stylesheet" href="/css/web/detail.css"/>
     <link rel="stylesheet" href="/css/web/public.css"/>
     <script src="/js/jquery/jquery-1.8.3.min.js"></script>
+    <script>
+        if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)){
+            window.location.href ="/Web/m/m-newsList.html";
+        }
+    </script>
 </head>
 <body>
 <script src="/js/web/header.js"></script>
@@ -24,12 +29,12 @@
                 <em></em>
                 <label>新闻详情</label>
             </span>
-            <a class="goback" href="javascript:history.go(-1)">&lt;&lt;返回列表</a>
+            <a class="goback" href="newsList.html">&lt;&lt;返回列表</a>
         </div>
     </section>
     <section class="area combox">
         <article class="artbox">
-            <h1>《华淳开心麻将》上线公测，开启掌上棋牌新时代！</h1>
+            <h1></h1>
             <div class="middle"></div>
         </article>
     </section>
@@ -37,5 +42,6 @@
 <div style="background:#2E2E2E;">
     <script src="/js/web/footer.js"></script>
 </div>
+<script src="/js/web/detail.js"></script>
 </body>
 </html>

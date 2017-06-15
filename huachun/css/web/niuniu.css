@@ -1,0 +1,116 @@
+
+
+.niuniubanner{
+    background: url('/images/index_images/niuniubanner.jpg') center top no-repeat;
+}
+video{
+    vertical-align: bottom;
+}
+/*视频banner*/
+.my-video{
+    width: 100%;
+}
+/*主背景*/
+.main {
+    background: url('/images/index_images/niuniu-mainbg.jpg') center top repeat-y;
+    width: 100%;
+    height:1804px;
+    position: relative;
+}
+/*产品特色介绍*/
+.special{
+    width:1000px;
+    margin:0 auto;
+}
+.special:before{
+    content:"";
+    display:table;
+    clear:both;
+}
+.special img{
+    width:1000px;
+    height:auto;
+}
+.special>p{
+    margin-top:50px;
+}
+
+/*悬浮框*/
+.m-slide{
+    color: #999;
+    width: 135px;
+    height: 422px;
+    position: fixed;
+    right: -0px;
+    top: 50%;
+    margin-top: -211px;
+    background: #FEFEFE;
+    z-index: 1001;
+    border:1px solid #aaa;
+    border-right:none;
+}
+.m-slide-trigger {
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -27px;
+    font-size: 14px;
+    width: 27px;
+    background-color: #20a238;
+    color: #fff;
+    text-align: center;
+    line-height: 1;
+    padding: 10px 0;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+}
+.m-slide-trigger i {
+    display: block;
+    width: 9px;
+    height: 15px;
+    margin: 5px auto 0;
+    background: url('/images/index_images/icon-float-bar.png') no-repeat -3px 0;
+}
+
+.fixed-box{
+    margin:0 auto;
+    height:140px;
+}
+.fixed-box:not(:last-child){
+    border-bottom: 1px solid #aaa;
+}
+
+.fixed-box:before{
+    content: "";
+    display: table;
+    clear: both;
+}
+.fixed-box p{
+    margin-top:10px;
+    color:#444866;
+    font-size:12px;
+    font-weight:bold;
+    text-align: center;
+    padding:0 10px;
+}
+.fixed-box i{
+    display: block;
+    height:100px;
+    margin:0 auto 10px;
+    width:110px;
+    background: url('/images/index_images/down-area.png') 0 0 no-repeat;
+    background-size: 376px;
+}
+.Android-code i{
+    background-position: -116px 0;
+}
+.Android-code:hover i{
+    background-position: -116px -114px;
+}
+.IOS-code:hover i{
+    background-position: 0 -114px;
+}
+.down-QR-code i{
+    background-position:-244px -9px;
+}

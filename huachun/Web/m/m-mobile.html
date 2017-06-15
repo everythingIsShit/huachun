@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="applicable-device" content="mobile" />
+    <meta name="robots" content="all"/>
+    <meta name="copyright" content="huachun">
+    <meta name="viewport" content="width=320,minimum-scale=1,maximum-scale=5,user-scalable=no"/>
+    <meta name="description" content="华淳游戏成立于2016年11月，华淳游戏以休闲棋牌游戏为核心业务，集游戏研发及发行于一体，致力于为全球华人用户提供优质精彩的棋牌、游戏、娱乐及服务的互联网公司。 公司倡导开放、平等的工作环境，尊重、鼓励员工的自主性和创造力，致力于为员工营造轻松和谐、富有激情并充满创意的工作氛围，帮助员工最大程度实现自我价值，为促进游戏产业的健康发展做出应有的贡献。">
+    <meta name="keywords" content="华淳游戏，华淳科技，牛牛游戏，麻将，棋牌游戏，">
+    <link href="/css/web/commen.css" rel="stylesheet" />
+    <link href="/css/web/m/m-public.css" rel="stylesheet" />
+    <link href="/css/web/m/m-mobile.css" rel="stylesheet" />
+    <link href="/css/web/m/m-mobile.css" rel="stylesheet" />
+    <script src="/js/jquery/jquery-1.8.3.min.js"></script>
+    <title>华淳游戏</title>
+    <script>if(!/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)){window.location.href ="/Web/index.html";}</script>
+</head>
+<body>
+<script src="/js/web/m/m-header.js"></script>
+<section class="indexbanner">
+    <div class="info">
+        <p>以中国传统棋牌文化为题材，演绎百姓的本色故事。
+        <b>—— 华淳科技与你同在！</b></p>
+    </div>
+</section>
+<section id="indexmain" class="main">
+
+    <section class="area news-swap">
+        <h3 class="s-tit">华淳最新资讯</h3>
+            <div class="news_tab">
+                <div class="hd">
+                    <ul>
+                        <li class="on">
+                            <a href="javascript:">最新资讯</a>
+                        </li>
+                        <li>
+                            <a href="javascript:">新闻公告</a>
+                        </li>
+                        <li>
+                            <a href="javascript:">精彩活动</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bd">
+                    <div class="tab-panel">
+                        <ul>
+
+                        </ul>
+                    </div>
+                    <div class="tab-panel">
+                        <ul>
+
+                        </ul>
+                    </div>
+                    <div class="tab-panel">
+                        <ul>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="more">
+                    <a href="m-newsList.html">查看更多</a>
+                </div>
+            </div>
+    </section>
+    <section class="area feature-swap">
+        <h3 class="tit">
+            <strong>特色活动</strong>
+        </h3>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="m-detail.html?NewsID=7">
+                        <img src="/images/index_images/carousel-1.jpg" alt=""/>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="m-detail.html?NewsID=8">
+                        <img src="/images/index_images/carousel-2.jpg" alt=""/>
+                    </a>
+                </div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    <section class=" area games-swap">
+        <h3 class="tit">
+            <strong>游戏中心</strong>
+        </h3>
+        <ul>
+            <li>
+                <a href="m-majiang.html">
+                    <img src="/images/index_images/majiang.png" alt="华淳开心麻将"/>
+                    <p>华淳开心麻将</p>
+                </a>
+            </li>
+            <li>
+                <a href="m-niuniu.html">
+                    <img src="/images/index_images/niuniu.png" alt="华淳开心牛牛"/>
+                    <p>华淳开心牛牛</p>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:" onclick="unopened()">
+                    <img src="/images/index_images/doudizhu.png" alt="华淳开心斗地主"/>
+                    <p>华淳开心斗地主</p>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:" onclick="unopened()">
+                    <img src="/images/index_images/buyu.png" alt="华淳开心捕鱼"/>
+                    <p>华淳开心捕鱼</p>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+</section>
+<section style="background: #211E22;">
+    <script src="/js/web/m/m-footer.js"></script>
+</section>
+<script src="/js/web/m/m-mobile.js"></script>
+<script src="/js/web/m/swiper-3.4.2.jquery.min.js"></script>
+<script>
+    var mySwiper = new Swiper ('.swiper-container', {
+        direction: 'horizontal',
+        loop: true,
+        autoplay: 2000,
+        // 如果需要分页器
+        pagination: '.swiper-pagination',
+        autoplayDisableOnInteraction : false
+    })
+</script>
+</body>
+</html>

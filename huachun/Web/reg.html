@@ -1,252 +1,27 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=" utf-8" />
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
     <title></title>
-    <link href="/css/common/common.css" rel="stylesheet" />
+    <link href="/css/web/commen.css" rel="stylesheet" />
+    <link href="/css/web/public.css" rel="stylesheet" />
     <script src="/js/jquery/jquery-1.8.3.min.js"></script>
     <style type="text/css">
-        .point {
-            position: absolute;
-            left: 386px;
-            top: 57px;
+
+        html{
+            height:100%;
         }
-
-        .header {
-            width: 100%;
-            height: 260px;
-            /*background-color:red;*/
+        body{
+            display: flex;
+            flex-direction:
+            column; height: 100%;
         }
-
-
-        .download {
-            width: 1010px;
-            height: auto;
-            margin: 0 auto;
-            left: 0px;
-            right: 0px;
-            text-align: center;
-            padding-bottom: 30px;
+        header{
+            flex: 0 0 auto;
         }
-
-            .download .wrap {
-                width: 100%;
-                margin-top: 40px;
-            }
-
-                .download .wrap .gamethumb {
-                    width: 100%;
-                    height: 220px;
-                    margin: 20px auto 0px;
-                }
-
-                .download .wrap .gamename {
-                    margin: 20px auto 25px;
-                    font: 18px/1.5 Microsoft YaHei;
-                    color: #e71f19;
-                    font-weight: bold;
-                    text-align: center;
-                }
-
-                .download .wrap .gamedownload {
-                    width: 100%;
-                    height: 50px;
-                    line-height: 50px;
-                    margin: 0 auto;
-                    color: #333333;
-                    font: 16px/1.5 Microsoft YaHei;
-                    font-weight: bold;
-                }
-
-            .download .gamedownload .webdown {
-                float: left;
-                width: 240px;
-                height: auto;
-                margin-left: 20px;
-            }
-
-                .download .gamedownload .webdown a:nth-child(1) {
-                    display: inline-block;
-                    width: 62px;
-                    height: 29px;
-                    background: url(/images/download_ios.png) no-repeat;
-                }
-
-                    .download .gamedownload .webdown a:nth-child(1):hover {
-                        background: url(/images/download_ios_hover.png) no-repeat;
-                    }
-
-                .download .gamedownload .webdown a:nth-child(2) {
-                    display: inline-block;
-                    width: 118px;
-                    height: 32px;
-                    background: url(/images/download_android.png) no-repeat;
-                    margin-left: 30px;
-                }
-
-                    .download .gamedownload .webdown a:nth-child(2):hover {
-                        background: url(/images/download_android_hover.png) no-repeat;
-                    }
-
-
-            .download .gamedownload .qrdown {
-                float: right;
-                margin-right: 50px;
-                margin-top: 5px;
-                color: #2f82ff;
-            }
-
-            .download ul {
-                width: 925px;
-                height: 395px;
-                margin: 0 auto;
-            }
-
-                .download ul li {
-                    float: left;
-                    width: 443px;
-                    height: 383px;
-                    border: 1px solid #e6e6e6;
-                    -webkit-border-radius: 5px;
-                    -moz-border-radius: 5px;
-                    border-radius: 5px;
-                    -webkit-box-shadow: #999 0px 0px 10px;
-                    -moz-box-shadow: #999 0px 0px 10px;
-                    box-shadow: #999 0px 0px 10px;
-                    position: relative;
-                }
-
-                    .download ul li.clear {
-                        height: 0px;
-                        border: 0px;
-                    }
-
-            .download .crossline {
-                width: 65%;
-                margin: 30px auto 0px;
-                left: 0px;
-                right: 0px;
-                border-bottom: 1px solid #e6e6e6;
-                -webkit-box-shadow: #e6e6e6 0px 0px 10px;
-                -moz-box-shadow: #e6e6e6 0px 0px 10px;
-                box-shadow: #e6e6e6 0px 0px 10px;
-            }
-
-            .download .qrdownclick {
-                width: 193px;
-                height: 155px;
-                display: none;
-                border: 1px solid #e6e6e6;
-                border-top: 0px;
-                -webkit-border-radius: 5px;
-                -moz-border-radius: 5px;
-                border-radius: 5px;
-                -webkit-box-shadow: #999 0px 0px 10px;
-                -moz-box-shadow: #999 0px 0px 10px;
-                box-shadow: #999 0px 0px 10px;
-                position: absolute;
-                background: #fff;
-                z-index: 100;
-            }
-
-        .on {
-            display: block;
+        .content{
+            flex: 1 0 auto;
         }
-
-        .download .qrdownclick {
-            right: 25px;
-            top: 130px;
-            line-height: 155px;
-            text-align: center;
-        }
-
-            .download .qrdownclick img {
-                /* margin-top:25px; */
-            }
-
-        .footer {
-            color: #333333;
-            font-size: 12px;
-            font-family: 宋体;
-            background: #e6e6e6;
-            width: 100%;
-            line-height: 30px;
-            margin: 15px auto 0px;
-            text-align: center;
-            position: absolute;
-        }
-
-            .footer a {
-                text-decoration: none;
-                color: #333;
-            }
-
-        #YSlide {
-            position: relative;
-            z-index: 1;
-            width: 100%;
-            height: 260px;
-            margin: 0 auto;
-            left: 0;
-            right: 0;
-            background: url(/images/common.jpg);
-            background-position: center top;
-            background-repeat: repeat-x;
-            overflow: hidden;
-        }
-
-        .YSample {
-            margin: 0 auto;
-            overflow: hidden;
-        }
-
-            .YSample, .YSample img {
-                width: 1024px;
-                height: 260px;
-            }
-
-                .YSample strong {
-                    display: none;
-                    position: absolute;
-                    z-index: 5;
-                    bottom: 0px;
-                    left: 0px;
-                    font-weight: normal;
-                    width: 1280px;
-                    height: 25px;
-                    line-height: 25px;
-                    text-indent: 10px;
-                    font-size: 12px;
-                    color: #fff;
-                    background: #000;
-                    opacity: .7;
-                    -moz-opacity: .7;
-                    filter: alpha(opacity=70);
-                }
-
-        .qrdownclick span, .qrdownclick span em {
-            display: block;
-            width: 0px;
-            height: 0px;
-            /*  border-width:0 15px 15px;  */
-            border-width: 15px 15px 0px;
-            border-style: solid;
-            position: absolute;
-        }
-
-        .qrdownclick span {
-            /*  border-color:transparent transparent #d7d7d7; */
-            border-color: #d7d7d7 transparent transparent;
-            bottom: -15px;
-            left: 71%; /* 三角形居中显示 */
-        }
-
-            .qrdownclick span em {
-                /*  border-color:transparent transparent #fff; */
-                border-color: #fff transparent transparent;
-                bottom: 4px;
-                margin-left: -15px;
-            }
 
         /*注册表单样式*/
         * {
@@ -310,6 +85,14 @@
 
         .alert {
             background-color: red;
+        }
+        #main{
+            width:800px; min-height:465px; margin:50px auto; border:1px solid #c4c4c4; border-radius:5px;
+        }
+        .banner{
+            background: url('/images/index_images/loginbanner.jpg') repeat-x center top;
+            height:260px;
+            width: 100%;
         }
     </style>
 
@@ -443,43 +226,47 @@
 
 </head>
 <body>
-    <script src="/js/web/fast-path.js"></script>
-    <div id="main" style="width:800px; min-height:465px; margin:130px auto 0px auto; border:1px solid #c4c4c4; border-radius:5px;">
-        <form id="register">
-            <div class="form-group">
-                <label class="control-label" for="uname">用户名：</label>
-                <input class="form-control" type="text" id="uname" autocomplete="off" autofocus>
-                <span data-id="uname" class="help-block primary">用户名可以包含数字和字母</span>
-            </div>
-            <div class="form-group">
-                <label class="control-label" for="upwd">密码：</label>
-                <input type="password" class="form-control" id="upwd">
-                <span data-id="upwd" class="help-block primary">密码长度在6~12位之间</span>
-            </div>
-            <div class="form-group">
-                <label class="control-label" for="umail">手机号：</label>
-                <input type="text" class="form-control" id="phone">
-                <span data-id="phone" class="help-block primary">请输入手机号码</span>
-            </div>
-            <p class="identify">防沉迷认证</p>
-            <p class="iden-content">根据《网络游戏管理暂行办法》，网络游戏用户需进行实名注册，为保证流畅游戏体验，享受健康生活，请广大用户尽快实名注册。注意：账号的身份证只能填写一次，是判断账号归属的重要依据。</p>
-            <div class="form-group">
-                <label class="control-label" for="fullName">真实姓名：</label>
-                <input type="text" class="form-control" id="realname">
-                <span data-id="realname" class="help-block primary">请输入真实姓名</span>
-            </div>
-            <div class="form-group">
-                <label class="control-label" for="IDCard">身份证号：</label>
-                <input type="text" class="form-control" id="card">
-                <span data-id="card" class="help-block primary">请输入身份证号</span>
-            </div>
-            <div class="form-group">
-                <label class="control-label"></label>
-                <input type="button" id="btn_reg" style="color:#fff; cursor:pointer;" value="注   册" class="form-control success">
-            </div>
-        </form>
+    <script src="/js/web/header.js"></script>
+    <div class="content">
+        <div class="banner"></div>
+        <div id="main">
+            <form id="register">
+                <div class="form-group">
+                    <label class="control-label" for="uname">用户名：</label>
+                    <input class="form-control" type="text" id="uname" autocomplete="off" autofocus>
+                    <span data-id="uname" class="help-block primary">用户名可以包含数字和字母</span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="upwd">密码：</label>
+                    <input type="password" class="form-control" id="upwd">
+                    <span data-id="upwd" class="help-block primary">密码长度在6~12位之间</span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="phone">手机号：</label>
+                    <input type="text" class="form-control" id="phone">
+                    <span data-id="phone" class="help-block primary">请输入手机号码</span>
+                </div>
+                <p class="identify">防沉迷认证</p>
+                <p class="iden-content">根据《网络游戏管理暂行办法》，网络游戏用户需进行实名注册，为保证流畅游戏体验，享受健康生活，请广大用户尽快实名注册。注意：账号的身份证只能填写一次，是判断账号归属的重要依据。</p>
+                <div class="form-group">
+                    <label class="control-label" for="realname">真实姓名：</label>
+                    <input type="text" class="form-control" id="realname">
+                    <span data-id="realname" class="help-block primary">请输入真实姓名</span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="card">身份证号：</label>
+                    <input type="text" class="form-control" id="card">
+                    <span data-id="card" class="help-block primary">请输入身份证号</span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label"></label>
+                    <input type="button" id="btn_reg" style="color:#fff; cursor:pointer;" value="注   册" class="form-control success">
+                </div>
+            </form>
+        </div>
     </div>
-    <div style="background:#e6e6e6;position:fixed;bottom:0; width:100%;">
+
+    <div style="background: #211E22;flex: 0 0 auto;">
         <script src="/js/web/footer.js"></script>
     </div>
 </body>
